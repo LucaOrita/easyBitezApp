@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ramburs</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<img class="center" src="/img/banner/logo.png"/>
+
+<div style="font-size: 50px; text-align: center; margin-top: 50px;">
+
+    <p>
+        Comanda dumneavoastră a fost înregistrată!
+    </p>
+    <p>
+        Coletul va fi livrat pe data de <text style="color: #ffba00" th:text="${data_livrare}"></text> și plata se va face la ramburs.
+    </p>
+
+</div>
+</body>
+<script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            location.href = '/';
+        }, 60000);
+    });
+</script>
+</html>

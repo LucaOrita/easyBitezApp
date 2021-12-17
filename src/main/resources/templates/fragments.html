@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+<header class="header_area sticky-header" th:fragment="header_main">
+    <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" th:href="@{/}"><img alt="" src="/img/banner/logos/logo_sus.png"
+                                                                   width="50px"></a>
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/}">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/retete}">Rețete</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" th:href="@{/preturi}">Prețuri</a></li>-->
+                        <!--<li class="nav-item"><a href="team.php" class="nav-link">Echipa</a></li>-->
+                        <li class="nav-item"><a class="nav-link" th:href="@{/about-us}">Despre Noi</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/shop}">
+                                Cumpără
+                            </a>
+                        </li>
+                        <li class="nav-item" id="visible-mobile"><a class="nav-link" th:href="@{/userpage}">Login</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/contact}">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="cart" th:href="@{/userpage}">
+                                <span class="lnr"></span>
+                                <lord-icon
+                                        colors="primary:#000000,secondary:#000000"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com//dxjqoygy.json"
+                                        stroke="100"
+                                        style="width:35px;height:35px;padding:0;"
+                                        trigger="loop">
+                                </lord-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<header class="header_area sticky-header" th:fragment="header_main_user">
+    <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" th:href="@{/}"><img alt="" src="/img/banner/logos/logo_sus.png"
+                                                                   width="50px"></a>
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/}">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/retete}">Rețete</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" th:href="@{/preturi}">Prețuri</a></li>-->
+                        <!--<li class="nav-item"><a href="team.php" class="nav-link">Echipa</a></li>-->
+                        <li class="nav-item"><a class="nav-link" th:href="@{/about-us}">Despre Noi</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/shop}">
+                                Cumpără
+                            </a>
+                        </li>
+                        <li class="nav-item" id="visible-mobile">
+                            <form method="post" class="logout-form" th:action="@{/logout}">
+                                <a class="nav-link logout-btn" href="javascript:void(0)">
+                                    Logout
+                                </a>
+                            </form>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/contact}">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <form method="post" class="logout-form" th:action="@{/logout}">
+                            <li class="nav-item">
+                                <span class="lnr lnr-exit logout-btn"></span>
+                            </li>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- End Header Area -->
+<div id="load" class="loading-page" th:fragment="loadingScreen">
+    <script>
+        window.onload = function () {
+            document.getElementById("load").style.opacity = "0";
+            document.getElementById("load").style.zIndex = "-99999999";
+        };
+    </script>
+    <img th:src="@{/img/banner/logo.png}" width="100px" class="align-vh breath-anim" th:if="${c} == null" alt="logo">
+    <div class="lds-ellipsis" th:if="${c} != null">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<footer class="footer-area" th:fragment="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="contact_info" style="padding-bottom:20px;">
+                    <div class="info_item align-foot">
+                        <i class="lnr lnr-home"></i>
+                        <h6 style="color:white !important;">Bucuresti, Romania</h6>
+                        <p>Al Barajul Dunarii 2A</p>
+                    </div>
+                    <div class="info_item align-foot">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h6 style="color:white !important;">(+40) 785 225 446</h6>
+                        <p>Luca Oriță</p>
+                    </div>
+                    <div class="info_item align-foot">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h6 style="color:white !important;">(+40) 749 532 815</h6>
+                        <p>Vlad Cămărășoiu</p>
+                    </div>
+
+                    <div class="info_item align-foot">
+                        <i class="lnr lnr-envelope"></i>
+                        <h6><a href="#" style="color:white !important;">suport@easybites.ro</a></h6>
+                        <p>Ne poti trimite un mesaj oricand</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="single-footer-widget" style="text-align:center;">
+                    <h6>Urmărește-ne pe social media:</h6>
+                    <p>
+                        <a href="https://www.instagram.com/easybitez_ro/"><i class="fa fa-instagram links"></i></a>
+                        <a href="https://www.facebook.com/easybitezromania"><i class="fa fa-facebook links"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="single-footer-widget" style="text-align:center;">
+                    <h6><p><span style="padding-right:10px"><a href="/img/files/terms_conditions.pdf">Termeni și condiții</a></span>
+                    </p></h6>
+                    <h6><p><span style="padding-right:10px"><a href="/img/files/GDPR.pdf">GDPR</a></span></p></h6>
+
+                    <div class="footer-social d-flex align-items-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+            <p class="footer-text m-0">
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                Easy Bitez | All rights reserved</a>
+            </p>
+        </div>
+    </div>
+    <style>
+        .align-foot {
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+        }
+
+        .links {
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            border-radius: 50%;
+            padding: 16px 19px;
+        }
+
+        .fa-facebook:before, .fa-instagram:before {
+            font-size: 20px;
+        }
+
+        .fa-instagram {
+            background: rgb(64, 93, 230);
+            background: linear-gradient(180deg, rgba(64, 93, 230, 1) 0%, rgba(88, 81, 219, 1) 53%, rgba(131, 58, 180, 1) 100%);
+            color: white;
+            border-radius: 50%;
+            padding: 16px 17px;
+        }
+    </style>
+</footer>
+
+<div th:fragment="header_checkout">
+    <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <header class="header-shop">
+        <section class="m">
+            <div style="width: 420px;height: 100%;">
+                <h3 id="pret_total" style="height:100%;text-align: center; line-height:60px !important;">Total <span
+                        th:text="${pret}" id="ammout-buy"></span> lei</h3>
+            </div>
+        </section>
+        <section class="next" style="left:100%;position: relative;transform: translateX(-100%);width:300px;">
+            <div class="next-btn--">
+                <div class="center-u" id="cumpara">
+                    Cumpara
+                    <span class="lnr lnr-cart"></span>
+                </div>
+            </div>
+        </section>
+    </header>
+    <header class="header-shop-mobile">
+        <div style="width:100%;height:100%;line-height: 60px;font-size: 24px;text-align: center"
+             th:text="'Total: ' + ${pret} + ' lei'"></div>
+    </header>
+</div>
+<div th:fragment="header_shop">
+    <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <header class="header-shop-mobile">
+        <div th:if="${s} == 1"></div>
+        <div class="next-btn--mobile smdim center-uu" th:if="${s} != 1" onclick="openMenu()">
+            <div style="width: 40px; height: 40px; line-height: 40px; text-align: center;"
+                 class="lnr lnr-cart"></div>
+        </div>
+        <div class="next-btn--mobile fulldim-width center-uu" onclick="next()">
+            <div class="center-u" id="cumpara">
+                <span class="text-pass">Pasul urmator</span>
+                <span class="lnr lnr-arrow-right"></span>
+            </div>
+        </div>
+    </header>
+    <header class="header-shop" th:attr="next=${s}">
+        <section class="m">
+            <div class="menu-opener" th:if="${s} == 2 or ${s} == 3" onclick="openMenu()">
+                <h4><span>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/slkvcfos.json"
+                            trigger="loop"
+                            colors="primary:#000000,secondary:#000000"
+                            style="width:45px;height:45px">
+                        </lord-icon>
+                </span> COSUL TAU</h4>
+            </div>
+        </section>
+        <section class="grid-header-center center-u ctrl">
+            <ul id="dotPlacer" class="numbers">
+                <li class="dot first-p" th:classappend="${s} == 1 ? 'active' : ''">
+                    <div class="after"></div>
+                    <a sec:authorize="isAnonymous()" href="/na/shop/1">Pasul 01</a>
+                    <a sec:authorize="isAuthenticated()" href="/shop/1">Pasul 01</a>
+                </li>
+                <li class="dot" th:classappend="${s} == 2 ? 'active' : ''" th:if="${s} >= 2">
+                    <div class="after"></div>
+                    <a sec:authorize="isAnonymous()" href="/na/shop/2">Pasul 02</a>
+                    <a sec:authorize="isAuthenticated()" href="/shop/2">Pasul 02</a>
+                </li>
+                <li class="dot" th:classappend="${s} == 3 ? 'active' : ''" th:if="${s} >= 3">
+                    <div class="after"></div>
+                    <a sec:authorize="isAnonymous()" href="/na/shop/3">Pasul 03</a>
+                    <a sec:authorize="isAuthenticated()" href="/shop/3">Pasul 03</a>
+                </li>
+                <li class="dot" th:classappend="${s} == 4 ? 'active' : ''" th:if="${s} >= 4">
+                    <div class="after"></div>
+                    <a sec:authorize="isAnonymous()" href="/na/shop/4">Pasul 04</a>
+                    <a sec:authorize="isAuthenticated()" href="/shop/4">Pasul 04</a>
+                </li>
+            </ul>
+            <section class="next">
+                <div class="next-btn--" onclick="next()">
+                    <div class="center-u" id="cumpara">
+                        Pasul urmator
+                        <span class="lnr lnr-arrow-right"></span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </header>
+</div>
+</body>
+</html>

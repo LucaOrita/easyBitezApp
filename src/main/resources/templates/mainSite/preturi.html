@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Preturi | Easy Bitez</title>
+
+    <!-- CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/user_defined.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/themify-icons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/nice-select.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/maicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/mobster.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/pret.css" async>
+    <style>
+        @media screen and (max-width: 1000px) {
+            .primary-btn.buy-index:hover {
+                transform: translate(-50%, -0.25em);
+            }
+        }
+
+        @media screen and (max-width: 605px) {
+            .store-food-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 10px;
+                grid-row-gap: 50px;
+            }
+
+            .description-cutie {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+
+            .add-bag.d-flex.align-items-center {
+                width: 154px;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-193599035-1">
+    </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27FWTMFWWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-27FWTMFWWF');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4342464632509246');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=4342464632509246&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+<div th:replace="fragments :: loadingScreen"></div>
+<div th:replace="fragments :: header_main"></div>
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb"
+         style="background: url('/img/banner/Wave-10s-1440px.svg') left no-repeat; background-size: cover; height: fit-content;">
+    <!--    <div class="layer"></div>-->
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center">
+            <div class="col-first">
+                <h1>Prețurile disponibile</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="/">Acasă<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="/preturi">Prețuri</a>
+                </nav>
+                <div class="add-bag d-flex align-items-center">
+                    <a class="primary-btn buy-index"
+                       href="/shop"
+                       style="background:white; line-height: 60px; color:#ff6c00;">
+                        Cumpără
+                        <span class="lnr lnr-arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+<!-- Start preturi Area -->
+<section class="section_gap">
+    <div class="store-food-grid">
+        <div class="item" id="item-carousel" th:each="box : ${boxes}" style="height:calc(100% + 16px);">
+            <img src="/img/boxes/cutie.png" style="width:100%">
+            <div class="spacer" style="height:10px"></div>
+            <h1 style="font-size: 22px;" th:text="${box.numeCutie}"></h1>
+            <div class="description-cutie" style="color:#2b2b2b;padding:10px 30px;padding-bottom:20px;font-size:15px;"
+                 th:text="${box.descriere}"></div>
+            <div class="al-c"
+                 style="left:50%;position:relative;transform:translateX(-50%);width: fit-content;bottom: 0px">
+                <i class="fa" style="padding:10px; background: #ffba00; border-radius:20px;color:white;"
+                   th:text="${box.pret} + ' lei'"></i>
+            </div>
+            <a class="primary-btn"
+               href="/shop"
+               style="background:#ff6c00; line-height: 40px; color:white; padding: 0 15px !important; margin-top: 10px;">
+                Cumpără
+
+            </a>
+        </div>
+    </div>
+</section>
+<!-- End preturi Area -->
+
+<div th:replace="fragments :: footer"></div>
+
+<script src="/js/vendor/jquery-2.2.4.min.js"></script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
+<script src="/js/jquery.sticky.js"></script>
+<script src="/js/set_header.js"></script>
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/js/deleteStorage.js"></script>
+<script>
+    $(document).ready(function(){
+        if (window.innerWidth > 509) {
+            $(".cutii").owlCarousel({
+                items: 3,
+                slideBy: 3,
+                center: true,
+                nav: true,
+                navText: ["<span class='lnr lnr-arrow-left' style='font-weight: 600;color:#ffba00'></span>","<span class='lnr lnr-arrow-right' style='font-weight: 600;color:#ffba00'></span>"],
+                dots: true,
+                loop: true,
+                // autoplay: 5000,
+                // autoplayHoverPause: true,
+                responsiveClass: true,
+                responsive: {
+                    1024: {
+                        items: 3,
+                        slideBy: 3
+                    },
+                    300: {
+                        items: 2,
+                        slideBy: 2,
+                        center: false,
+                    },
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

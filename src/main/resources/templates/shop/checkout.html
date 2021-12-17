@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="EasyBites">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <title>Easy Bitez | Shop | Checkout</title>
+    <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/card.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/shop_v3.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/shop_log.css" async>
+    <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .wraper .title-chapter {
+            color: white !important;
+        }
+
+        .header-shop {
+            transition: 0.3s;
+        }
+
+        #body1, #body2, #filters_and_shit_1, #filters_and_shit_2 {
+            transition: 0.3s;
+        }
+
+        [contenteditable] {
+            -webkit-user-select: text;
+            user-select: text;
+        }
+
+        .controller-sub-filt {
+            display: none;
+        }
+
+        .i {
+            height: 380px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 509px) {
+            .header-shop-mobile {
+                display: block;
+            }
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27FWTMFWWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-27FWTMFWWF');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4342464632509246');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=4342464632509246&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+<body>
+
+<div th:replace="fragments :: loadingScreen(c = 'notnull')"></div>
+<div th:replace="fragments :: header_checkout(pret = ${pret})"></div>
+
+<div class="slides curr">
+    <div class="wraper" id="body1" style="">
+        <div class="wraped-content-u" style="width: 95%;max-width:1000px;">
+            <div style="max-width:1000px;left:50%;position:relative;transform:translateX(-50%)">
+                <h1 class="title-chapter" id="date-range-1" style="text-align:center;">
+                    <lord-icon
+                            src="https://cdn.lordicon.com//uetqnvvg.json"
+                            trigger="loop"
+                            colors="primary:#ffffff,secondary:#ffffff"
+                            style="width:100px;height:100px">
+                    </lord-icon>
+                    <br>
+                    <span>Sumar Comandă</span>
+                </h1>
+            </div>
+            <div class="make-2-grid" style="display: block !important;">
+                <div class="left">
+                    <div class="container-l" style="width: 100%;height:fit-content;">
+                        <h3 class="title-chapter">
+                            <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                            Mâncarea aleasă de tine
+                        </h3>
+                        <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                        <div class="container-u" style="min-width:360px">
+                            <div class="order" style="color: black !important;">
+                                <div>
+                                    <h3 class=""><span id="day1" th:text="${dates_1}">(Marți - Sâmbătă)</span></h3>
+                                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                                    <div id="prima">
+                                        <h4 style="text-align:left"> Feluri principale </h4>
+                                        <div class="food-grid">
+                                            <div class='food' th:each="pic : ${pics_1}"
+                                                 th:style="'background: url(' + ${pic} + ');background-size: cover;'">
+                                                <span class='add-left-top nr' th:text="'x' + ${nrPers}"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spacer" style="height:30px;"></div>
+                                <div th:if="${days} == 7">
+                                    <h3 class=""><span id="day2" th:text="${dates_2}">(Marti - Sambata)</span></h3>
+                                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                                    <div id="doua">
+                                        <h4 style="text-align:left"> Feluri principale </h4>
+                                        <div class="food-grid">
+                                            <div class='food' th:each="pic : ${pics_2}"
+                                                 th:style="'background: url(' + ${pic} + ');background-size: cover;'">
+                                                <span class='add-left-top nr' th:text="'x' + ${nrPers}"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spacer" style="height:30px;"></div>
+                    <h3 class="title-chapter">
+                        <img src="/img/icons/cod.png" style="width:50px;height:50px;display: inline-block"/>
+                        Cod de reducere
+                    </h3>
+                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                    <div class="card mb-3"
+                         style="position:relative;left: 50%;transform: translateX(-50%);min-width:360px;height:fit-content">
+                        <div class="card-body">
+                            <form action="javascript:void(0)" method="post">
+                                <div class="form-group">
+                                    <label>Ai un cupon de reducere?</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control coupon" name="code"
+                                               placeholder="Codul de reducere">
+                                        <span class="input-group-append">
+                                    <button class="btn btn-primary btn-apply coupon"
+                                            style="background: rgba(255,186,0,1); color: white;">
+                                        Aplică!
+                                    </button>
+                                </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <h5 id="feedback" style="text-align: left"></h5>
+                            <h5 id="err_feedback" style="text-align: left;color:red;"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 class="title-chapter">
+                        <img src="/img/icons/detalii.png" style="width:50px;height:50px;display: inline-block"/>
+                        Datele tale personale
+                    </h3>
+                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                    <div class="order" id="livrarefacturare"
+                         style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                        <div class="container-u" style="padding: 20px;">
+                            <h3>Date de livrare</h3>
+                            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                            <p class="input-l" sec:authorize="isAnonymous()">Nume Prenume*:</p>
+                            <div sec:authorize="isAnonymous()" contenteditable="true" style="border: 1px solid black" id="n"
+                                 class="input-f nr" th:text="${ud_username}"></div>
+                            <p class="input-l">Email*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nume"
+                                 class="input-f nr" th:text="${ud_email}"></div>
+                            <p class="input-l">Număr de telefon*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nrTel"
+                                 class="input-f nr" th:text="${ud_telefon}"></div>
+                            <p class="input-l">Oraș*: <span
+                                    style="color:red;">(Livrările se fac doar în București)</span></p>
+                            <div style="border: 1px solid black" id="town" class="input-f adr">
+                                București
+                            </div>
+                            <p class="input-l">Sector*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="judet"
+                                 class="input-f adr" th:text="${ud_sector}"></div>
+                            <div class="make-2-grid order"
+                                 style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                                <div>
+                                    <p class="input-l">Strada*:</p>
+                                    <div contenteditable="true" style="border: 1px solid black" id="strada"
+                                         class="input-f adr" th:text="${ud_strada}"></div>
+                                </div>
+
+                                <div>
+                                    <p class="input-l">Număr*:</p>
+                                    <div contenteditable="true" style="border: 1px solid black" id="nrStrada"
+                                         class="input-f adr" th:text="${ud_nr}"></div>
+                                </div>
+                            </div>
+                            <p class="input-l">Detalii livrare*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="detaliiLiv"
+                                 class="input-f adr" th:text="${ud_adresa}"></div>
+                            <div class="cbx">
+                                <input id="cbx-detalii" checked style="border: 2px solid rgba(255,186,0,1)" type="checkbox"/>
+                                <label for="cbx"></label>
+                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                </svg>
+                                <span style="padding-left:34px;">Detaliile de livrare si facturare sunt aceleasi</span>
+                            </div>
+                        </div>
+                        <div class="container-u" id="facturare" style="padding: 20px;display:none;">
+                            <h3 id="text-on-toggle">Date de facturare</h3>
+                            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                            <p class="input-l" sec:authorize="isAnonymous()">Nume Prenume*:</p>
+                            <div sec:authorize="isAnonymous()" contenteditable="true" style="border: 1px solid black" id="n2"
+                                 class="input-f nr" th:text="${ud_username}"></div>
+                            <p class="input-l">Email*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nume2"
+                                 class="input-f nr" th:text="${ud_email}"></div>
+                            <p class="input-l">Număr de telefon*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nrTel2"
+                                 class="input-f nr" th:text="${ud_telefon}"></div>
+                            <p class="input-l">Oraș*: <span
+                                    style="color:red;">(Livrările se fac doar în București)</span></p>
+                            <div style="border: 1px solid black" id="town2" class="input-f adr">
+                                București
+                            </div>
+                            <p class="input-l">Sector*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="judet2"
+                                 class="input-f adr" th:text="${ud_sector}"></div>
+                            <div class="make-2-grid order"
+                                 style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                                <div>
+                                    <p class="input-l">Strada*:</p>
+                                    <div contenteditable="true" style="border: 1px solid black" id="strada2"
+                                         class="input-f adr" th:text="${ud_strada}"></div>
+                                </div>
+
+                                <div>
+                                    <p class="input-l">Număr*:</p>
+                                    <div contenteditable="true" style="border: 1px solid black" id="nrStrada2"
+                                         class="input-f adr" th:text="${ud_nr}"></div>
+                                </div>
+                            </div>
+                            <p class="input-l">Detalii livrare*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="detaliiLiv2"
+                                 class="input-f adr" th:text="${ud_adresa}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbx">
+                <input id="cbx" type="checkbox"/>
+                <label for="cbx"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <span style="padding-left:34px;color:white;">Sunt de acord cu Termenii și Condițiile EasyBites</span>
+            </div>
+            <div class="spacer"></div>
+            <div class="add-bag d-flex align-items-center">
+                <a id="buy-goods" class="primary-btn buy-index"
+                   href="#"
+                   style="background:white; line-height: 60px; color:#ff6c00;">
+                    Plătește
+                </a>
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/vendor/bootstrap.min.js"></script>
+<script sec:authorize="isAnonymous()" type="text/javascript" src="/js/na/shop_p4_na.js"></script>
+<script sec:authorize="isAuthenticated()" type="text/javascript" src="/js/shop_p4.js"></script>
+</body>
+</html>
