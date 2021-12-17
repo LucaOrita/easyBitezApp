@@ -22,7 +22,7 @@ public class AppApplication {
     private int serverPortHttps;
 //-------------------------------
 
-//hjhj
+
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(AppApplication.class);
         app.run(args);
