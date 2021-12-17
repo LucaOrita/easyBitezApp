@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "60c6882fe55e8b5191bf795c"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 14 portii de feluri principale",
+  "numeCutie": "Cutie Single de 7 zile",
+  "pret": 310,
+  "portii": 14,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "archer",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 1,
+  "days": 7
+},{
+  "_id": {
+    "$oid": "60c6889ae55e8b5191bf795d"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 6 portii de feluri principale",
+  "numeCutie": "Cutie Single de 3 zile",
+  "pret": 145,
+  "portii": 6,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "giant",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 1,
+  "days": 3
+},{
+  "_id": {
+    "$oid": "60c688b2e55e8b5191bf795e"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 8 portii de feluri principale",
+  "numeCutie": "Cutie Single de 4 zile",
+  "pret": 180,
+  "portii": 8,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "goblin",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 1,
+  "days": 4
+},{
+  "_id": {
+    "$oid": "60c688e7e55e8b5191bf795f"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 28 portii de feluri principale",
+  "numeCutie": "Cutie Family de 7 zile",
+  "pret": 505,
+  "portii": 28,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "barbarian",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 2,
+  "days": 7
+},{
+  "_id": {
+    "$oid": "60c6892ae55e8b5191bf7960"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 12 portii de feluri principale",
+  "numeCutie": "Cutie Family de 3 zile",
+  "pret": 240,
+  "portii": 12,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "archer",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 2,
+  "days": 3
+},{
+  "_id": {
+    "$oid": "60c68939e55e8b5191bf7961"
+  },
+  "pic": "null",
+  "descriere": "Cutie cu 16 portii de feluri principale",
+  "numeCutie": "Cutie Family de 4 zile",
+  "pret": 305,
+  "portii": 16,
+  "micdejun": 0,
+  "gustari": 0,
+  "superClass": "wizard",
+  "isLive": 1,
+  "oldPret": 0,
+  "nrPers": 2,
+  "days": 4
+}]

@@ -1,0 +1,166 @@
+[{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c97"
+  },
+  "reducePercentage": 10,
+  "codeID": "easy10",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c9c"
+  },
+  "reducePercentage": 15,
+  "codeID": "oracudora15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c9d"
+  },
+  "reducePercentage": 15,
+  "codeID": "rvegetariene15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+  "$oid": "60eb61d916993246fdd39c9e"
+  },
+  "reducePercentage": 15,
+  "codeID": "jurnaldulce15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "7a0d37e70c86ffaf5c1d5e8d"
+  },
+  "reducePercentage": 15,
+  "codeID": "sophie15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c9f"
+  },
+  "reducePercentage": 15,
+  "codeID": "alinaedu15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39d00"
+  },
+  "reducePercentage": 30,
+  "codeID": "easy30",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c98"
+  },
+  "reducePercentage": 0,
+  "codeID": "easyalb",
+  "type": "",
+  "menu_type": "offerFoodForPack",
+  "offerOfBox": "",
+  "scope": "family",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c99"
+  },
+  "reducePercentage": 0,
+  "codeID": "easyrosu",
+  "type": "",
+  "menu_type": "offerFoodForPack",
+  "offerOfBox": "",
+  "scope": "family",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c9a"
+  },
+  "reducePercentage": 0,
+  "codeID": "easyrose",
+  "type": "",
+  "menu_type": "offerFoodForPack",
+  "offerOfBox": "",
+  "scope": "family",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c9b"
+  },
+  "reducePercentage": 0,
+  "codeID": "easydesert",
+  "type": "",
+  "menu_type": "offerFoodForPack",
+  "offerOfBox": "",
+  "scope": "single",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c90"
+  },
+  "reducePercentage": 15,
+  "codeID": "gusturoi15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c91"
+  },
+  "reducePercentage": 0,
+  "codeID": "ong30",
+  "type": "",
+  "menu_type": "offerFoodForPack",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c92"
+  },
+  "reducePercentage": 15,
+  "codeID": "emelicious15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c93"
+  },
+  "reducePercentage": 30,
+  "codeID": "cumpara30",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+}]

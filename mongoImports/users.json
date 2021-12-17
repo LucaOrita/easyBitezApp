@@ -1,0 +1,59 @@
+[
+  {
+    "_id": {
+      "$oid": "611bb983d9f09a055ab6360f"
+    },
+    "username": "sudo",
+    "email": "sudo",
+    "password": "$2a$10$x0n1aYHhw/jMPSxqA/JylOmnT5e.TBnjs5SzeY4u7OwEASez.VSIy",
+    "telefon": " ",
+    "adresa": "",
+    "oras": "",
+    "sector": "",
+    "strada": "",
+    "nr": "",
+    "tutorial": 0,
+    "role": "ROLE_super_admin",
+    "isActivated": true,
+    "uuid": "",
+    "_class": "ro.easybites.app.model.SimpleUser"
+  },
+  {
+    "_id": {
+      "$oid": "60e83f9f563ddc363eee22d5"
+    },
+    "username": "lucaorita",
+    "email": "lucaorita",
+    "password": "$2a$04$Ihgir3ypeqCExO8G3b1JmeWSWdZKqeCA1s7S.tphafAAL66AT29iq",
+    "telefon": "",
+    "adresa": "",
+    "oras": "",
+    "sector": "",
+    "strada": "",
+    "nr": "",
+    "tutorial": 0,
+    "role": "ROLE_admin",
+    "isActivated": true,
+    "uuid": "",
+    "_class": "ro.easybites.app.model.SimpleUser"
+  },
+  {
+    "_id": {
+      "$oid": "60e8aba23084c6076ad5cf52"
+    },
+    "username": "vladcamarasoiu",
+    "email": "vladcamarasoiu",
+    "password": "$2a$04$Ihgir3ypeqCExO8G3b1JmeWSWdZKqeCA1s7S.tphafAAL66AT29i",
+    "telefon": "",
+    "adresa": "",
+    "oras": "",
+    "sector": "",
+    "strada": "",
+    "nr": "",
+    "tutorial": 0,
+    "role": "ROLE_admin",
+    "isActivated": true,
+    "uuid": "",
+    "_class": "ro.easybites.app.model.SimpleUser"
+  }
+]
