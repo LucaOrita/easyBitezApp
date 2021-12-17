@@ -1,0 +1,102 @@
+form button, form .question label, form .question input {
+    -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+form .question {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+}
+
+.banner-area.organic-breadcrumb:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.go_home {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background: white;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-right: 10px;
+    top: 50%;
+    color: #ffba00;
+    font-weight: 600;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+form .question label {
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    /*color: #ffba00;*/
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: block;
+    position: absolute;
+    margin-top: -42.5px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+form .question input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: none;
+    border: 1px solid #ffba00;
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: #ffba00;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+}
+
+form .question input:focus, form .question input:-webkit-autofill {
+    outline: none;
+    background: -webkit-gradient(linear, left top, right top, from(#ffba00), to(#ff6c00));
+    background: -o-linear-gradient(left, #ffba00 0%, #ff6c00 100%);
+    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);;
+    color: white;
+    margin-top: 30px;
+}
+
+form .question input:valid {
+    margin-top: 30px;
+}
+
+form .question input:focus ~ label, form .question input:-webkit-autofill ~ label {
+    -ms-transform: translate(0, -35px);
+    -webkit-transform: translate(0, -35px);
+    transform: translate(0, -35px);
+}
+
+form .question input:valid ~ label, form .question input:-webkit-autofill ~ label {
+    text-transform: uppercase;
+    font-style: italic;
+    -ms-transform: translate(5px, -35px) scale(0.6);
+    -webkit-transform: translate(5px, -35px) scale(0.6);
+    transform: translate(5px, -35px) scale(0.6);
+}

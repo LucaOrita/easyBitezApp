@@ -1,0 +1,395 @@
+body {
+    overflow-x: hidden;
+}
+
+.wraper {
+    padding-top: 50px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+}
+
+.layer {
+    background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(48%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 1)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#titlu-reteta {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+}
+
+.content-scroller hr {
+    width: 80%;
+}
+
+.ingredients-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.ingredients-grid > div {
+    height: 200px;
+}
+
+#pic-rete {
+    width: 100%;
+    height: 380px;
+}
+
+.timer {
+    position: relative;
+    background: #ffba00;
+    padding: 5px;
+    border-radius: 30px;
+    color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-transform: translate(-20%, -50%);
+    -ms-transform: translate(-20%, -50%);
+    transform: translate(-20%, -50%);
+    z-index: 10;
+}
+
+.inner-time {
+    padding: 5px;
+    /*width: fit-content;*/
+    border-radius: 20px;
+    background: #ffba00;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    -webkit-transform: translate(20%, -120%);
+    -ms-transform: translate(20%, -120%);
+    transform: translate(20%, -120%);
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+h3, hr, p {
+    /*padding:0px 40px;*/
+}
+
+.content-scroller {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+#flit:nth-child(1) {
+    margin-bottom: 5px !important;
+}
+
+.controller-sub-filt {
+    padding-left: 30px !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+}
+
+.lnr-cross:before {
+    font-size: 25px;
+}
+
+.content-reteta {
+    width: 630px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+.content-overlay {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+/* total width */
+.content-overlay::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+.content-overlay::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* scrollbar itself */
+.content-overlay::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.content-overlay::-webkit-scrollbar-button {
+    display: none;
+}
+
+.close-ov {
+    z-index: 10000;
+    text-align: center;
+    width: 34px;
+    color: black;
+    height: 34px;
+    padding: 10px;
+    border-radius: 500px;
+    position: fixed;
+    left: calc(50% + 315px);
+    -webkit-transform: translateX(-160%);
+    -ms-transform: translateX(-160%);
+    transform: translateX(-160%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+    .close-ov {
+        left: 100%;
+    }
+}
+
+.close-ov > span {
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: none;
+}
+
+#filt > p {
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.currentFilt {
+    color: #ffba00;
+}
+
+.wraped-content-u {
+    width: 70%;
+    max-width: 1200px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding-bottom: 100px;
+}
+
+.container-u {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.container-u h3 {
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.container-u .food-pannel h3, h4 {
+    color: black !important;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.container-l {
+    width: 100%;
+    height: 100%;
+}
+
+.container-l:nth-of-type(2) {
+    -webkit-filter: drop-shadow(0 4px 12px rgba(56, 51, 64, 0.15));
+    filter: drop-shadow(0 4px 12px rgba(56, 51, 64, 0.15));
+}
+
+ł
+.title-grid-filter {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 30px;
+    grid-template-columns: auto 30px;
+}
+
+.make-2-grid {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 20% 30px 80% !important;
+    grid-template-columns: 20% 80% !important;
+    -ms-grid-rows: 100%;
+    grid-template-rows: 100%;
+    grid-gap: 30px;
+    width: 100%;
+}
+
+.make-2-grid > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.make-2-grid > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.store-food-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+}
+
+.store-food-grid > .store-el {
+    -webkit-box-shadow: 0 4px 12px rgba(56, 51, 64, 0.15);
+    box-shadow: 0 4px 12px rgba(56, 51, 64, 0.15);
+    height: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: white;
+}
+
+.store-el img {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.item {
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px !important;
+    color: black !important;
+    text-align: center;
+    border: 6px solid #fff;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+@media screen and (max-width: 557px) {
+
+    .card {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .card .text h1 {
+        font-size: 17px !important;
+    }
+
+    .card .text .fa {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .card {
+        display: block;
+    }
+
+    .card .text h1 {
+        font-size: 25px !important;
+    }
+
+    .card .text .fa {
+        font-size: inherit;
+    }
+
+}
+
+@media screen and (max-width: 476px) {
+
+}
+
+@media screen and (max-width: 450px) {
+
+    #pic-rete {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .content-reteta {
+        min-width: 0px;
+        width: 100%;
+    }
+
+    .content-overlay::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 755px) {
+
+    .make-2-grid {
+        display: block !important;
+    }
+
+    .make-2-grid > .container-l {
+        padding-bottom: 20px;
+        width: 100% !important;
+        position: relative !important;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .controller-sub-filt {
+        padding-left: 0px !important;
+    }
+
+}

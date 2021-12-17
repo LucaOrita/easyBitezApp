@@ -1,0 +1,282 @@
+.store-food-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 50px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 0;
+    width: 85%;
+    max-width: 1300px;
+}
+
+.box_n {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box_n > * {
+    flex: 1 1 80px;
+    background-color: green;
+    margin: 10px;
+    max-width: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px !important;
+    color: black !important;
+    text-align: center;
+    border: 6px solid #fff;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    width: 85%;
+    max-width: 1300px;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    background: #ffba00;
+    color: white;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        color: #ff6c00;
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+.clash-card {
+    background: white;
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 19px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    z-index: 9999;
+}
+
+.clash-card__image {
+    position: relative;
+    height: 230px;
+    margin-bottom: 35px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.clash-card__image--no-img img, .clash-card__image--barbarian img, .clash-card__image--archer img, .clash-card__image--giant img, .clash-card__image--goblin img, .clash-card__image--wizard img {
+    width: 300px;
+    position: absolute;
+    top: -15px;
+    left: -20px;
+}
+
+.clash-card__image--barbarian {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+
+.clash-card__image--archer {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+
+.clash-card__image--giant {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+
+.clash-card__image--goblin {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+
+.clash-card__image--wizard {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+
+.clash-card__level {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.clash-card__level {
+    color: #ffba00;
+}
+
+.clash-card__unit-name {
+    font-size: 26px;
+    line-height: 30px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.clash-card__unit-stats--barbarian {
+    background: #ffba00;
+}
+
+.clash-card__unit-stats--barbarian .one-third {
+    border-right: 1px solid #BD7C2F;
+}
+
+.clash-card__unit-stats--archer {
+    background: #ffba00;
+}
+
+.clash-card__unit-stats--archer .one-third {
+    border-right: 1px solid #D04976;
+}
+
+.clash-card__unit-stats--giant {
+    background: #ffba00;
+}
+
+.clash-card__unit-stats--giant .one-third {
+    border-right: 1px solid #d69c00;
+}
+
+.clash-card__unit-stats--goblin {
+    background: #ffba00;
+}
+
+.clash-card__unit-stats--goblin .one-third {
+    border-right: 1px solid #e0a400;
+}
+
+.clash-card__unit-stats--wizard {
+    background: #ffba00;
+}
+
+.clash-card__unit-stats--wizard .one-third {
+    border-right: 1px solid #e0a400;
+}
+
+.clash-card__unit-stats {
+    color: white;
+    font-weight: 700;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.clash-card__unit-stats .one-third {
+    width: 50%;
+    float: left;
+    padding: 20px 15px;
+}
+
+.clash-card__unit-stats sup {
+    position: absolute;
+    bottom: 4px;
+    font-size: 45%;
+    margin-left: 2px;
+}
+
+.clash-card__unit-stats .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.clash-card__unit-stats .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.clash-card__unit-stats .no-border {
+    border-right: none;
+}
+Ò
+.clearfix:after {
+    /*visibility: hidden;*/
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
