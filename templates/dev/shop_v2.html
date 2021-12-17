@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>EasyBites | Shop</title>
+
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="scss/main.css" async>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/shop_v3.css">
+    <link rel="stylesheet" href="css/shop_log.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-193599035-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-193599035-1');
+
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'Vrei sa iesi de pe pagina? Comanda ta nu va fi salvata!';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+        });
+    </script>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '142806894510392');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=142806894510392&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+<div th:replace="/mainSite/UI/fragments :: loadingScreen"></div>
+<div th:replace="/mainSite/UI/fragments :: header_shop"></div>
+<?php
+        if(!isset($_SESSION['IDuser']))
+            echo '
+            <div class="option-login">
+<div class="login_form_inner" style="padding-bottom:115px;">
+    <h3>Logare</h3>
+    <div class="form row login_form" action="" method="POST" id="contactForm">
+        <div style="width:100%;height:184px">
+            <div class="question" style="margin-top:10px;">
+                <input type="text" name="user" id="user" required/>
+                <label>Email</label>
+            </div>
+            <div class="question" style="margin-top:20px">
+                <input type="password" name="pass" id="pass" required/>
+                <label>Parola</label>
+            </div>
+        </div>
+        <h4 id="err-login" style="color: red;text-align:center;width:100%;padding-bottom: 20px;"></h4>
+        <div class="col-md-12 form-group">
+            <button id="login" type="submit" value="submit" name="login" class="login-btn top-border-30 bottom-border-30">Log In</button>
+            <a id="login-no-acc" href="#">Continuă fără cont</a>
+        </div>
+    </div>
+</div>
+<div></div>
+</div>
+';
+?>
+<div class="not-available" style="">
+    <div>
+        <h1 style="text-align:center;">
+            Te rugăm să ții telefonul drept, pentru o experiență mult mai bună <br><br> Îți mulțumim!
+        </h1>
+    </div>
+</div>
+<div class="overlay" id="generatorReteta">
+    <!--<div class="content-reteta">-->
+    <!--    <div class="close-ov" onclick="close_ovl()" style="text-align:center;margin-top:10px;background:#ffba00; line-height:15px;font-size:30px;color:white;">&times;</div>-->
+    <!--    <div class="content-overlay">-->
+    <!--        <div class="content-scroller" id="generatorReteta">-->
+
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!--<div class="addBTN" id="addBTN_large" style="position: fixed;">-->
+    <!--       Adaugă-->
+    <!--   </div>-->
+</div>
+<div class="main">
+    <div class="slider" id="slider">
+        <div class="slides curr">
+            <div class="wraper">
+                <div class="wraped-content-u">
+                    <h3 class="title-chapter"><span style="padding-right:5px;" class="lnr lnr-calendar-full"></span> Alege momentul livrarii</h3>
+                    <div class="border-top my-3"></div>
+                    <div class="alert alert-danger" style="width:fit-content; border-radius:20px;left:50%;position:relative;transform:translateX(-50%);">
+                        <img src="/img/icons/atention.png" style="display:inline-block; width: 35px;" />
+                        <span style="line-height:35px;height:100%;">Pentru orice cutie sunt 2 livrari, pentru a mentine mancarea proaspata pentru tine!</span>
+                    </div>
+                    <div class="row" style="max-width:670px;left:50%;position:relative;transform:translateX(-50%);">
+                        <div class="col-sm">
+                            <div class="data-m" onclick="setDate('<?php echo $data1; ?>', 0, '<?php echo $prima_zi; ?>')">
+                                <div class="info">
+                                    <h4>Prima livrare - <?php echo $prima_zi; ?></h4>
+                                    <p style="margin-bottom: 0px"> - <?php echo $data1; ?> - </p> <br>
+                                    <h4>A doua livrare - <?php echo $a_doua_zi; ?></h4>
+                                    <p style="margin-bottom: 0px"> - <?php echo $data2; ?> - </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="data-m" onclick="setDate('<?php echo $data2; ?>', 1, '<?php echo $a_doua_zi; ?>')">
+                                <div class="info">
+                                    <h4>Prima livrare - <?php echo $a_doua_zi; ?></h4>
+                                    <p style="margin-bottom: 0px"> - <?php echo $data2; ?> - </p> <br>
+                                    <h4>A doua livrare - <?php echo $prima_zi; ?></h4>
+                                    <p style="margin-bottom: 0px"> - <?php echo $data2; ?> - </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <h3 class="title-chapter">
+                        <span style="padding-right:5px;" class="lnr lnr-inbox"></span>
+                        Alege cutia potrivita
+                    </h3>
+                    <div class="border-top my-3"></div>
+                    <p style="text-align:center;display:none;">
+                        <span style="padding-right:5px;" class="lnr lnr-arrow-left"></span>
+                        Apucati cu mouce-ul si glisati pe carusel
+                        <span style="padding-left:5px;" class="lnr lnr-arrow-right"></span>
+                    </p>
+                    <div class="cutii">
+                        <?php
+                                $IDB = array();
+                                $PretB = array();
+                                $iterator_idb = 0;
+                                foreach($boxes as $box){
+
+                                    $row = json_decode($box, true);
+                                    $IDB[$iterator_idb] = $row['IDB'];
+                                    $PretB[$iterator_idb] = $row['pret'];
+
+                                    echo '
+                                    <div class="main-wrapper '.$row['IDB'].'" onclick="boxb(\''.$row["IDB"].'\',1)">
+                        <div class="clash-card">
+                            <div class="clash-card__image clash-card__image--'.$row['class'].'">
+                                <img src="'.$row['pic'].'" alt="box_idea" />
+                            </div>
+                            <div class="clash-card__level clash-card__level">'.$row['pret'].' lei</div>
+                            <div class="clash-card__unit-name">'.$row['numeCutie'].'</div>
+                            <div class="clash-card__unit-description">
+                                '.$row['descriere'].'
+                            </div>
+
+                            <div class="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                                <div class="one-third">
+                                    <div class="stat">'.$row['portii'].'</sup></div>
+                                    <div class="stat-value">Portii</div>
+                                </div>
+
+                                <div class="one-third">
+                                    <div class="stat">'.$row['gustari'].'</div>
+                                    <div class="stat-value">Gustari</div>
+                                </div>
+
+                                <div class="one-third no-border">
+                                    <div class="stat">'.$row['micdejun'].'</div>
+                                    <div class="stat-value">Mic dejun</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    ';
+                    $iterator_idb++;
+                    }
+
+                    $_SESSION['bids'] = $IDB;
+                    $_SESSION['pret'] = $PretB;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slides">
+        <?php if(isMobileDevice()) echo '<div onclick="open_filt_m1()" class="float_btn">
+        <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff" style="width:30px;height:30px;left:50%;top:50%;transform:translate(-50%,-50%);position:relative">
+        </lord-icon>
+    </div>'; ?>
+    <?php if(isMobileDevice())
+                    echo '
+                <div class="container-l" id="filters_and_shit_1" style="transform:translateX(100%);width:100%;height:100%;position:fixed; z-index:150;background:rgba(0,0,0,0.7);padding:20px;overflow-y: auto;">
+    <div style="height:fit-content; width:100%;padding-top:20px;">
+        <div class="title-grid-filter">
+            <h3 class="title-chapter" id="date-range-1">
+                <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                Filtre
+            </h3>
+            <h3 class="title-chapter">
+                <span onclick="close_flit_m1()" style="padding-right:5px;" class="lnr lnr-cross"></span>
+            </h3>
+        </div>
+        <div class="border-top my-3"></div>
+        <div class="container-u" id="filt" style="background:white; overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+            <p class="controller-filt" onclick="mancare1_m()">Feluri principale</p>
+            <p class="controller-sub-filt m" onclick="showCategory(\'pui\',0,0)">
+                <span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/pui.png\' style="width:48px;height:48px"> Pui</p>
+            <p class="controller-sub-filt m" onclick="showCategory(\'vita\',1,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/vita.png\' style="width:48px;height:48px">
+                Vita</p>
+            <p class="controller-sub-filt m" onclick="showCategory(\'porc\',2,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/porc.png\' style="width:48px;height:48px">
+                Porc
+            </p>
+            <p class="controller-sub-filt m" onclick="showCategory(\'paste\',3,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/paste.png\' style="width:48px;height:48px">
+                Paste
+            </p>
+            <p class="controller-sub-filt m" onclick="showCategory(\'vegetariene\',4,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/vegetariene.png\' style="width:48px;height:48px">
+                Vegetariene
+            </p>
+            <p class="controller-filt" onclick="gustari1_m()">Gustari</p>
+            <p class="controller-sub-filt g" onclick="showCategory(\'batoane\',5,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/batoane.png\' style="width:48px;height:48px">
+                Batoane
+            </p>
+            <p class="controller-filt" onclick="micdejun1_m()">Mic dejun</p>
+            <p class="controller-sub-filt mi" onclick="showCategory(\'cereale\',6,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                <img src=\'/img/icons/cereale.png\' style="width:48px;height:48px">
+                Cereale
+            </p>
+        </div>
+        <div class="spacer"></div>
+        <div class="menu" style=""><!--position:sticky;top:120px;-->
+            <h3 class="title-chapter" id="date-range-1">
+                <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                Meniul tau <br> <span id="day1">(Marti - Sambata)</span>
+            </h3>
+            <div class="border-top my-3"></div>
+            <div class="container-u" id="prima" style="overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+                <h4 style="text-align:left"> Feluri principale </h4>
+                <div class="food-grid" id="firstFood">
+
+                </div>
+                <div id="spawnMic">
+
+                </div>
+                <div id="spawnGust">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+'; ?>
+<div class="wraper" id="body1" style="">
+    <div class="wraped-content-u" style="width: 95%;">
+        <div class="make-2-grid" style="width:1200px;display:block;left:50%;position:relative;transform:translateX(-50%)">
+            <h1 class="title-chapter" id="date-range-1" style="text-align:center;">
+                <lord-icon
+                        src="https://cdn.lordicon.com//uetqnvvg.json"
+                        trigger="loop"
+                        colors="primary:#ffffff,secondary:#ffffff"
+                        style="width:100px;height:100px">
+                </lord-icon>
+                Alege retetele pentru <b style="color:white">PRIMA LIVRARE</b>
+            </h1>
+            <?php if(!isMobileDevice())
+                                echo '
+                            <div class="container-l">
+            <h3 class="title-chapter" id="date-range-1">
+                <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                Filtre
+            </h3>
+            <div class="border-top my-3"></div>
+            <div class="container-u" id="filt" style="background:white; overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+                <p class="controller-filt" onclick="mancare1()">Feluri principale</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'pui\',0,0)">
+                    <span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/pui.png\' style="width:48px;height:48px"> Pui</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'vita\',1,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/vita.png\' style="width:48px;height:48px">
+                    Vita</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'porc\',2,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/porc.png\' style="width:48px;height:48px">
+                    Porc
+                </p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'paste\',3,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/paste.png\' style="width:48px;height:48px">
+                    Paste
+                </p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'vegetariene\',4,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/vegetariene.png\' style="width:48px;height:48px">
+                    Vegetariene
+                </p>
+                <p class="controller-filt" onclick="gustari1()">Gustari</p>
+                <p class="controller-sub-filt g" onclick="showCategory(\'batoane\',5,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/batoane.png\' style="width:48px;height:48px">
+                    Batoane
+                </p>
+                <p class="controller-filt" onclick="micdejun1()">Mic dejun</p>
+                <p class="controller-sub-filt mi" onclick="showCategory(\'cereale\',6,0)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/cereale.png\' style="width:48px;height:48px">
+                    Cereale
+                </p>
+            </div>
+            <div class="spacer"></div>
+            <!--<div class="menu" style="">
+                <h3 class="title-chapter" id="date-range-1">
+                    <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                    Meniul tau <br> <span id="day1">(Marti - Sambata)</span>
+                </h3>
+                <div class="border-top my-3"></div>
+                <div class="container-u" id="prima" style="overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+                    <h4 style="text-align:left"> Feluri principale </h4>
+                    <div class="food-grid" id="firstFood">
+
+                    </div>
+                    <div id="spawnMic">
+
+                    </div>
+                    <div id="spawnGust">
+
+                    </div>
+                </div>
+                <div  class="next-btn" onclick="nextSlide()">
+                    <div class="center-u">
+                        Următorul pas
+                        <span class="lnr lnr-arrow-right"></span>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        '; ?>
+        <div class="container-l" style="width: calc(100% - 30px);">
+            <?php echo isMobileDevice() ? "<h2 style='text-align:center'>Prima livrare</h2>" : ""; ?>
+            <div class="title-grid-filter">
+                <h3 class="title-chapter">
+                    <span style="padding-right:5px;" class="lnr lnr-book"></span>
+                    Retetele disponibile
+                </h3>
+                <h3>
+                </h3>
+            </div>
+            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+            <div class="container-u" style="background:transparent">
+                <div class="food-pannel" sytle="overflow-x:hidden; overflow-y: auto;">
+                    <div class="store-food-grid" id="first">
+                        <?php //
+                                                for($i = 0; $i < count($data); $i++ ){
+
+                                                    if($data[$i]["referinta"] == 0){
+
+                                                        $desc = $data[$i]["descriere"];
+                                                        $fel = $data[$i]["fel"];
+                                                        $cat = strtolower($data[$i]["categorie"]);
+                                                        $fef_short = $fel == "mancare" ? "m" : ($fel == "gustari" ? "g" : "mi");
+                                                        $time = $data[$i]["durata"];
+                                                        $s = $data[$i]["retetaID"];
+                                                        $f = json_decode($data[$i]["retetaPic"], true)[0];
+                                                        $m = $data[$i]["retetaName"];
+                                                        $k = $data[$i]["premium"] == 1 ? 'style="border: 10px solid #d4af37;"' : '';
+                                                        $price = strtr($data[$i]["in_plus"],'.',',');
+                                                        $div = '';
+                                                        $styleTimer = '';
+                                                        $style="top:-35px;position:relative";
+                                                        if($k != ''){
+                                                            $div="<div style='border-radius:10px;width:fit-content;background:#d4af37;color:white;padding:5px;left:50%;position:relative;transform:translateX(-50%);top:-20px;'>+{$price} lei</div>";
+                    $style="top:-60px;position:relative";
+                    $styleTimer = "transform: translate(-40%, -170%)";
+                    }
+
+                    $options = "<li data-value='0' onclick='addToFood(\"{$s}\",\"{$s}\",0,1)' class='option selected'>Original</li>";
+
+                    $stars="";
+                    $integerStar = intval($data[$i]["review"]);
+                    $pl;
+                    for($pl = 1; $pl <= $integerStar; $pl++){
+                    $stars .= "<span class='icon mai-star'></span>";
+                    }
+                    if(($data[$i]["review"] - $integerStar) >= 0.3 && ($data[$i]["review"] - $integerStar) <= 0.7){
+                    $stars .= "<span class='icon mai-star-half'></span>";
+                    $pl++;
+                    } else if(($data[$i]["review"] - $integerStar) > 0.7) {
+                    $stars .= "<span class='icon mai-star'></span>";
+                    $pl++;
+                    }
+                    if($pl != 5)
+                    while($pl <= 5){
+                    $stars .= "<span class='mai-star-outline'></span>";
+                    $pl++;
+                    }
+
+                    echo "
+                    <div class='card ${fel} ${cat}' onclick='openReteta(\"$s\", 0, \"${fef_short}\")' id='prm{$s}'>
+                        <div class='added' id='add0${s}'>
+                            <svg id='successAnimation' xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'>
+                                <path id='successAnimationResult' fill='#D8D8D8' d='M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z'/>
+                                <circle id='successAnimationCircle' cx='35' cy='35' r='24' stroke='#979797' stroke-width='2' stroke-linecap='round' fill='transparent'/>
+                                <polyline id='successAnimationCheck' stroke='#979797' stroke-width='2' points='23 34 34 43 47 27' fill='transparent'/>
+                            </svg>
+                            <br>
+                            <p style='text-align:center; top: 60%;position: absolute;'>Adăugat!</p>
+                        </div>
+                        <div class='header'>
+                            <img src='{$f}' style='height:100%;width:100%;border-radius:20px;object-fit: cover;'/>
+                        </div>
+                        <div class='text'>
+                            <div style='position:relative;padding-bottom:40px;'>
+                                <h1 class='food'>{$m}</h1>
+                                <div style='left:50%;position:relative;transform:translateX(-50%);width:fit-content;'>
+                                    <i class='fa' style='display:".($time == "" ? 'none' : "inline-block").(isMobileDevice() ? ";padding:7px;" : "")."'>
+                                    <img src='/img/icons/clock.png' style='width:32px;height:32px;".(isMobileDevice() ? "display:none" : "")."'/>
+                                    {$time}
+                                    </i>
+                                    <i class='fa'>
+                                        <img src='/img/icons/{$cat}-white.png' style='width:32px;height:32px;'/>
+                                        <span class='type'></span>
+                                    </i>
+                                </div>
+                                <div class='descriere-card' style='color:#777777;padding:10px 30px;font-size:15px;'>{$desc}</div>
+                            </div>
+                            <div class='addBTN' style='' onclick='addCart(0, \"{$s}\", \"{$fef_short}\", event)'>Adauga</div>
+                        </div>
+                    </div>
+                    ";
+                    }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="slides">
+    <?php if(isMobileDevice()) echo '<div onclick="open_filt_m2()" class="float_btn">
+    <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff" style="width:30px;height:30px;left:50%;top:50%;transform:translate(-50%,-50%);position:relative">
+    </lord-icon>
+</div>'; ?>
+<?php if(isMobileDevice())
+                    echo '
+                <div class="container-l" id="filters_and_shit_2" style="transform:translateX(100%);width:100%;height:100%;position:fixed; z-index:150;background:rgba(0,0,0,0.7);padding:20px;overflow-y: auto;">
+<div style="width:100%;height:fit-content;padding-top:20px;">
+    <div class="title-grid-filter">
+        <h3 class="title-chapter" id="date-range-1">
+            <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+            Filtre
+        </h3>
+        <h3 class="title-chapter">
+            <span onclick="close_flit_m2()" style="padding-right:5px;" class="lnr lnr-cross"></span>
+        </h3>
+    </div>
+    <div class="border-top my-3"></div>
+    <div class="container-u" id="filt" style="background:white; overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+        <p class="controller-filt" onclick="mancare2_m()">Feluri principale</p>
+        <p class="controller-sub-filt m" onclick="showCategory(\'pui\',0,1)">
+            <span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/pui.png\' style="width:48px;height:48px"> Pui</p>
+        <p class="controller-sub-filt m" onclick="showCategory(\'vita\',1,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/vita.png\' style="width:48px;height:48px">
+            Vita</p>
+        <p class="controller-sub-filt m" onclick="showCategory(\'porc\',2,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/porc.png\' style="width:48px;height:48px">
+            Porc
+        </p>
+        <p class="controller-sub-filt m" onclick="showCategory(\'paste\',3,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/paste.png\' style="width:48px;height:48px">
+            Paste
+        </p>
+        <p class="controller-sub-filt m" onclick="showCategory(\'vegetariene\',4,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/vegetariene.png\' style="width:48px;height:48px">
+            Vegetariene
+        </p>
+        <p class="controller-filt" onclick="gustari2_m()">Gustari</p>
+        <p class="controller-sub-filt g" onclick="showCategory(\'batoane\',5,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/batoane.png\' style="width:48px;height:48px">
+            Batoane
+        </p>
+        <p class="controller-filt" onclick="micdejun2_m()">Mic dejun</p>
+        <p class="controller-sub-filt mi" onclick="showCategory(\'cereale\',6,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+            <img src=\'/img/icons/cereale.png\' style="width:48px;height:48px">
+            Cereale
+        </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="menu" style=""><!--position:sticky;top:120px;-->
+        <h3 class="title-chapter">
+            <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+            Meniul tau <br> <span id="day2">(Marti - Sambata)</span>
+        </h3>
+        <div class="border-top my-3"></div>
+        <div class="container-u" id="doua" style="overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+            <h4 style="text-align:left"> Feluri principale </h4>
+            <div class="food-grid" id="firstFood">
+
+            </div>
+            <div id="spawnMic">
+
+            </div>
+            <div id="spawnGust">
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+'; ?>
+<div class="wraper" id="body2" style="">
+    <div class="wraped-content-u" style="width: 95%;" id="trialIfNot">
+        <div class="make-2-grid" style="width:1200px;display:block;left:50%;position:relative;transform:translateX(-50%)">
+            <h1 class="title-chapter" id="date-range-1" style="text-align:center;">
+                <lord-icon
+                        src="https://cdn.lordicon.com//uetqnvvg.json"
+                        trigger="loop"
+                        colors="primary:#ffffff,secondary:#ffffff"
+                        style="width:100px;height:100px">
+                </lord-icon>
+                Alege retetele pentru <b style="color:white">A DOUA LIVRARE</b>
+            </h1>
+            <?php if(!isMobileDevice())
+                                echo '
+                            <div class="container-l">
+            <h3 class="title-chapter" id="date-range-1">
+                <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                Filtre
+            </h3>
+            <div class="border-top my-3"></div>
+            <div class="container-u" id="filt" style="background:white; overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+                <p class="controller-filt" onclick="mancare2()">Feluri principale</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'pui\',0,1)">
+                    <span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/pui.png\' style="width:48px;height:48px"> Pui</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'vita\',1,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/vita.png\' style="width:48px;height:48px">
+                    Vita</p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'porc\',2,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/porc.png\' style="width:48px;height:48px">
+                    Porc
+                </p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'paste\',3,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/paste.png\' style="width:48px;height:48px">
+                    Paste
+                </p>
+                <p class="controller-sub-filt m" onclick="showCategory(\'vegetariene\',4,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/vegetariene.png\' style="width:48px;height:48px">
+                    Vegetariene
+                </p>
+                <p class="controller-filt" onclick="gustari2()">Gustari</p>
+                <p class="controller-sub-filt g" onclick="showCategory(\'batoane\',5,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/batoane.png\' style="width:48px;height:48px">
+                    Batoane
+                </p>
+                <p class="controller-filt" onclick="micdejun2()">Mic dejun</p>
+                <p class="controller-sub-filt mi" onclick="showCategory(\'cereale\',6,1)"><span class=\'fa\' style="margin-right:5px;"></span>
+                    <img src=\'/img/icons/cereale.png\' style="width:48px;height:48px">
+                    Cereale
+                </p>
+            </div>
+            <div class="spacer"></div>
+            <!--<div class="menu" style="">
+                <h3 class="title-chapter">
+                    <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                    Meniul tau <br> <span id="day2">(Marti - Sambata)</span>
+                </h3>
+                <div class="border-top my-3"></div>
+                <div class="container-u" id="doua" style="overflow-x:hidden; overflow-y: auto; margin-top:10px; height:fit-content;">
+                    <h4 style="text-align:left"> Feluri principale </h4>
+                    <div class="food-grid" id="firstFood">
+
+                    </div>
+                    <div id="spawnMic">
+
+                    </div>
+                    <div id="spawnGust">
+
+                    </div>
+                </div>
+                <div  class="next-btn" onclick="nextSlide()">
+                    <div class="center-u">
+                        Următorul pas
+                        <span class="lnr lnr-arrow-right"></span>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        '; ?>
+        <div class="container-l" style="width: calc(100% - 30px);">
+            <?php echo isMobileDevice() ? "<h2 style='text-align:center'>A doua livrare</h2>" : ""; ?>
+            <div class="title-grid-filter">
+                <h3 class="title-chapter">
+                    <span style="padding-right:5px;" class="lnr lnr-book"></span>
+                    Retetele disponibile
+                </h3>
+                <h3>
+                </h3>
+            </div>
+            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+            <div class="container-u" style="background:transparent">
+                <div class="food-pannel" sytle="overflow-x:hidden; overflow-y: auto;">
+                    <div class="store-food-grid" id="second">
+                        <?php
+                                                for($i = 0; $i < count($data); $i++ ){
+
+                                                    if($data[$i]["referinta"] == 0){
+
+                                                        $desc = $data[$i]["descriere"];
+                                                        $fel = $data[$i]["fel"];
+                                                        $cat = strtolower($data[$i]["categorie"]);
+                                                        $time = $data[$i]["durata"];
+                                                        $fef_short = $fel == "mancare" ? "m" : ($fel == "gustari" ? "g" : "mi");
+                                                        $s = $data[$i]["retetaID"];
+                                                        $f = json_decode($data[$i]["retetaPic"], true)[0];
+                                                        $m = $data[$i]["retetaName"];
+                                                        $k = $data[$i]["premium"] == 1 ? 'style="border: 10px solid #d4af37;"' : '';
+                                                        $price = strtr($data[$i]["in_plus"],'.',',');
+                                                        $div = '';
+                                                        $styleTimer = '';
+                                                        $style="top:-35px;position:relative";
+                                                        if($k != ''){
+                                                            $div="<div style='border-radius:10px;width:fit-content;background:#d4af37;color:white;padding:5px;left:50%;position:relative;transform:translateX(-50%);top:-20px;'>+{$price} lei</div>";
+                    $style="top:-60px;position:relative";
+                    $styleTimer = "transform: translate(-40%, -170%)";
+                    }
+
+                    $options = "<li data-value='0' onclick='addToFood(\"{$s}\",\"{$s}\",0,1)' class='option selected'>Original</li>";
+
+                    $stars="";
+                    $integerStar = intval($data[$i]["review"]);
+                    $pl;
+                    for($pl = 1; $pl <= $integerStar; $pl++){
+                    $stars .= "<span class='icon mai-star'></span>";
+                    }
+                    if(($data[$i]["review"] - $integerStar) >= 0.3 && ($data[$i]["review"] - $integerStar) <= 0.7){
+                    $stars .= "<span class='icon mai-star-half'></span>";
+                    $pl++;
+                    } else if(($data[$i]["review"] - $integerStar) > 0.7) {
+                    $stars .= "<span class='icon mai-star'></span>";
+                    $pl++;
+                    }
+                    if($pl != 5)
+                    while($pl <= 5){
+                    $stars .= "<span class='mai-star-outline'></span>";
+                    $pl++;
+                    }
+
+                    echo "
+                    <div class='card ${fel} ${cat}' onclick='openReteta(\"$s\", 1, \"${fef_short}\")' id='prm{$s}'>
+                        <div class='added' id='add1${s}'>
+                            <svg id='successAnimation' xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'>
+                                <path id='successAnimationResult' fill='#D8D8D8' d='M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z'/>
+                                <circle id='successAnimationCircle' cx='35' cy='35' r='24' stroke='#979797' stroke-width='2' stroke-linecap='round' fill='transparent'/>
+                                <polyline id='successAnimationCheck' stroke='#979797' stroke-width='2' points='23 34 34 43 47 27' fill='transparent'/>
+                            </svg>
+                            <br>
+                            <p style='text-align:center; top: 60%;position: absolute;'>Adăugat!</p>
+                        </div>
+                        <div class='header'>
+                            <img src='{$f}' style='height:100%;width:100%;border-radius:20px;object-fit: cover;'/>
+                        </div>
+                        <div class='text'>
+                            <div style='position:relative;padding-bottom:40px;'>
+                                <h1 class='food'>{$m}</h1>
+                                <div style='left:50%;position:relative;transform:translateX(-50%);width:fit-content;'>
+                                    <i class='fa' style='display:".($time == "" ? 'none' : "inline-block").(isMobileDevice() ? "padding:7px;" : "")."'>
+                                    <img src='/img/icons/clock.png' style='width:32px;height:32px;".(isMobileDevice() ? "display:none" : "")."'/>
+                                    {$time}
+                                    </i>
+                                    <i class='fa'>
+                                        <img src='/img/icons/{$cat}-white.png' style='width:32px;height:32px;'/>
+                                        <span class='type'></span>
+                                    </i>
+                                </div>
+                                <div class='descriere-card' style='color:#777777;padding:10px 30px;font-size:15px;'>{$desc}</div>
+                            </div>
+                            <div class='addBTN' onclick='addCart(1, \"{$s}\", \"{$fef_short}\", event)'>Adauga</div>
+                        </div>
+                    </div>
+                    ";
+                    }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="slides">
+    <div class="wraper" style="height:100%">
+        <div class="wraped-content-u" style="width: 95%;">
+            <div class="container-l" style="width: 100%;">
+                <h3 class="title-chapter">
+                    <span style="padding-right:5px;" class="lnr lnr-dinner"></span>
+                    Mancarea aleasa de tine
+                </h3>
+                <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                <div class="container-u">
+                    <div class="make-2-grid order" style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                        <div>
+                            <h3 class="title-chapter"><span id="day1">(Marti - Sambata)</span></h3>
+                            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                            <div id="prima">
+
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="title-chapter"><span id="day2">(Marti - Sambata)</span></h3>
+                            <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                            <div id="doua">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <!--<h3>-->
+                <!--    <span style="padding-right:5px;" class="lnr lnr-list"></span>-->
+                <!--    Tabel nutritional-->
+                <!--</h3>-->
+                <!--<div class="border-top my-3" style="margin-top:7px !important;"></div>-->
+                <!--<div class="container-u">-->
+
+                <!--</div>-->
+                <!--<div class="spacer"></div>-->
+                <!--<h3>-->
+                <!--    <span style="padding-right:5px;" class="lnr lnr-printer"></span>-->
+                <!--    Printare retete-->
+                <!--</h3>-->
+                <!--<div class="border-top my-3" style="margin-top:7px !important;"></div>-->
+                <!--<div class="container-u">-->
+
+                <!--</div>-->
+                <!--<div class="spacer"></div>-->
+                <!--<h3>-->
+                <!--    <span style="padding-right:5px;" class="lnr lnr-store"></span>-->
+                <!--    Mini-shop-->
+                <!--</h3>-->
+                <!--<div class="border-top my-3" style="margin-top:7px !important;"></div>-->
+                <!--<div class="container-u order shop">-->
+                <!--    <p>Click pe element pentru a-l adauga in cos</p>-->
+                <!--<div class="store-food-grid" >-->
+                <?php
+                                        // for($i = 0; $i < 10; $i++ )
+                                        //     echo "<div class='shop-el'>
+                //         <div class='lnr lnr-cross close-u' onclick='removecart({$i})'></div>
+                //         <div class='shop-el-container' onclick='addcart({$i})'></div>
+                //     </div>";
+            ?>
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="spacer"></div>-->
+            <div class="container-u" style="width:fit-content;left:50%;position:relative;transform:translateX(-50%);">
+                <h3 id="pret_total">Total</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="slides slidelast">
+    <div class="wraper" style="padding-bottom:100px;height:100%">
+        <div class="wraped-content-u" style="padding-bottom:0px;width: 95%;">
+            <div class="make-2-grid order" style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                <div class="container-u">
+                    <h3>Date de livrare</h3>
+                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                    <p class="input-l">Numar de telefon*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="nrTel" class="input-f nr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["telefon"];?>
+                    </div>
+                    <p class="input-l">Oras*: <span style="color:red;">(Livrările se fac doar în București)</span></p>
+                    <div style="border: 1px solid black" id="town" class="input-f adr">
+                        <?php echo "București";?>
+                    </div>
+                    <p class="input-l">Sector*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="judet" class="input-f adr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["judet"];?>
+                    </div>
+                    <div class="make-2-grid order" style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                        <div>
+                            <p class="input-l">Strada*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="strada" class="input-f adr">
+                                <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["strada"];?>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="input-l">Numar*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nrStrada" class="input-f adr">
+                                <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["nr"];?>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="input-l">Detalii livrare*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="detaliiLiv" class="input-f adr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["adresa"];?>
+                    </div>
+                </div>
+                <div class="container-u">
+                    <h3>Date de facturare</h3>
+                    <div class="border-top my-3" style="margin-top:7px !important;"></div>
+                    <p class="input-l">Numar de telefon*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="nrTel2" class="input-f nr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["telefon"];?>
+                    </div>
+                    <p class="input-l">Oras*: <span style="color:red;">(Livrările se fac doar în București)</span></p>
+                    <div style="border: 1px solid black" id="town2" class="input-f adr">
+                        <?php echo "București";?>
+                    </div>
+                    <p class="input-l">Sector*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="judet2" class="input-f adr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["judet"];?>
+                    </div>
+                    <div class="make-2-grid order" style="grid-template-columns: 1fr 1fr !important; grid-gap:40px;">
+                        <div>
+                            <p class="input-l">Strada*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="strada2" class="input-f adr">
+                                <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["strada"];?>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="input-l">Numar*:</p>
+                            <div contenteditable="true" style="border: 1px solid black" id="nrStrada2" class="input-f adr">
+                                <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["nr"];?>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="input-l">Detalii livrare*:</p>
+                    <div contenteditable="true" style="border: 1px solid black" id="detaliiLiv2" class="input-f adr">
+                        <?php if(isset($_SESSION["userInfo"])) echo json_decode($_SESSION["userInfo"],true)["adresa"];?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cbx">
+                <input id="cbx" type="checkbox"/>
+                <label for="cbx"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <span style="padding-left:34px;">Sunt de acord cu Termenii și Condițiile EasyBites</span>
+            </div>
+            <div class="primary-btn" id="plaseaza-comanda">
+                Cumpara!
+            </div>
+            <div class="spacer">
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- start footer Area -->
+
+<!-- End footer Area -->
+
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<!--<script src="js/shop.js?id=<?php echo uniqid(); ?>"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>
+
+    var prima = "<?php echo $prima_zi; ?>";
+    var permissions = <?php echo isset($_SESSION["userInfo"]) ? json_decode($_SESSION["userInfo"],true)["tutorial"] : 1; ?>;
+    	var current = 0;
+    	var arrived = [0,0,0];
+    	var curr_slide = ".s1";
+
+    	$(window).on("resize", function(){
+    	   // document.querySelectorAll("#astf")[0].style.width = document.querySelectorAll("#item-carousel")[0].offsetWidth + "px";
+    	});
+
+    	(function () {
+          var slideContainer = $(".cutii");
+
+          slideContainer.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [
+            {
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+          });
+
+          $(".clash-card__image img").hide();
+          $(".slick-active").find(".clash-card img").fadeIn(200);
+
+          slideContainer.on(
+            "beforeChange",
+            function (event, slick, currentSlide, nextSlide) {
+              $(".slick-active").find(".clash-card img").fadeOut(1000);
+            }
+          );
+
+          // On after slide change
+          slideContainer.on("afterChange", function (event, slick, currentSlide) {
+            $(".slick-active").find(".clash-card img").fadeIn(200);
+          });
+        })();
+
+        $(document).ready(function(){
+
+            <?php if(isMobileDevice()) echo 'var ks = document.querySelectorAll(".dot a span"); for(var i = 0; i < ks.length; i++ ) ks[i].innerHTML = i + 1;'; ?>
+
+            $("#login").on('click', function(){
+                var $user = $("#user").val();
+                var $pass = $("#pass").val();
+                 $.ajax({
+                    url: 'backend/login.php',
+                    type: 'POST',
+                    data: 'login=submit&user='+$user+'&pass='+$pass,
+                    success: function(data){
+                        if(data.trim() != "null") {
+                            if(data.trim() != "passed"){
+                                $("#err-login").html(data);
+                            } else {
+                                $(".login_form_inner").css('transform','translateX(-100%)');
+                                $(".option-login").css('opacity','0');
+                                setTimeout(function() { $(".option-login").css('display','none'); }, 300);
+                            }
+                        } else $("#err-login").html("Eroare la comunicarea cu serverul. Incearca din nou");
+                    }
+                });
+            });
+
+            $("#login-no-acc").on('click', function(){
+                $(".option-login").css('display','none');
+            });
+
+            // document.querySelectorAll("#astf")[0].style.width = document.querySelectorAll("#item-carousel")[0].offsetWidth + "px";
+
+            $('#plaseaza-comanda').on('click', function(){
+                if(document.getElementById("cbx").checked)
+                    cumpara();
+                    else alert("Trebuie să fii de acord cu termenii și condițiile!");
+    });
+    });
+</script>
+<style>
+    .title-chapter{
+        color:white !important;
+    }
+    .header-shop {
+        transition: 0.3s;
+    }
+    <?php
+    if(isMobileDevice())
+    echo "@media screen and (min-width: 600px) { .not-available { display: block; } }";
+    ?>
+     #body1, #body2, #filters_and_shit_1, #filters_and_shit_2{
+         transition:0.3s;
+     }
+    [contenteditable] {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+    .controller-sub-filt {
+        display: none;
+    }
+
+    .i {
+        height:380px;
+        width:100%;
+    }
+</style>
+<script>
+
+    var shoppingCart = (function() {
+
+        pos = 0;
+        day = "";
+        date = "-";
+        box = "-1";
+        box_no = "-1";
+        price = "";
+        mancare = ["-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"];
+        micdejun = ["-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"];
+        gustari = ["-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"];
+        allBoxIDs = <?php echo json_encode($_SESSION['bids']); ?>;
+      allBoxPrice = <?php echo json_encode($_SESSION['pret']); ?>;
+
+
+      // Constructor
+      function Item(ID) {
+        this.ID;
+      }
+
+      // Save cart
+      function saveMancare() {
+        sessionStorage.setItem('mancare', JSON.stringify(mancare));
+      }
+
+      function saveMicdejun() {
+        sessionStorage.setItem('micdejun', JSON.stringify(micdejun));
+      }
+
+      function saveGustari() {
+        sessionStorage.setItem('gustari', JSON.stringify(gustari));
+      }
+
+      function saveDay() {
+        sessionStorage.setItem('day', day);
+      }
+
+      function saveDate() {
+        sessionStorage.setItem('date', date);
+      }
+
+      function saveBox() {
+        sessionStorage.setItem('box', box);
+      }
+
+      function saveBox_no() {
+        sessionStorage.setItem('box_no', box_no);
+      }
+
+      function savePrice() {
+        sessionStorage.setItem('price', price);
+      }
+
+        // Load cart
+      function loadCart() {
+        cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+      }
+
+      if (sessionStorage.getItem("shoppingCart") != null) {
+        loadCart();
+      }
+
+
+      // =============================
+      // Public methods and propeties
+      // =============================
+      var functions = {};
+
+      functions.addDateAndDay = function(dateP, dayP) {
+        date = dateP;
+        day = dayP;
+        saveDate();
+        saveDay();
+        mancare.fill("-1");
+        micdejun.fill("-1");
+        gustari.fill("-1");
+        saveMancare();
+        saveMicdejun();
+        saveGustari();
+      }
+
+      functions.addBoxAndBoxNo = function(boxID) {
+        box = "-1";
+        box_no = "-1";
+
+        for (let i = 0; i < allBoxIDs.length; i++) {
+          if(allBoxIDs[i] == boxID){
+            price = allBoxPrice[i];
+            savePrice();
+            box_no = i + 1;
+            saveBox_no();
+            box = boxID;
+            saveBox();
+            mancare.fill("-1");
+            micdejun.fill("-1");
+            gustari.fill("-1");
+            saveMancare();
+            saveMicdejun();
+            saveGustari();
+
+            return [box_no, price];
+          }
+        }
+
+        return [-1, 0];
+      }
+
+      emptyMarti1 = function(arr) {
+        for(let i = 0; i < 4; i++)
+          if(arr[i] == "-1")
+            return i;
+          return -1;
+      }
+
+      emptyMarti2 = function(arr) {
+        for(let i = 3; i < 7; i++)
+          if(arr[i] == "-1")
+            return i;
+        return -1;
+      }
+
+      emptySambata1 = function(arr) {
+        for(let i = 0; i < 3; i++)
+          if(arr[i] == "-1")
+            return i;
+        return -1;
+      }
+
+      emptySambata2 = function(arr) {
+        for(let i = 4; i < 7; i++)
+          if(arr[i] == "-1")
+            return i;
+        return -1;
+      }
+
+      emptyTrial = function(arr) {
+        for(let i = 0; i < 3; i++)
+          if(arr[i] == "-1")
+            return i;
+        return -1;
+      }
+
+      // Add to cart
+      functions.addMancare = function(ID,slide) {
+        if(box_no == "5") {
+          let p = emptyTrial(mancare);
+          if (p != -1) {
+            mancare[p] = ID;
+            saveMancare()
+            return true;
+          } else return false;
+        } else if(slide == 0 && day === "Marti") {
+          let p = emptyMarti1(mancare);
+          if(p != -1){
+            mancare[p] = ID;
+            saveMancare();
+            return true;
+          } else return false;
+        } else if(slide == 1 && day == "Sambata") {
+          let p = emptyMarti2(mancare);
+          if(p != -1){
+            mancare[p] = ID;
+            saveMancare();
+            return true;
+          } else return false;
+        } else if(slide == 0 && day == "Sambata") {
+          let p = emptySambata1(mancare);
+          if(p != -1){
+            mancare[p] = ID;
+            saveMancare();
+            return true;
+          } else return false;
+        } else if(slide == 1 && day == "Marti") {
+          let p = emptySambata2(mancare);
+          if(p != -1){
+            mancare[p] = ID;
+            saveMancare();
+            return true;
+          } else return false;
+        }
+
+      }
+
+      functions.addGustari = function(ID,slide) {
+        if(box_no == "5") {
+          let p = emptyTrial(gustari);
+          if (p != -1) {
+            gustari[p] = ID;
+            saveGustari();
+            return true;
+          } else return false;
+        } else if(box_no == "2" || box_no == "4") {
+          if(slide == 0 && day === "Marti") {
+            let p = emptyMarti1(gustari);
+            if(p != -1){
+              gustari[p] = ID;
+              saveGustari();
+              return true;
+            } else return false;
+          } else if(slide == 1 && day == "Sambata") {
+            let p = emptyMarti2(gustari);
+            if(p != -1){
+              gustari[p] = ID;
+              saveGustari();
+              return true;
+            } else return false;
+          } else if(slide == 0 && day == "Sambata") {
+            let p = emptySambata1(gustari);
+            if(p != -1){
+              gustari[p] = ID;
+              saveGustari();
+              return true;
+            } else return false;
+          } else if(slide == 1 && day == "Marti") {
+            let p = emptySambata2(gustari);
+            if(p != -1){
+              gustari[p] = ID;
+              saveGustari();
+              return true;
+            } else return false;
+          }
+        }
+      }
+
+      functions.addMicdejun = function(ID,slide) {
+        if (box_no == "5") {
+          let p = emptyTrial(micdejun);
+          if (p != -1) {
+            micdejun[p] = ID;
+            saveMancare()
+            return true;
+          } else return false;
+        } else if (box_no == "3" || box_no == "4") {
+          if (slide == 0 && day === "Marti") {
+            let p = emptyMarti1(micdejun);
+            if (p != -1) {
+              micdejun[p] = ID;
+              saveMicdejun();
+              return true;
+            } else return false;
+          } else if (slide == 1 && day == "Sambata") {
+            let p = emptyMarti2(micdejun);
+            if (p != -1) {
+              micdejun[p] = ID;
+              saveMicdejun();
+              return true;
+            } else return false;
+          } else if (slide == 0 && day == "Sambata") {
+            let p = emptySambata1(micdejun);
+            if (p != -1) {
+              micdejun[p] = ID;
+              saveMicdejun();
+              return true;
+            } else return false;
+          } else if (slide == 1 && day == "Marti") {
+            let p = emptySambata2(micdejun);
+            if (p != -1) {
+              micdejun[p] = ID;
+              saveMicdejun();
+              return true;
+            } else return false;
+          }
+        }
+      }
+
+      functions.removeMancare = function(pos,slide) {
+
+        var position = pos;
+
+        if(slide == 1 && day == "Sambata")
+            position += 3;
+            else if(slide == 1 && day == "Marti")
+                position += 4;
+
+        mancare[position] = "-1";
+      }
+
+      functions.removeGustari = function(pos,slide) {
+
+        var position = pos;
+
+        if(slide == 1 && day == "Sambata")
+            position += 3;
+            else if(slide == 1 && day == "Marti")
+                position += 4;
+
+        gustari[position] = "-1";
+      }
+
+      functions.removeMicdejun = function(pos,slide) {
+
+        var position = pos;
+
+        if(slide == 1 && day == "Sambata")
+            position += 3;
+            else if(slide == 1 && day == "Marti")
+                position += 4;
+
+        micdejun[position] = "-1";
+      }
+
+
+      functions.toSlide1 = function() {
+        return [(date != "-" && box_no != "-1"),day, box_no, hasOnlyNone(mancare)];
+      }
+
+      hasOnlyNone = function(arr){
+        for(var k = 0; k < arr.length; k++){
+            if(arr[k] != "-1")
+                return false;
+        }
+        return true;
+      }
+
+      functions.toSlide2 = function() {
+        let m = 1, mi = 1, g = 1;
+
+        if(box_no == 5) {
+          if(emptyTrial(mancare) != -1)
+            m = 0;
+          if(emptyTrial(gustari) != -1)
+            g = 0;
+          if(emptyTrial(micdejun) != -1)
+            mi = 0;
+
+          return !(m == 0 || g == 0 || mi == 0);
+
+        } else if(day == "Marti") {
+
+          if(emptyMarti1(mancare) != -1)
+            m = 0;
+          if(box_no == "2" || box_no == "4") {
+            if (emptyMarti1(gustari) != -1)
+              g = 0;
+          }
+          if(box_no == "3" || box_no == "4") {
+            if(emptyMarti1(micdejun) != -1)
+              mi = 0;
+          }
+
+          return !(m == 0 || g == 0 || mi == 0);
+
+        } else if(day == "Sambata") {
+
+          if(emptySambata1(mancare) != -1)
+            m = 0;
+          if(box_no == "2" || box_no == "4") {
+            if (emptySambata1(gustari) != -1)
+              g = 0;
+          }
+          if(box_no == "3" || box_no == "4") {
+            if(emptySambata1(micdejun) != -1)
+              mi = 0;
+          }
+
+          return !(m == 0 || g == 0 || mi == 0);
+        }
+
+      }
+
+      functions.toSlide3 = function() {
+        let m = 1, mi = 1, g = 1;
+
+        if(box_no == 5) {
+          return [true,box_no, day];
+        } else if(day == "Marti") {
+
+          if(emptyMarti2(mancare) != -1)
+            m = 0;
+          if(box_no == "2" || box_no == "4") {
+            if (emptyMarti2(gustari) != -1)
+              g = 0;
+          }
+          if(box_no == "3" || box_no == "4") {
+            if(emptyMarti2(micdejun) != -1)
+              mi = 0;
+          }
+
+          return [!(m == 0 || g == 0 || mi == 0),box_no, day];
+
+        } else if(day == "Sambata") {
+
+          if(emptySambata2(mancare) != -1)
+            m = 0;
+          if(box_no == "2" || box_no == "4") {
+            if (emptySambata2(gustari) != -1)
+              g = 0;
+          }
+          if(box_no == "3" || box_no == "4") {
+            if(emptySambata2(micdejun) != -1)
+              mi = 0;
+          }
+
+          return [!(m == 0 || g == 0 || mi == 0),box_no, day];
+        }
+
+      }
+
+      functions.toParams = function() {
+        return 'price' + sessionStorage.getItem('price') + '&box=' +  sessionStorage.getItem('box') + '&box_no=' +  sessionStorage.getItem('box_no') + '&date=' +  sessionStorage.getItem('date') + '&day=' +  sessionStorage.getItem('day') + '&price=' + price + '&mancare=' + sessionStorage.getItem('mancare') + '&gustari=' + sessionStorage.getItem('gustari') + '&micdejun=' + sessionStorage.getItem('micdejun');
+      }
+
+      return functions;
+    })();
+
+
+    function openMenu(){
+        if($(".menu-wrapper").css("bottom") == "0px") {
+            $(".menu-wrapper").css("bottom", "-700px");
+        } else $(".menu-wrapper").css("bottom", "0");
+    }
+
+    function boxb(box, optional) {
+
+        var k = document.querySelectorAll(".cutii")[0].querySelectorAll(".main-wrapper");
+
+        d = shoppingCart.addBoxAndBoxNo(box);
+
+        for(i = 0; i < k.length; i++)
+            k[i].style.opacity = "0.5";
+
+        $("." + box + ":not(.slick-cloned)")[0].style.opacity = "1";
+
+        document.querySelectorAll("#pret_total")[0].innerHTML = 'Total: ' + d[1] + ' lei';
+    }
+
+
+
+    const initPannel3Days = (slide, box) => {
+
+        document.querySelectorAll('#spawnMic')[slide].innerHTML = "";
+        document.querySelectorAll('#spawnGust')[slide].innerHTML = "";
+
+        var k = document.querySelectorAll('#firstFood')[slide];
+        k.innerHTML = "";
+
+
+        for(i = 1; i <= 3; i ++)
+            k.innerHTML += "<div id='f" + i +"'><span class='add-left-top nr'>x2</span><span onclick='delF("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+
+
+    if(box == 3 || box == 4 || box == 5){
+            document.querySelectorAll('#spawnMic')[slide].innerHTML = "<h4 style='text-align:left'> Mic dejun </h4><div class='food-grid' id='firstMic'></div>";
+
+            var z = document.querySelectorAll('#firstMic')[slide];
+            z.innerHTML = "";
+
+            for(i = 1; i <= 3; i ++)
+                z.innerHTML += "<div id='m" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delM("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+
+
+        if(box == 2 || box == 4 || box == 5){
+            document.querySelectorAll('#spawnGust')[slide].innerHTML = "<h4 style='text-align:left'> Gustari </h4><div class='food-grid' id='firstGust'></div>";
+
+            var x = document.querySelectorAll('#firstGust')[slide];
+            x.innerHTML = "";
+
+            for(i = 1; i <= 3; i ++)
+                x.innerHTML += "<div id='g" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delG("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+
+    }
+
+    const initPannelTrial = () =>{
+        slide = 0;
+        box = 5;
+
+        document.querySelectorAll('#spawnMic')[slide].innerHTML = "";
+        document.querySelectorAll('#spawnGust')[slide].innerHTML = "";
+
+        var k = document.querySelectorAll('#firstFood')[slide];
+        k.innerHTML = "";
+
+
+        for(i = 1; i <= 3; i ++)
+            k.innerHTML += "<div id='f" + i +"'><span class='add-left-top nr'>x2</span><span onclick='delF("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+
+
+        if(box == 5){
+            document.querySelectorAll('#spawnMic')[slide].innerHTML = "<h4 style='text-align:left'> Mic dejun </h4><div class='food-grid' id='firstMic'></div>";
+
+            var z = document.querySelectorAll('#firstMic')[slide];
+            z.innerHTML = "";
+
+            for(i = 1; i <= 3; i ++)
+                z.innerHTML += "<div id='m" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delM("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+
+
+        if(box == 5){
+            document.querySelectorAll('#spawnGust')[slide].innerHTML = "<h4 style='text-align:left'> Gustari </h4><div class='food-grid' id='firstGust'></div>";
+
+            var x = document.querySelectorAll('#firstGust')[slide];
+            x.innerHTML = "";
+
+            for(i = 1; i <= 3; i ++)
+                x.innerHTML += "<div id='g" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delG("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+    }
+
+    const initPannel4Days = (slide, box) => {
+
+        /*document.getElementById("date-range-1").innerHTML = "Meniul tau (pana "+params.day+")";*/
+
+        document.querySelectorAll('#spawnMic')[slide].innerHTML = "";
+        document.querySelectorAll('#spawnGust')[slide].innerHTML = "";
+
+        var k = document.querySelectorAll('#firstFood')[slide];
+        k.innerHTML = "";
+
+        /*food*/
+        for(i = 1; i <= 4; i ++)
+            k.innerHTML += "<div id='f" + i +"'><span class='add-left-top nr'>x2</span><span onclick='delF("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+
+        /*mic*/
+        if(box == 3 || box == 4){
+            document.querySelectorAll('#spawnMic')[slide].innerHTML = "<h4 style='text-align:left'> Mic dejun </h4><div class='food-grid' id='firstMic'></div>";
+
+            var z = document.querySelectorAll('#firstMic')[slide];
+            z.innerHTML = "";
+
+            for(i = 1; i <= 4; i ++)
+                z.innerHTML += "<div id='m" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delM("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+
+        /*gust*/
+        if(box == 2 || box == 4){
+            document.querySelectorAll('#spawnGust')[slide].innerHTML = "<h4 style='text-align:left'> Gustari </h4><div class='food-grid' id='firstGust'></div>";
+
+            var x = document.querySelectorAll('#firstGust')[slide];
+            x.innerHTML = "";
+
+            for(i = 1; i <= 4; i ++)
+                x.innerHTML += "<div id='g" + i +"'><span class='add-left-top nr'>x1</span><span onclick='delG("+i+","+slide+")' class='lnr lnr-cross x'></span><span class='lnr lnr-plus-circle add' style='display:none'></span></div>"
+        }
+    }
+
+    const test = () => {
+
+    }
+
+    const delF = (pos, slide) => {
+        shoppingCart.removeMancare(pos-1, slide);
+        var k = document.querySelectorAll('#firstFood')[slide].childNodes;
+        k[pos-1].style.background = "#ffba00";
+        var l = k[pos - 1].childNodes;
+        l[1].style.display = "none";
+    }
+
+    const delM = (pos, slide) => {
+        shoppingCart.removeMicdejun(pos-1, slide);
+        var k = document.querySelectorAll('#firstMic')[slide].childNodes;
+        k[pos-1].style.background = "#ffba00";
+        var l = k[pos - 1].childNodes;
+        l[1].style.display = "none";
+    }
+
+    const delG = (pos, slide) => {
+        shoppingCart.removeGustari(pos-1, slide);
+        var k = document.querySelectorAll('#firstGust')[slide].childNodes;
+        k[pos-1].style.background = "#ffba00";
+        var l = k[pos - 1].childNodes;
+        l[1].style.display = "none";
+    }
+
+    const preventPropagation = (e) => {
+        if (!e)
+            e = window.event;
+
+        //IE9 & Other Browsers
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        }
+        //IE8 and Lower
+        else {
+            e.cancelBubble = true;
+        }
+    }
+
+    const addCart = (slide, ID, type, e) => {
+
+        preventPropagation(e);
+
+        var add = document.querySelector("#add"+slide+ID);
+
+        if(type == "m") {
+
+            if(shoppingCart.addMancare(ID, slide)) {
+                var root = document.querySelectorAll('#firstFood')[slide].childNodes;
+
+                for(i = 1; i <= root.length; i++) {
+                    if(root[i - 1].style.background == 'rgb(255, 186, 0)' || root[i - 1].style.background == '') {
+                        var prm = document.querySelector("#prm"+ID+" .header img");
+                        root[i - 1].style.background = "url('"+prm.src+"')";
+                        root[i - 1].style.backgroundSize = "cover";
+                        var k = root[i - 1].childNodes;
+                        k[1].style.display = "block";
+                        break;
+                    }
+                }
+
+                add.style.opacity = "1";
+                add.style.display = "flex";
+                add.firstElementChild.classList.add('animated');
+
+                setTimeout(
+                    function(){
+                        add.style.opacity = "0";
+                        setTimeout(
+                            function(){
+                                add.style.display = "none";
+                            },
+                            300
+                        );
+                        add.firstElementChild.classList.remove('animated');
+                    },
+                    2000
+                );
+
+            } else alert("Nu mai poti comanda feluri principale pentru aceasta zi");
+
+        } else if(type == "g") {
+
+            if(shoppingCart.addGustari(ID, slide)) {
+                var root = document.querySelectorAll('#firstGust')[slide].childNodes;
+
+                for(i = 1; i <= root.length; i++) {
+                    if(root[i - 1].style.background == 'rgb(255, 186, 0)' || root[i - 1].style.background == '') {
+                        var prm = document.querySelector("#prm"+ID+" .header img");
+                        root[i - 1].style.background = "url('"+prm.src+"')";
+                        root[i - 1].style.backgroundSize = "cover";
+                        var k = root[i - 1].childNodes;
+                        k[1].style.display = "block";
+                        break;
+                    }
+                }
+
+                add.style.opacity = "1";
+                add.style.display = "flex";
+                add.firstElementChild.classList.add('animated');
+
+                setTimeout(
+                    function(){
+                        add.style.opacity = "0";
+                        setTimeout(
+                            function(){
+                                add.style.display = "none";
+                            },
+                            300
+                        );
+                        add.firstElementChild.classList.remove('animated');
+                    },
+                    2000
+                );
+
+            } else alert("Nu mai poti comanda gustari pentru aceasta zi");
+
+        } else if(type == "mi") {
+
+            if(shoppingCart.addMicdejun(ID, slide)) {
+                var root = document.querySelectorAll('#firstMic')[slide].childNodes;
+
+                for(i = 1; i <= root.length; i++) {
+                    if(root[i - 1].style.background == 'rgb(255, 186, 0)' || root[i - 1].style.background == '') {
+                        var prm = document.querySelector("#prm"+ID+" .header img");
+                        root[i - 1].style.background = "url('"+prm.src+"')";
+                        root[i - 1].style.backgroundSize = "cover";
+                        var k = root[i - 1].childNodes;
+                        k[1].style.display = "block";
+                        break;
+                    }
+                }
+
+                add.style.opacity = "1";
+                add.style.display = "flex";
+                add.firstElementChild.classList.add('animated');
+
+                setTimeout(
+                    function(){
+                        add.style.opacity = "0";
+                        setTimeout(
+                            function(){
+                                add.style.display = "none";
+                            },
+                            300
+                        );
+                        add.firstElementChild.classList.remove('animated');
+                    },
+                    2000
+                );
+
+            } else alert("Nu mai poti comanda mic dejun-uri pentru aceasta zi");
+
+        } else alert("ba, nu mai fura, nu fi marlan :(");
+    }
+
+    const addcart = (item) => {
+        var s = document.querySelectorAll('.shop-el')[item].style.opacity = "1";
+        var c = document.querySelectorAll('.close-u')[item].style.display = "block";
+        $.ajax({
+            url: 'backend/addToOrder_v2.php',
+            type: 'POST',
+            data: 'shopa=true&slot=' + item
+        });
+    }
+
+    const removecart = (item) => {
+        var s = document.querySelectorAll('.shop-el')[item].style.opacity = "0.7";
+        var c = document.querySelectorAll('.close-u')[item].style.display = "none";
+        $.ajax({
+            url: 'backend/addToOrder_v2.php',
+            type: 'POST',
+            data: 'shopd=true&slot=' + item
+        });
+    }
+
+    const setDate = (date, item, day) =>{
+
+        shoppingCart.addDateAndDay(date, day);
+
+        if(item == 1)
+        {
+            $('.data-m').eq(0).css("opacity", "0.3");
+            $('.data-m').eq(1).css("opacity", "1");
+        }
+        else {
+            $('.data-m').eq(0).css("opacity", "1");
+            $('.data-m').eq(1).css("opacity", "0.3");
+        }
+
+    }
+
+    let slideNumber = 0;
+    let dotNumber = 0;
+
+    const prevSlide = () =>{
+
+        const slides = document.getElementsByClassName('slides');
+        const dots = document.getElementsByClassName('dot');
+
+        const dotPlacer = document.getElementById('dotPlacer');
+        const slider = document.getElementById("slider");
+
+        const currentSlide = slider.getElementsByClassName('curr');
+        const currentDots = dotPlacer.getElementsByClassName('active');
+
+        currentSlide[0].classList.remove("curr");
+        currentDots[0].classList.remove("active");
+
+        if(slideNumber == 0){
+            slideNumber = 0;
+        }
+        else slideNumber = slideNumber-1;
+
+        if(dotNumber == 0){
+            dotNumber = 0;
+        }
+        else{
+            dotNumber = dotNumber-1;
+        }
+
+        dots[dotNumber].classList.add("active");
+        slides[slideNumber].classList.add("curr");
+
+        switch(slideNumber){
+            case 0:{
+                current = 0;
+            } break;
+
+            case 1:{
+                current = 1;
+            } break;
+
+            case 2:{
+
+            } break;
+
+            case 3: {
+                current = 2;
+            } break;
+
+        }
+    }
+
+    const nextSlide = () =>{
+        const slides = document.getElementsByClassName('slides');
+        const dots = document.getElementsByClassName('dot');
+
+        const dotPlacer = document.getElementById('dotPlacer');
+        const slider = document.getElementById("slider");
+
+        const currentSlide = slider.getElementsByClassName('curr');
+        const currentDots = dotPlacer.getElementsByClassName('active');
+
+        allow(slideNumber, dots, slides, currentSlide, currentDots);
+    }
+
+    function initNull(){
+        document.querySelectorAll("#firstFood")[1].innerHTML = "<p style='width:100%;color: black;'>Ati selectat o cutie trial. Mergeti la checkout.</p>";
+        document.querySelectorAll("#spawnMic")[1].innerHTML = "";
+        document.querySelectorAll("#spawnGust")[1].innerHTML = "";
+    }
+
+    function allow(slideNumber, dots, slides, currentSlide, currentDots){
+        switch(slideNumber){
+            case 0:{
+                d = shoppingCart.toSlide1();
+                day = d[1];
+                box = d[2];
+
+                if(d[0]){
+
+                    $(".menu-wrapper").css("bottom", "0px");
+
+                    $(".blocked").eq(0).css("top", "55%");
+                    $(".blocked").eq(0).css("height", "45%");
+
+                    next(dots, slides, currentSlide, currentDots);
+                    if(d[3]) {
+                        if(box == 5) {
+                            startIndex = 3;
+                            initPannelTrial();
+                            initNull();
+                        } else if((day == "Marti" && prima=="Marti") || (day == "Marti" && prima=="Sambata")){
+
+                            document.querySelectorAll("#day1")[0].innerHTML = "<h5>(Miercuri-Sambata)</h5>";
+                            document.querySelectorAll("#day1")[1].innerHTML = "<h5>(Miercuri-Sambata)</h5>";
+                            document.querySelectorAll("#day2")[0].innerHTML = "<h5>(Duminica-Marti)</h5>";
+                            document.querySelectorAll("#day2")[1].innerHTML = "<h5>(Duminica-Marti)</h5>";
+
+                            startIndex = 4;
+                            initPannel4Days(0, box);
+                            initPannel3Days(1, box);
+
+                        } else if ((day == "Sambata" && prima=="Marti") || (day == "Sambata" && prima=="Sambata")) {
+
+                            document.querySelectorAll("#day2")[0].innerHTML = "<h5>(Miercuri-Sambata)</h5>";
+                            document.querySelectorAll("#day2")[1].innerHTML = "<h5>(Miercuri-Sambata)</h5>";
+                            document.querySelectorAll("#day1")[0].innerHTML = "<h5>(Duminica-Marti)</h5>";
+                            document.querySelectorAll("#day1")[1].innerHTML = "<h5>(Duminica-Marti)</h5>";
+
+                            startIndex = 3;
+                            initPannel3Days(0, box);
+                            initPannel4Days(1, box);
+                        }
+                    }
+                } else alert("Alege data cand vrei sa se livreze si tipul de cutie");
+
+            } break;
+            case 1:{
+                if(shoppingCart.toSlide2()) {
+                    $(".blocked").eq(0).removeClass("addition");
+                    $(".blocked").eq(0).css("height", "45%");
+                    $(".blocked").eq(0).css("top", "50px");
+                    $(".blocked h4").eq(0).html("Completat la pasul anterior");
+                    next(dots, slides, currentSlide, currentDots);
+                } else alert("Nu ai comandat pentru toata ziua! Uita-te în stânga la meniu.");
+            } break;
+            case 2:{
+                d = shoppingCart.toSlide3();
+                let data = d[0];
+                if(data) {
+                    $(".blocked").eq(0).css("height", "100%");
+                    $(".blocked").eq(0).css("top", "0px");
+                    $(".blocked").eq(0).addClass("addition");
+                    $(".blocked h4").eq(0).html("Meniu complet");
+
+                    let box = d[1];
+                    let day = d[2];
+
+                    next(dots, slides, currentSlide, currentDots);
+
+                    if(box != 5 ) {
+                        document.querySelectorAll("#prima")[1].innerHTML = document.querySelectorAll("#prima")[0].innerHTML;
+                        document.querySelectorAll("#doua")[1].innerHTML = document.querySelectorAll("#doua")[0].innerHTML;
+
+
+                        for(i = 1; i<=3; i++){
+                            for(k = 2; k<=3; k++){
+                                document.querySelectorAll("#f"+i)[k].removeChild(document.querySelectorAll("#f"+i)[k].childNodes[1]);
+                                document.querySelectorAll("#f"+i)[k].removeChild(document.querySelectorAll("#f"+i)[k].childNodes[1]);
+                            }
+                        }
+
+                        document.querySelectorAll("#f4")[1].removeChild(document.querySelectorAll("#f4")[1].childNodes[1]);
+                        document.querySelectorAll("#f4")[1].removeChild(document.querySelectorAll("#f4")[1].childNodes[1]);
+
+                        for(i = 1; i<=3; i++){
+                            for(k = 2; k<=3; k++){
+                                if(box == 2 || box == 4){
+                                    document.querySelectorAll("#g"+i)[k].removeChild(document.querySelectorAll("#g"+i)[k].childNodes[1]);
+                                    document.querySelectorAll("#g"+i)[k].removeChild(document.querySelectorAll("#g"+i)[k].childNodes[1]);
+                                }
+                                if(box == 3 || box == 4){
+                                    document.querySelectorAll("#m"+i)[k].removeChild(document.querySelectorAll("#m"+i)[k].childNodes[1]);
+                                    document.querySelectorAll("#m"+i)[k].removeChild(document.querySelectorAll("#m"+i)[k].childNodes[1]);
+                                }
+                            }
+                        }
+
+                        if(box == 2 || box == 4){
+                            document.querySelectorAll("#g4")[1].removeChild(document.querySelectorAll("#g4")[1].childNodes[1]);
+                            document.querySelectorAll("#g4")[1].removeChild(document.querySelectorAll("#g4")[1].childNodes[1]);
+                        }
+                        if(box == 3 || box == 4){
+                            document.querySelectorAll("#m4")[1].removeChild(document.querySelectorAll("#m4")[1].childNodes[1]);
+                            document.querySelectorAll("#m4")[1].removeChild(document.querySelectorAll("#m4")[1].childNodes[1]);
+                        }
+                    } else {
+                        document.querySelectorAll("#prima")[1].innerHTML = document.querySelectorAll("#prima")[0].innerHTML;
+
+                        for(i = 1; i<=3; i++){
+                            document.querySelectorAll("#f"+i)[1].removeChild(document.querySelectorAll("#f"+i)[1].childNodes[1]);
+                            document.querySelectorAll("#f"+i)[1].removeChild(document.querySelectorAll("#f"+i)[1].childNodes[1]);
+                        }
+
+                        for(i = 1; i<=3; i++){
+                            document.querySelectorAll("#g"+i)[1].removeChild(document.querySelectorAll("#g"+i)[1].childNodes[1]);
+                            document.querySelectorAll("#g"+i)[1].removeChild(document.querySelectorAll("#g"+i)[1].childNodes[1]);
+
+                            document.querySelectorAll("#m"+i)[1].removeChild(document.querySelectorAll("#m"+i)[1].childNodes[1]);
+                            document.querySelectorAll("#m"+i)[1].removeChild(document.querySelectorAll("#m"+i)[1].childNodes[1]);
+                        }
+
+                        document.querySelectorAll("#doua")[1].innerHTML = "<p>Cutie trial, are doar 3 zile</p>";
+
+                    }
+                } else alert("Nu ai comandat pentru toata ziua! Uita-te în stânga la meniu.");
+            } break;
+            case 3:{
+                openMenu();
+                next(dots, slides, currentSlide, currentDots);
+            } break;
+            case 4:{
+                next(dots, slides, currentSlide, currentDots);
+            } break;
+        }
+    }
+
+    function next(dots, slides, currentSlide, currentDots){
+
+        currentSlide[0].classList.remove("curr");
+        currentDots[0].classList.remove("active");
+
+        if(slideNumber == (slides.length-1)){
+            slideNumber = (slides.length-1);
+        }
+        else{
+            slideNumber = slideNumber+1;
+        }
+
+        if(dotNumber == (dots.length-1)){
+            dotNumber = (dots.length-1);
+        }
+        else dotNumber = dotNumber+1
+
+        dots[dotNumber].classList.add("active");
+        slides[slideNumber].classList.add("curr");
+    }
+
+    function gustari1_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[1].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0; item < 7; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.g");
+        for(item = 0; item < 1; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function gustari2_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[4].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.g");
+        for(item = 1; item < 2; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function mancare1_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[0].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0 ; item < 7; item++){
+            categ[item].style.display = "none";
+            categ[item].style.color = "rgb(119, 119, 119)";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.m");
+        for(item = 0 ; item < 5; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function mancare2_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[3].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+            categ[item].style.color = "rgb(119, 119, 119)";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.m");
+        for(item = 5; item < 10; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function micdejun1_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[2].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0 ; item < 7; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.mi");
+        for(item = 0 ; item < 1; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function micdejun2_m(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[5].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.mi");
+        for(item = 1; item < 2; item++){
+            categ[item].style.display = "block";
+        }
+    }
+
+    function cumpara() {
+        var tel = document.querySelector("#nrTel").innerHTML.trim().replaceAll("'", "").replaceAll('"', "");
+
+        let livrare = {
+            'nrTel':document.querySelector("#nrTel").innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'town':document.querySelector('#town').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'judet':document.querySelector('#judet').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'strada':document.querySelector('#strada').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'nrStrada':document.querySelector('#nrStrada').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'detalii':document.querySelector('#detaliiLiv').innerHTML.trim().replaceAll("'", "").replaceAll('"', "")
+        };
+
+        let facturare = {
+            'nrTel':document.querySelector("#nrTel2").innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'town':document.querySelector('#town2').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'judet':document.querySelector('#judet2').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'strada':document.querySelector('#strada2').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'nrStrada':document.querySelector('#nrStrada2').innerHTML.trim().replaceAll("'", "").replaceAll('"', ""),
+            'detalii':document.querySelector('#detaliiLiv2').innerHTML.trim().replaceAll("'", "").replaceAll('"', "")
+        };
+
+        let ok = true;
+
+        if(livrare.nrTel == "<br>" || livrare.judet == "<br>" || livrare.strada == "<br>" || livrare.nrStrada == "<br>" || livrare.detalii == "<br>" || livrare.nrTel == "" || livrare.judet == "" || livrare.strada == "" || livrare.nrStrada == "" || livrare.detalii == "")
+            ok = false;
+
+        if(facturare.nrTel == "<br>" || facturare.judet == "<br>" || facturare.strada == "<br>" || facturare.nrStrada == "<br>" || facturare.detalii == "<br>" || facturare.nrTel == "" || facturare.judet == "" || facturare.strada == "" || facturare.nrStrada == "" || facturare.detalii == "")
+            ok = false;
+
+        if(ok) {
+
+            let params = shoppingCart.toParams() + '&livrare='+JSON.stringify(livrare)+'&facturare='+JSON.stringify(facturare);
+            $.ajax({
+                url: 'backend/buy_v2.php',
+                type: 'POST',
+                data: params,
+                success: function (data){
+                    arr = JSON.parse(data);
+
+                    if(arr.success == true) {
+                        location.href="/pay/index.php?key=<?php echo sha1(strtotime((new DateTime("now", new DateTimeZone("UTC")))->format("d-m-Y"))."--key"); ?>";
+                    } else {
+                        location.href="confirmation.php?s=false";
+                    }
+                }
+            });
+        } else {
+            alert("Ai campuri goale!");
+        }
+    }
+
+    function closeTutShow(){
+        document.querySelector("#closeT").style.display="block";
+    }
+
+    function gustari1(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[1].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0; item < 7; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.g");
+        for(item = 0; item < 1; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#first")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('gustari')){
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            }
+            else parent[i].style.display = "none";
+        }
+    }
+
+    function gustari2(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[4].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.g");
+        for(item = 1; item < 2; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#second")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('gustari')) {
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            }
+            else parent[i].style.display = "none";
+        }
+    }
+
+    function mancare1(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[0].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0 ; item < 7; item++){
+            categ[item].style.display = "none";
+            categ[item].style.color = "rgb(119, 119, 119)";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.m");
+        for(item = 0 ; item < 5; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#first")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('mancare')) {
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            }
+            else parent[i].style.setProperty("display", "none", "important");
+        }
+    }
+
+    function mancare2(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[3].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+            categ[item].style.color = "rgb(119, 119, 119)";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.m");
+        for(item = 5; item < 10; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#second")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('mancare'))
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            else parent[i].style.display = "none";
+        }
+    }
+
+    function micdejun1(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[0] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[0].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[2].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0 ; item < 7; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.mi");
+        for(item = 0 ; item < 1; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#first")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('micdejun'))
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            else parent[i].style.display = "none";
+        }
+    }
+
+    function micdejun2(){
+
+        if(document.querySelectorAll(".controller-filt.currentFilt")[1] != undefined)
+            document.querySelectorAll(".controller-filt.currentFilt")[1].classList.remove("currentFilt");
+        document.querySelectorAll(".controller-filt")[5].classList.add("currentFilt");
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 7; item < 14; item++){
+            categ[item].style.display = "none";
+        }
+
+        var categ = document.querySelectorAll(".controller-sub-filt.mi");
+        for(item = 1; item < 2; item++){
+            categ[item].style.display = "block";
+        }
+
+        var parent = document.querySelectorAll("#second")[0].children;
+        for(i = 0; i < parent.length; i++){
+            if(parent[i].classList.contains('micdejun'))
+                if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                    parent[i].style.setProperty("display", "grid", "important")
+                else parent[i].style.display = "block";
+            else parent[i].style.display = "none";
+        }
+    }
+
+    function showCategory(category, n, s){
+
+        var categ = document.querySelectorAll(".controller-sub-filt");
+        for(item = 0 ; item < categ.length; item++){
+            categ[item].style.color = "#777777";
+        }
+        if(s == 1)
+            categ[n+7].style.color = "#ffba00";
+        else categ[n].style.color = "#ffba00";
+
+        var parent = document.querySelectorAll(".card");
+        parent.forEach(child => {
+            child.style.display = "none";
+        })
+
+        var parent = document.querySelectorAll(".card."+category);
+        parent.forEach(child => {
+            if(window.innerWidth <= "842" && window.innerWidth >= "700")
+                child.style.setProperty("display", "grid", "important")
+            else child.style.display = "block";
+        })
+
+        <?php echo isMobileDevice() ? "if(s == 0) close_flit_m1(); else close_flit_m2();" : "";?>
+    }
+
+    function openReteta(id, slide) {
+        $.ajax({
+            url: 'backend/getInfo.php',
+            type: 'POST',
+            data: 'p=' + id + '&s='+slide,
+            success: function (data){
+                var result = $.parseJSON(data);
+                var canvas = document.querySelector("#generatorReteta");
+                canvas.innerHTML = '';
+                canvas.innerHTML = result[0];
+                document.querySelector(".overlay").style.display = "block";
+                document.getElementsByTagName("BODY")[0].style.overflow = "hidden";
+
+                $(".owl-carousel").owlCarousel({
+                    items: 3,
+                    center: true,
+                    nav: false,
+                    dots: false,
+                    loop: true,
+                    autoplay:true,
+                    autoplayTimeout:2500,
+                    autoplayHoverPause:true,
+                    responsiveClass: true,
+                    responsive:{
+                        250:{
+                            items: 1
+                        },
+                        600:{
+                            items:2
+                        },
+                        100:{
+                            items:2
+                        }
+                    }
+                });
+
+                if(result[1] > 1){
+                    $(".img-presentation").owlCarousel({
+                        items: 1,
+                        center: true,
+                        nav: false,
+                        dots: false,
+                        loop: true,
+                        autoplay:true,
+                        autoplayTimeout:2500,
+                        autoplayHoverPause:true
+                    });
+                }
+            }
+        });
+    }
+
+    function close_ovl(){
+
+        document.querySelector(".overlay").style.display = "none";
+
+        document.getElementsByTagName("BODY")[0].style.overflow = "auto";
+
+        $(".owl-carousel").owlCarousel('destroy').removeClass('owl-carousel');
+        $(".img-presentation").owlCarousel('destroy').removeClass('owl-carousel');
+
+        var canvas = document.querySelector("#generatorReteta");
+        canvas.innerHTML = '';
+    }
+
+    function open_filt_m1(){
+        document.querySelector(".header-shop-mobile").style.transform = "translateX(-200%)";
+        document.querySelector("#filters_and_shit_1").style.transform = "translateX(0)";
+        document.querySelector("#body1").style.transform = "translateX(-100%)";
+        document.querySelectorAll(".float_btn")[0].style.opacity = "0";
+    }
+
+    function close_flit_m1(){
+        document.querySelector(".header-shop-mobile").style.transform = "translateX(-50%)";
+        document.querySelector("#filters_and_shit_1").style.transform = "translateX(100%)";
+        document.querySelector("#body1").style.transform = "translateX(0)";
+        document.querySelectorAll(".float_btn")[0].style.opacity = "1";
+    }
+
+    function open_filt_m2(){
+        document.querySelector(".header-shop-mobile").style.transform = "translateX(-200%)";
+        document.querySelector("#filters_and_shit_2").style.transform = "translateX(0)";
+        document.querySelector("#body2").style.transform = "translateX(-100%)";
+        document.querySelectorAll(".float_btn")[1].style.opacity = "0";
+    }
+
+    function close_flit_m2(){
+        document.querySelector(".header-shop-mobile").style.transform = "translateX(-50%)";
+        document.querySelector("#filters_and_shit_2").style.transform = "translateX(100%)";
+        document.querySelector("#body2").style.transform = "translateX(0)";
+        document.querySelectorAll(".float_btn")[1].style.opacity = "1";
+    }
+
+
+</script>
+</body>
+
+</html>

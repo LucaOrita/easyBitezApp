@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Easy Bitez | Shop | Page 1</title>
+
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/card.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/shop_v3.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/shop_log.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css" async>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" async/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+          async/>
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js" defer></script>
+    <style>
+
+        body{
+            overflow: hidden;
+        }
+
+        .icon-lnr{
+            display: none !important;
+        }
+        @media screen and (max-width: 605px) {
+            .icon-lnr {
+                display: inline-block !important;
+            }
+            .stat-value {
+                display: none;
+            }
+
+            .nr_portii{
+                font-size: 15px;
+            }
+
+            .clash-card__unit-stats .one-third {
+                padding: 6px 15px;
+            }
+
+            .clash-card__unit-stats .stat {
+                margin-bottom: 0px;
+            }
+        }
+
+        .title-chapter {
+            color: white !important;
+        }
+
+        .header-shop {
+            transition: 0.3s;
+        }
+
+        #body1, #body2, #filters_and_shit_1, #filters_and_shit_2 {
+            transition: 0.3s;
+        }
+
+        [contenteditable] {
+            -webkit-user-select: text;
+            user-select: text;
+        }
+
+        .controller-sub-filt {
+            display: none;
+        }
+
+        .i {
+            height: 380px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .data-m {
+                height: 200px !important;
+            }
+
+            .data-m lord-icon {
+                height: 100px !important;
+                width: 100px !important;
+            }
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27FWTMFWWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-27FWTMFWWF');
+    </script>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4342464632509246');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=4342464632509246&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+<body>
+
+<div th:replace="fragments :: loadingScreen(c = 'notnull')"></div>
+<div th:replace="fragments :: header_shop(s = ${step})"></div>
+
+<div class="login-box-overlay">
+    <div class="row" style="max-width:670px;margin-left:0;">
+        <div class="col-sm">
+            <div class="data-m" onclick="location.href='/shop/1'" style="height: 100%">
+                <div class="info">
+                    <lord-icon
+                            src="https://cdn.lordicon.com/uukerzzv.json"
+                            trigger="loop"
+                            colors="primary:#121331,secondary:#ffba00"
+                            style="width:250px;height:250px">
+                    </lord-icon> <br>
+                    <h3>Comandă folosind contul tău de utilizator</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="data-m" onclick="location.href='/na/shop/1'" style="height: 100%">
+                <div class="info">
+                    <lord-icon
+                            src="https://cdn.lordicon.com/udwhdpod.json"
+                            trigger="loop"
+                            colors="primary:#121331,secondary:#ffba00"
+                            style="width:250px;height:250px">
+                    </lord-icon>
+                    <h3>Continuă fară cont</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="slider" id="slider">
+        <div class="slides curr">
+            <div class="wraper">
+                <div class="wraped-content-u">
+                    <h3 class="title-chapter"><span style="padding-right:5px;" class="lnr lnr-calendar-full"></span>
+                        Alege momentul livrarii</h3>
+                    <div class="border-top my-3"></div>
+                    <div class="alert alert-danger"
+                         style="width:fit-content; border-radius:20px;left:50%;position:relative;transform:translateX(-50%);">
+                        <img src="/img/icons/atention.png" style="display:inline-block; width: 35px;"/>
+                        <span style="line-height:35px;height:100%;">Pentru orice cutie de 7 zile sunt 2 livrari, pentru a mentine mancarea proaspata pentru tine!</span>
+                    </div>
+                    <div class="row" style="max-width:670px;left:50%;position:relative;transform:translateX(-50%);">
+                        <div class="col-sm">
+                            <div class="data-m">
+                                <div class="info" th:attr="data-day=${livrare1d}, data-date=${livrare1date}">
+                                    <h4 th:text="${livrare1d}"></h4>
+                                    <p style="margin-bottom: 0px;margin-top: 10px;" th:text="${livrare1date}"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="data-m">
+                                <div class="info" th:attr="data-day=${livrare2d}, data-date=${livrare2date}">
+                                    <h4 th:text="${livrare2d}"></h4>
+                                    <p style="margin-bottom: 0px;margin-top: 10px;" th:text="${livrare2date}"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <h3 class="title-chapter">
+                        <span style="padding-right:5px;" class="lnr lnr-inbox"></span>
+                        Alege cutia potrivita
+                    </h3>
+                    <div class="border-top my-3"></div>
+                    <p style="text-align:center;display:none;">
+                        <span style="padding-right:5px;" class="lnr lnr-arrow-left"></span>
+                        Apucati cu mouce-ul si glisati pe carusel
+                        <span style="padding-left:5px;" class="lnr lnr-arrow-right"></span>
+                    </p>
+                    <div class="cutii owl-carousel stack-carousel owl-theme">
+                        <div class="item" th:each="box : ${boxes}" th:attr="data-box-id=${box.ID}">
+                            <img src="/img/boxes/cutie.png" style="width:100%">
+                            <h1 style="font-size: 22px;" th:text="${box.numeCutie}"></h1>
+                            <div class="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                                <div class="one-third">
+                                    <div class="stat"><span class="nr_portii" th:text="${box.portii}"></span><img src="/img/icons/v.png" style="margin-left:3px;width:30px;" class="icon-lnr" /></div>
+                                    <div class="stat-value">Portii</div>
+                                </div>
+                                <div class="one-third no-border">
+                                    <div class="stat"><span class="nr_portii" th:text="${box.nrPers}"></span><img src="/img/icons/avatar.png" style="margin-left:3px;width:30px;" class="icon-lnr" /></div>
+                                    <div class="stat-value">Persoane</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- start footer Area -->
+
+<!-- End footer Area -->
+
+<script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/js/shop_start.js"></script>
+</body>
+</html>

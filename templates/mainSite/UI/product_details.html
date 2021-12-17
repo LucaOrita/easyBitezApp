@@ -1,0 +1,69 @@
+<div class="content-scroller" xmlns:th="http://www.thymeleaf.org">
+    <div id="pic-rete">
+        <div th:if="${recipeDetails.pics.size() == 1}" class="img-presentation" style="height:100%;width:100%;">
+            <div class="i"
+                 th:style="'background: url(' + ${recipeDetails.pics[0]} + ') no-repeat center; background-size: cover;'"></div>
+        </div>
+        <div th:if="${recipeDetails.pics.size() > 1}" class="img-presentation" style="height:100%;width:100%;">
+            <div th:each="url : ${recipeDetails.pics}" class="i"
+                 th:style="'background: url(' + ${url} + ') no-repeat center; background-size: cover;'"></div>
+        </div>
+        <div class="inner-time">
+            <lord-icon src="https://cdn.lordicon.com//kbtmbyzy.json" trigger="loop" delay="500"
+                       colors="primary:#ffffff,secondary:#ffffff" stroke="100"
+                       style="width:32px;height:32px"></lord-icon>
+            <span th:text="${recipeDetails.durata}"></span>
+        </div>
+    </div>
+    <h2 id="titlu-reteta" th:text="${recipeDetails.name}">Buffalo Bites</h2>
+    <h3 style="padding: 0px 30px;padding-top: 50px;">
+        <lord-icon src="https://cdn.lordicon.com//nocovwne.json" trigger="loop" delay="1000"
+                   colors="primary:#121331,secondary:#ffba00"
+                   style="margin-right: 25px;width:48px;height:48px"></lord-icon>
+        Descriere
+    </h3>
+    <hr>
+    <p style="padding: 0px 30px;" th:text="${recipeDetails.descriere}"></p>
+    <h3 style="padding: 0px 30px;padding-top: 50px;">
+        <lord-icon src="https://cdn.lordicon.com//nlzvfogq.json" trigger="loop" delay="1000"
+                   colors="primary:#121331,secondary:#ffba00"
+                   style="margin-right: 25px; width:48px;height:48px"></lord-icon>
+        Ingrediente
+    </h3>
+    <hr>
+    <div class="ingredients-grid">
+        <div class="" style="text-align:center" th:each="ing : ${recipeDetails.i}">
+            <img style="width: 150px; height:150px; border-radius:100px;padding-bottom:10px;" th:src="${ing.img}">
+            <h5 th:text="${ing.name}"></h5>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="owl-carousel stack-carousel mt-2 wow fadeInUp owl-responsive-600 owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+                <div class="owl-stage"></div>
+            </div>
+        </div>
+    </div>
+    <h3 style="padding: 0px 30px; padding-top:50px;">
+        <lord-icon src="https://cdn.lordicon.com//zbopvjaq.json" trigger="loop" delay="500"
+                   colors="primary:#121331,secondary:#ffba00"
+                   style="margin-right: 25px; width:48px;height:48px"></lord-icon>
+        Alergii
+    </h3>
+    <hr>
+    <div>
+        <p style="padding: 0px 30px 30px 30px;" th:text="${recipeDetails.alergii}"></p>
+    </div>
+    <script th:if="${recipeDetails.pics.size() > 1}">
+        $(".img-presentation").owlCarousel({
+            items: 1,
+            center: true,
+            nav: false,
+            dots: false,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true
+        });
+    </script>
+</div>

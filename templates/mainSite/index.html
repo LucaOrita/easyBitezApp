@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/img/banner/logos/logo_sus.png">
+    <!-- Author Meta -->
+    <meta content="EasyBitez" name="author">
+    <!-- Meta Description -->
+    <meta content="" name="description">
+    <!-- Meta Keyword -->
+    <meta content="" name="keywords">
+    <meta content="#fff" name="theme-color"/>
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Home | Easy Bitez</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/user_defined.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/themify-icons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/nice-select.css" async>
+    <!--<link rel="stylesheet" href="css/nouislider.min.css">-->
+    <!--<link rel="stylesheet" href="css/ion.rangeSlider.css" />-->
+    <!--<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />-->
+    <!--<link rel="stylesheet" href="css/magnific-popup.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/maicons.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/mobster.css" async>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" async>
+    <!--star review-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+
+
+        /*review*/
+        .checked {
+            color: orange;
+            font-size: 20px;
+        }
+
+        .data {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .item {
+            height: 460px;
+        }
+
+        .nume {
+            color:#343434;
+        }
+
+        .star {
+            margin-bottom: 8px;
+        }
+
+        .owl-dots {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .owl-dots .owl-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #f1f1f1;
+            margin: 0 3px;
+            border: 2px #ff8300;
+        }
+
+        .owl-dots .owl-dot span {
+            font-size: 70px;
+            position: relative;
+            top: -5px;
+        }
+        .owl-dots .owl-dot.active {
+            background-color: #ffba00;
+        }
+
+        .owl-dots .owl-dot:focus {
+            outline: none;
+        }
+
+        .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.38) !important;
+        }
+
+        /*end review*/
+
+        .cookie {
+            width: 100%;
+            height: fit-content;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            z-index: 150;
+        }
+
+        .gdpr-accept-btn {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            padding: 0 30px;
+            line-height: 50px;
+            border-radius: 50px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            background: -webkit-gradient(linear, left top, right top, from(#ffba00), to(#ff6c00));
+            background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+        }
+
+        .close-gdpr{
+            top:5px;
+            position: absolute;
+            left: 95%;
+            transform: translateX(-95%);
+            background: rgba(0, 0, 0, 0.17);
+            cursor: pointer;
+            width:25px;
+            height:25px;
+            text-align: center;
+            border-radius: 20px;
+            color:white;
+            z-index:3;
+        }
+
+        .gdpr-text {
+            padding: 35px 15px 15px 15px;
+            color: white;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .primary-btn.buy-index:hover {
+                transform: translate(-50%, -0.25em);
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .gdpr-accept-btn {
+                margin-left: 0 !important;
+                transform: scale(0.9);
+            }
+
+            .responsive-gdpr {
+                width: fit-content;
+                left: 0%;
+                position: relative;
+                transform: translateX(0%);
+            }
+        }
+    </style>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27FWTMFWWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-27FWTMFWWF');
+    </script>
+
+    <meta name="facebook-domain-verification" content="g9nnrkiayjrxwr56qdj8oysxdkve3i" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4342464632509246');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=4342464632509246&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+<div th:replace="fragments :: loadingScreen"></div>
+<div th:replace="fragments :: header_main"></div>
+
+<div class="cookie" id="cookie">
+    <div class="container">
+        <div class="row">
+            <div class="close-gdpr gdpr-no-new">
+                x
+            </div>
+            <div class="col-sm-8 gdpr-text">
+                Acest site utilizează cookie-uri pentru a îmbunătăți experiența utilizatorului. Prin utilizarea site-ului nostru, sunteți de acord cu toate cookie-urile în conformitate cu Politica noastră de cookie-uri.
+            </div>
+            <div class="col-sm-4 responsive-gdpr">
+                <div class="gdpr-accept-btn gdpr-ok" style="margin-top:20px">
+                    Accept
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- start banner Area -->
+<section class="banner-area section_gap"
+         th:style="'background: url(' + @{/img/banner/bg_hero_2.svg} + ') center no-repeat; background-size: cover; height: fit-content;'">
+    <div class="container">
+        <div class="row fullscreen align-items-center justify-content-start">
+            <div class="col-lg-12">
+                <!-- <div class="active-banner-slider"> -->
+                <!-- single-slide -->
+                <div class="row single-slide align-items-center d-flex">
+                    <div class="col-lg-5 col-md-6" id="scris-titlu-mare">
+                        <div class="banner-content">
+                            <h1 class="title-index">Alege ce vrei să gătești și noi îți livrăm ingredientele acasă! <br>
+                            </h1>
+                            <!--<p style="text-align:center;">Desktop based (mobile version coming soon)</p>-->
+                            <div class="add-bag d-flex align-items-center">
+                                <a class="primary-btn buy-index"
+                                   href="/shop"
+                                   style="background:white; line-height: 60px; color:#ff6c00;">
+                                    Cumpără
+                                    <span class="lnr lnr-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="banner-img">
+                            <img alt="" class="img-fluid" src="img/banner/logo.png"
+                                 style="background:white; max-width:90%;border-radius:100%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+
+<section class="page-section no-scroll">
+    <div class="container">
+        <h2 class="text-center wow fadeIn">Testimoniale:</h2>
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInLeft">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:330px;">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#e83a30"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/rjzlnunf.json"
+                                        style="width:100px;height:100px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;font-size:26px;">Clienții noștri ne-au oferit nota:</h2>
+                            <br>
+                            <div>
+                                <p style="font-size:30px;color:black;">4.8
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:330px">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#f4ae28"
+                                        deplay="1000"
+                                        src="https://cdn.lordicon.com/wloilxuq.json"
+                                        style="width:100px;height:100px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;font-size:26px;">Testimoniale primite până acum:</h2>
+                            <br>
+                            <p style="font-size:30px;color:black;">58</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="reviews">
+            <div class="review owl-carousel stack-carousel owl-theme">
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            20.10.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">O experienta reusita!</h2>
+                    <p class="fg-gray">Este prima data cand incerc ceva de genu,desi am auzit ca acest concept exista de mult in strainatate. Tot ce pot sa spun este ca mi-a usurat foarte mult munca: ingredientele chiar au venit deja in cantitatile de care aveam nevoie conform retetei, iar reteta a fost de jumatate de pagina. Mi-am comandat pui piperat cu piure si pokebowl.
+                        Mi-am propus sa comand o data pe saptamana ca sa incerc cat mai multe retete, a fost o experienta relaxanta! </p>
+                    <div class="nume">
+                        Ioana
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            15.09.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Super!</h2>
+                    <p class="fg-gray">A fost delicious si ingredientele sunt bine proportionate.
+                        Mi-ar fi placut doar daca legumele ar fi venit deja si spalate. </p>
+                    <div class="nume">
+                        Alexandru
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            18.08.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Uite ca se poate si la noi</h2>
+                    <p class="fg-gray">Am studiat in Anglia, unde am folosit un serviciu similar de foodkit. De cand m-am intors mi-a fost dor de concept, pt ca m-am dezobisnuit sa stau la coada la cumparaturi sau sa arunc mancare, pt ca si serviciul respective tot asa, ti le aducea deja masurate.
+                        <!--Cand am comandat, nu m-am asteptat sa fie mare lucru (ceea ce e de inteles, par clar sa fie la inceput), dar am fost placut surprins: retete au iesit absolut delicioase, iar alimentele au fost toate impecabil alese.-->
+                        Cred ca EasyBitez si-a facut un client fidel pe toata sederea mea in Romania!!!</p>
+                    <div class="nume">
+                        Raluca Ana
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star" style="font-size: 20px;"></span>
+                        <div class="data">
+                            23.09.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Recomand!</h2>
+                    <p class="fg-gray">Am comandat si a fost f bun, recomand cu caldura!</p>
+                    <div class="nume">
+                        Mihai
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            7.10.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Pokebowl</h2>
+                    <p class="fg-gray">Neaparat sa incercati Pokebowl-ul, e genial</p>
+                    <div class="nume">
+                        Gabi
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            27.09.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Mancare pentru lenesi</h2>
+                    <p class="fg-gray">Totul a fost foarte simplu, mi-a prins bine in weekend
+                        sa nu ma mai strofoc cu cumparaturile si lipsa de inspiratie. Bravo!</p>
+                    <div class="nume">
+                        Irina
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star" style="font-size: 20px;"></span>
+                        <div class="data">
+                            03.08.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Bun</h2>
+                    <p class="fg-gray">Imi place conceptul, retetele sunt misto, pacat ca livreaza doar de doua ori per saptamana</p>
+                    <div class="nume">
+                        Luca
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half-o checked"></span>
+                        <div class="data">
+                            14.10.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Hellofresh de Romania</h2>
+                    <p class="fg-gray">Conceptul e acelasi ca la Hellofresh, ma bucur sa vedem asa ceva si la noi. Voi mai comanda sigur.</p>
+                    <div class="nume">
+                        Radu
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half-o checked"></span>
+                        <div class="data">
+                            01.11.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Impresie buna</h2>
+                    <p class="fg-gray">De obicei imi cumpar singura alimentele si incropesc ceva de gatit, a fost placut sa am deja totul planuit. Cel mai mult mi-a placut
+                        Messy Meatballs, nu ma asteptam sa iasa asa bun, avand in vedere ca retete e simpluta</p>
+                    <div class="nume">
+                        Ileana
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="data">
+                            07.10.21
+                        </div>
+                    </div>
+                    <h2 style="font-size: 26px;color:Black;">Serviciu profesionist si amabil</h2>
+                    <p class="fg-gray">Livrarea s-a facut la timp, iar baiatul care a livrat a fost foarte amabil si mi-a raspuns toate intrebarile
+                        pe care le mai aveam. Aparent sunt inca la inceput, dar la vad un viitor stralucit!</p>
+                    <div class="nume">
+                        Rares
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="exclusive-deal-area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 py-3">
+                <div class="iconic-list">
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-content">
+                            <h2>Pasul 1</h2>
+                            <p class=" fg-gray" style="font-size:18px">Alege tipul de cutie pe care ți-l dorești.</p>
+                        </div>
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    src="https://cdn.lordicon.com/nlzvfogq.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                    </div>
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    src="https://cdn.lordicon.com/slkvcfos.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                        <div class="iconic-content">
+                            <h2>Pasul 2</h2>
+                            <p class="fg-gray" style="font-size:18px">Urmează partea fun! Alege rețetele variate de care
+                                vrei să te bucuri pe parcursul săptămânii (tip: alege măcar o rețetă care te-a
+                                surprins)</p>
+                        </div>
+                    </div>
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-content">
+                            <h2>Pasul 3</h2>
+                            <p class="fg-gray" style="font-size:18px">Pasul 3 este pentru noi! Vom cumpăra toate
+                                alimentele pentru meal-urile tale selectate și vom pregăti cantitatea după cum ne
+                                dictează rețetarul. We are here to serve!</p>
+                        </div>
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    src="https://cdn.lordicon.com/fyhanzjw.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3 wow zoomIn">
+
+            </div>
+            <div class="col-lg-5 py-3">
+                <div class="iconic-list">
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    src="https://cdn.lordicon.com/uetqnvvg.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                        <div class="iconic-content">
+                            <h2>Pasul 4</h2>
+                            <p class="fg-gray" style="font-size:18px">Îți vom livra cutiile la ușă în două tranșe
+                                săptămânale pentru a garanta prospețimea alimentelor.</p>
+                        </div>
+                    </div>
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-content">
+                            <h2>Pasul 5</h2>
+                            <p class="fg-gray" style="font-size:18px">Ai primit cutia! Now what? Vei găsi în aceasta
+                                toate rețetele alese explicate simplu și practic pe pași, împreună cu alimentele
+                                numerotate în ordinea în care trebuie să fie gătite.</p>
+                        </div>
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    delay="1000"
+                                    src="https://cdn.lordicon.com/wxnxiano.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                    </div>
+                    <div class="iconic-item wow fadeInUp">
+                        <div class="iconic-md iconic-text fg-white rounded-circle"
+                             style="border:2px solid #ffba00; width: 80px; height:80px; background: white;">
+                            <lord-icon
+                                    colors="primary:#121331,secondary:#ffba00"
+                                    src="https://cdn.lordicon.com/gazjnoea.json"
+                                    style="width:70px;height:70px"
+                                    trigger="loop">
+                            </lord-icon>
+                        </div>
+                        <div class="iconic-content">
+                            <h2>Ultimul pas</h2>
+                            <p class="fg-gray" style="font-size:18px">Alege rețeta dorită, scoate alimentele din cutie
+                                și spor la gătit!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section no-scroll">
+    <div class="container">
+        <h2 class="text-center wow fadeIn">Easy Bitez îți oferă:</h2>
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInLeft">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:100%">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#c71f16"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/rivoakkk.json"
+                                        style="width:128px;height:128px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;">Fără risipă</h2>
+                            <p class="fs-grey">Cină pentru patru persoane? Comandă online rețetele, iar noi îți livrăm
+                                rapid toate ingredientele, măsurate perfect pentru numărul de porții de care ai nevoie.
+                                Zilele în care aruncai mâncare pentru că ai cumpărat în cantități prea mari, s-au
+                                terminat. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:100%">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#ffba00"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/dnoiydox.json"
+                                        style="width:128px;height:128px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;">Varietate</h2>
+                            <p class="fg-gray">Ai posibilitatea să alegi dintr-o colecție de rețete rapide, gustoase și
+                                ușor de pregătit. Fiecare preparat vine cu un twist care te va face sa îl savurezi de
+                                fiecare dată cu aceeași plăcere.
+                                Încearcă-le pe toate și vei deveni un adevărat chef, la tine acasă. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInRight">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:100%">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#4d2c19"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/gmzxduhd.json"
+                                        style="width:128px;height:128px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;">Comoditate</h2>
+                            <p class="fg-gray">Te-ai săturat să scrii liste de cumpărături sau să aștepți întotdeauna la
+                                cozi interminabile? Easy Bitez îți livrează toate alimentele necesare, pentru ca tu să
+                                economisești timp și să îți păstrezi energia pentru gătit. Odată ce ai ales preparatele,
+                                tot ce trebuie să faci este să aștepți coletele care vor veni de două ori pe săptămână,
+                                însoțite de rețete explicate pas cu pas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInRight">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:100%">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#121331,secondary:#08a88a"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/ribdawhq.json"
+                                        style="width:128px;height:128px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;">Prospețime</h2>
+                            <p class="fg-gray">Îți livrăm alimente proaspete, atent selecționate și perfect măsurate, de
+                                fiecare dată. Toate produsele sunt etichetate și numerotate în ordinea folosirii lor
+                                conform rețetei. De acum, gătitul va fi mereu o experiență plăcută.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 py-3 wow fadeInRight">
+                        <div class="card card-body border-0 text-center shadow pt-5 top-border-30 bottom-border-30" style="height:100%">
+                            <div class="svg-icon mx-auto mb-4">
+                                <lord-icon
+                                        colors="primary:#e8e230,secondary:#000000"
+                                        delay="1000"
+                                        src="https://cdn.lordicon.com/vaeagfzc.json"
+                                        style="width:128px;height:128px"
+                                        trigger="loop">
+                                </lord-icon>
+                            </div>
+                            <h2 style="color:black;">Accesibil și de calitate</h2>
+                            <p class="fg-gray">Easy Bitez pune preț pe calitate și accesibilitate. Ne dorim ca oricine
+                                să poată testa cea mai eficientă și modernă metodă de preparare a mesei. Cutiile noastre
+                                includ rețetar și alimente perfect măsurate, numerotate, numai gata de folosit. Comandă
+                                online o nouă experiență în bucătărie!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- start footer Area -->
+<div th:replace="fragments :: footer"></div>
+<!-- End footer Area -->
+
+<!--js dependencys go top-down-->
+<!--first jquert, than js, than js file with script-->
+<script type="text/javascript" th:src="@{/js/vendor/jquery-2.2.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/vendor/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.nice-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.sticky.js}"></script>
+<script type="text/javascript" th:src="@{/js/set_header.js}"></script>
+<script type="text/javascript" th:src="@{/js/owl.carousel.min.js}"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/deleteStorage.js"></script>
+</body>
+</html>
