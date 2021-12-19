@@ -58,7 +58,7 @@ public class AppApplication {
         connector.setPort(serverPortHttp);
         connector.setRedirectPort(serverPortHttps);
         return connector;
-//    }
+    }
 //-------------------------------
 
 }
