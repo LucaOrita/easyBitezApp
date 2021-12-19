@@ -17,9 +17,9 @@ public class AppApplication {
 //---------comment for local run
     @Value("${server.port.http}")
     private int serverPortHttp;
-
-    @Value("${server.port}")
-    private int serverPortHttps;
+//
+//    @Value("${server.port}")
+//    private int serverPortHttps;
 //-------------------------------
 
 
@@ -27,6 +27,8 @@ public class AppApplication {
         SpringApplication app = new SpringApplication(AppApplication.class);
         app.run(args);
     }
+
+
 
 
 //---------comment for local run
@@ -46,19 +48,19 @@ public class AppApplication {
 
         };
 
-        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
+//        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
 
         return tomcat;
     }
-
-    private Connector httpToHttpsRedirectConnection() {
-        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
-        connector.setScheme("http");
-        connector.setSecure(false);
-        connector.setPort(serverPortHttp);
-        connector.setRedirectPort(serverPortHttps);
-        return connector;
-    }
+//
+//    private Connector httpToHttpsRedirectConnection() {
+//        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+//        connector.setScheme("http");
+//        connector.setSecure(false);
+//        connector.setPort(serverPortHttp);
+//        connector.setRedirectPort(serverPortHttps);
+//        return connector;
+//    }
 //-------------------------------
 
 }
