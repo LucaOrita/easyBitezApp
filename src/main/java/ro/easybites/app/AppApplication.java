@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Bean;
 public class AppApplication {
 
 //---------comment for local run
-    @Value("${server.port.http}")
-    private int serverPortHttp;
+//    @Value("${server.port.http}")
+//    private int serverPortHttp;
 //
 //    @Value("${server.port}")
 //    private int serverPortHttps;
@@ -32,26 +32,26 @@ public class AppApplication {
 
 
 //---------comment for local run
-    @Bean
-    public ServletWebServerFactory servletWebServerFactory(){
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory(){
-
-            @Override
-            protected void postProcessContext(Context context){
-                SecurityConstraint securityConstraint = new SecurityConstraint();
-                securityConstraint.setUserConstraint("CONFIDANTIAL");
-                SecurityCollection collection = new SecurityCollection();
-                collection.addPattern("/*");
-                securityConstraint.addCollection(collection);
-                context.addConstraint(securityConstraint);
-            }
-
-        };
-
-//        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
-
-        return tomcat;
-    }
+//    @Bean
+//    public ServletWebServerFactory servletWebServerFactory(){
+//        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory(){
+//
+//            @Override
+//            protected void postProcessContext(Context context){
+//                SecurityConstraint securityConstraint = new SecurityConstraint();
+//                securityConstraint.setUserConstraint("CONFIDANTIAL");
+//                SecurityCollection collection = new SecurityCollection();
+//                collection.addPattern("/*");
+//                securityConstraint.addCollection(collection);
+//                context.addConstraint(securityConstraint);
+//            }
+//
+//        };
+//
+////        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
+//
+//        return tomcat;
+//    }
 //
 //    private Connector httpToHttpsRedirectConnection() {
 //        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
