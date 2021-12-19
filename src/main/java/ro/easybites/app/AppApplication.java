@@ -46,19 +46,19 @@ public class AppApplication {
 
         };
 
-        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
+//        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
 
         return tomcat;
     }
 
-    private Connector httpToHttpsRedirectConnection() {
-        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
-        connector.setScheme("http");
-        connector.setSecure(false);
-        connector.setPort(serverPortHttp);
-        connector.setRedirectPort(serverPortHttps);
-        return connector;
-    }
+//    private Connector httpToHttpsRedirectConnection() {
+//        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+//        connector.setScheme("http");
+//        connector.setSecure(false);
+//        connector.setPort(serverPortHttp);
+//        connector.setRedirectPort(serverPortHttps);
+//        return connector;
+//    }
 //-------------------------------
 
 }
