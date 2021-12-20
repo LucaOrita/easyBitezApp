@@ -48,7 +48,7 @@ public class AppApplication {
 
         };
 
-//        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
+        tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnection());
 
         return tomcat;
     }
