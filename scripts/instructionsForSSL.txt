@@ -1,0 +1,62 @@
+Pasul 1.
+Deschizi contul ZeroSSL si interfata de reinoire certificat
+
+Pasul 2.
+Selectezi ce SSL vrei sa se regenereze si apoi parcurgi formularul
+
+Pasul 3.
+Selectezi incarcare de fisier pa un anumit path. Descarci acel fisier si il incarci in /resources/.well-known/pki-validation/[nume_fisier]
+
+Pasul 4.
+Te duci in src/main/java/ro.easybites.app.security si deschizi fisierul SercurityConfig.java
+
+Pasul 5.
+Pe linia 44 (daca nu schimbi structura fisierului) se afla o functie numita configure(WebSecurity web)
+
+Pasul 6.
+Pe urmatoarea linie (45) ai urmatoarea expresie:
+        web.ignoring().antMatchers("/.well-known/pki-validation/CE6E7B6DB528DF070D26FDE6816EA859.txt","/static/**", "/css/**", "/js/**", "/img/**", "/fonts/**",  "/json/**", "/favicon.ico", "/error");
+In loc de "/.well-known/pki-validation/[nume_fisier]" vei inlocui cu path-ul pe care ti-l spune ca trebuie accesat din ZeroSSL
+Faci push pe server si redeploy la applicatie
+In interfata ZeroSSL ii dai click check si ar trebui sa functioneze
+
+Pasul 7.
+Astepti sa se genereze certificatele si apoi le descarci
+
+Pasul 8.
+Le plasezi in folderul /resources/keystore/certificates dupa ce le stergi pe cele vechi (FF IMP SA LE STERGI PE CELE VECHI)
+
+Pasul 9.
+Faci push pe server
+
+Pasul 10.
+Deschizi consola si navighezi in folderul ~/easyBitezApp/src/main/resources/keystore/certificates
+
+Pasul 11.
+Rulezi urmatoarea comanda
+
+openssl pkcs12 -export -in certificate.crt -inkey private.key -out easy.p12 -name easyssl[n]
+
+ATENTIE! NOTATIA [n] SEMNIFICA FAPTUL CA ACEL NUME/ALIAS ARE UN NUMAR. MOMENTAN NUMARUL ESTE 3. CEEA CE INSEAMNA CA DACA
+VEI GENERA UN NOU CERTIFICAT, VA TREBUI SA PUI 4, 5, 6... DACA GRESESTI, ITI VEI STRICA CHEIA SI KEYTOOL CHAIN, CEEA CE
+VA DUCE LA CREAREA UNUI NOU DROPLET!
+
+EX.
+openssl pkcs12 -export -in certificate.crt -inkey private.key -out easy.p12 -name easyssl4
+SAU
+
+openssl pkcs12 -export -in certificate.crt -inkey private.key -out easy.p12 -name easyssl5
+SAU
+
+....
+
+For more info see: https://stackoverflow.com/a/54527471/8196323
+
+Pasul 12.
+Te duci in fisierul application.properties si schimbi "server.ssl.keyAlias=easyssl3" cu numele corespunzator
+
+Pasul 13.
+Faci push pe server
+
+Pasul 14.
+Pornesti applicatia.
