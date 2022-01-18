@@ -99,6 +99,11 @@ public class MainLinkMapper {
         return "admin/admin";
     }
 
+    @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
+    public String g9nnrkiayjrxwr56qdj8oysxdkve3i(Model model) {
+        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i.html";
+    }
+
     @GetMapping("/contact")
     public String contact(Model model) {
         return "mainSite/contact";
