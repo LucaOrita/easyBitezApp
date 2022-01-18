@@ -101,7 +101,7 @@ public class MainLinkMapper {
 
     @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
     public String g9nnrkiayjrxwr56qdj8oysxdkve3i(Model model) {
-        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i.html";
+        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
     }
 
     @GetMapping("/contact")
