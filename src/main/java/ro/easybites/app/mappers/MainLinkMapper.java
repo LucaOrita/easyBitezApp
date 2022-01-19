@@ -100,7 +100,7 @@ public class MainLinkMapper {
     }
 
     @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
-    public String g9nnrkiayjrxwr56qdj8oysxdkve3i(Model model) {
+    public String g9nnrkiayjrxwr56qdj8oysxdkve3i() {
         return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
     }
 
