@@ -49,6 +49,11 @@ public class MainLinkMapper {
         return "mainSite/preturi";
     }
 
+//    @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
+//    public String g9nnrkiayjrxwr56qdj8oysxdkve3i() {
+//        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
+//    }
+
 
     //------------RETETE START---------------//
 
@@ -99,10 +104,7 @@ public class MainLinkMapper {
         return "admin/admin";
     }
 
-    @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
-    public String g9nnrkiayjrxwr56qdj8oysxdkve3i() {
-        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
-    }
+
 
     @GetMapping("/contact")
     public String contact(Model model) {
