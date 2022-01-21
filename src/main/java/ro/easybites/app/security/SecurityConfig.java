@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/pay",
                         "/register", "/registeruser",
                         "/activate-account",
-                        "/", "/preturi", "/contact", "/retete", "/retete/**", "/about-us", "/contacted", "g9nnrkiayjrxwr56qdj8oysxdkve3i.html").permitAll()
+                        "/", "/preturi", "/contact", "/retete", "/retete/**", "/about-us", "/contacted", "/g9nnrkiayjrxwr56qdj8oysxdkve3i.html").permitAll()
                 .anyRequest().authenticated()
                 .and()
 //                .httpBasic()
