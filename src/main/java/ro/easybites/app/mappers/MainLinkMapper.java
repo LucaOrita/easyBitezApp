@@ -49,10 +49,10 @@ public class MainLinkMapper {
         return "mainSite/preturi";
     }
 
-//    @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
-//    public String g9nnrkiayjrxwr56qdj8oysxdkve3i() {
-//        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
-//    }
+    @GetMapping("/g9nnrkiayjrxwr56qdj8oysxdkve3i.html")
+    public String g9nnrkiayjrxwr56qdj8oysxdkve3i() {
+        return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
+    }
 
 
     //------------RETETE START---------------//
