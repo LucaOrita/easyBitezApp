@@ -66,6 +66,28 @@
   "_class": "ro.easybites.app.model.Codes"
 },{
   "_id": {
+    "$oid": "60eb61d916993246fdd39c00"
+  },
+  "reducePercentage": 15,
+  "codeID": "oanastoica15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c01"
+  },
+  "reducePercentage": 15,
+  "codeID": "bebemananca15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
     "$oid": "60eb61d916993246fdd39d00"
   },
   "reducePercentage": 30,
