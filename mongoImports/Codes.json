@@ -106,18 +106,7 @@
   "type": "",
   "menu_type": "offerFoodForPack",
   "offerOfBox": "",
-  "scope": "single",
-  "_class": "ro.easybites.app.model.Codes"
-},{
-  "_id": {
-    "$oid": "60eb61d916993246fdd39c04"
-  },
-  "reducePercentage": 0,
-  "codeID": "vday",
-  "type": "",
-  "menu_type": "offerFoodForPack",
-  "offerOfBox": "",
-  "scope": "family",
+  "scope": "",
   "_class": "ro.easybites.app.model.Codes"
 },{
   "_id": {

@@ -551,16 +551,16 @@ public class ShopLinker {
             session.setAttribute("codeUsed", code);
             return new ResponseEntity<>(" " + String.valueOf(percentagePrice) + " lei vor fi donati catre " + "<a href='https://www.instagram.com/easybitez_ro/'>ONG</a>", HttpStatus.OK);
         } else
-        if (c.getScope().equals("single") && code.equals("vday") &&
+        if (code.equals("vday") &&
                 fetcher.getBoxById((String) session.getAttribute("boxID")).getNrPers() == 1) {
 
             session.setAttribute("codeApplied", true);
             session.setAttribute("addOn", "vin proseco");
             session.setAttribute("codeUsed", code);
-            return new ResponseEntity<>("Vei primi la livrare o noua sticlă de vin ", HttpStatus.OK);
+            return new ResponseEntity<>("Vei primi la livrare o noua sticla de vin ", HttpStatus.OK);
 
         } else
-        if (c.getScope().equals("family") && code.equals("vday") &&
+        if (code.equals("vday") &&
                 fetcher.getBoxById((String) session.getAttribute("boxID")).getNrPers() == 2) {
 
             session.setAttribute("codeApplied", true);
