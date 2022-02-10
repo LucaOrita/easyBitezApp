@@ -110,6 +110,61 @@
   "_class": "ro.easybites.app.model.Codes"
 },{
   "_id": {
+    "$oid": "60eb61d916993246fdd39c04"
+  },
+  "reducePercentage": 15,
+  "codeID": "BEAUTYBAROMETER15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c05"
+  },
+  "reducePercentage": 15,
+  "codeID": "ANDREEACRISTINAM15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c06"
+  },
+  "reducePercentage": 15,
+  "codeID": "ZBURATOAREARO15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c07"
+  },
+  "reducePercentage": 15,
+  "codeID": "TRENDS15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
+    "$oid": "60eb61d916993246fdd39c08"
+  },
+  "reducePercentage": 15,
+  "codeID": "DANIELANICULI15",
+  "type": "",
+  "menu_type": "percentage",
+  "offerOfBox": "",
+  "scope": "",
+  "_class": "ro.easybites.app.model.Codes"
+},{
+  "_id": {
     "$oid": "60eb61d916993246fdd39d00"
   },
   "reducePercentage": 30,

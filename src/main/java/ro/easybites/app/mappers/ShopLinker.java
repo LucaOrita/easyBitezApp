@@ -494,7 +494,7 @@ public class ShopLinker {
             if (c != null) {
                 switch (c.getMenu_type()) {
                     case "percentage":
-                        if (code.equals("easy10") || code.equals("gusturoi15") || code.equals("easy30") || code.equals("emelicious15") || code.equals("alinaedu15") || code.equals("sophie15") || code.equals("jurnaldulce15") || code.equals("rvegetariene15") || code.equals("oracudora15") || code.equals("oanastoica15") || code.equals("bebemananca15") ) {
+                        if (code.equals("easy10") || code.equals("gusturoi15") || code.equals("easy30") || code.equals("emelicious15") || code.equals("alinaedu15") || code.equals("sophie15") || code.equals("jurnaldulce15") || code.equals("rvegetariene15") || code.equals("oracudora15") || code.equals("oanastoica15") || code.equals("bebemananca15") || code.equals("BEAUTYBAROMETER15") || code.equals("ANDREEACRISTINAM15") || code.equals("ZBURATOAREARO15") || code.equals("TRENDS15") || code.equals("DANIELANICULI15")) {
                             Integer percentage = c.getReducePercentage();
                             double newPrice = ((Double) session.getAttribute("pret")) * (100 - percentage) / 100.0;
                             session.setAttribute("codeApplied", true);
