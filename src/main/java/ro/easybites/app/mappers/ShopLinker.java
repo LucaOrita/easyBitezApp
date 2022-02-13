@@ -714,7 +714,7 @@ public class ShopLinker {
             params.put("company", "");
             params.put("city", body.getTown());
             params.put("add", body.makeAdress());
-            params.put("email", "email@email.com");
+            params.put("email", body.getNume());
             params.put("phone", body.getNrTel());
             params.put("fax", "");
 
@@ -725,7 +725,7 @@ public class ShopLinker {
             params.put("scompany", "");
             params.put("scity", body.getTown2());
             params.put("sadd", body.makeAdress2());
-            params.put("semail", "");
+            params.put("semail", body.getNume2());
             params.put("sphone", body.getNrTel2());
             params.put("sfax", "");
 

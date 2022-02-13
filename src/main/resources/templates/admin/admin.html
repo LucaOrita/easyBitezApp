@@ -74,7 +74,8 @@
         <tr>
 <!--            <td>OrderID</td>-->
             <td>Box ID</td>
-            <td>Date</td>
+            <td>Date Placed</td>
+            <td>Date Delivery</td>
             <td>Mancare Comandata</td>
             <td>Detalii Livrare</td>
             <td>UserID</td>
@@ -83,8 +84,8 @@
         <tr th:each="order : ${orders}">
 <!--            <td th:text="${order.id}"></td>-->
             <td th:text="${order.boxID}"></td>
-            <td th:text="${order.datePlaced}">UserID</td>
-            <td th:text="${order.date}">Date</td>
+            <td th:text="${order.datePlaced}">Date Placed</td>
+            <td th:text="${order.date}">Date Delivery</td>
             <td th:text="${order.getFoodTitle()}">Mancare Comandata</td>
             <td th:text="${order.getLivrareFormated()}">Detalii Livrare</td>
             <td th:text="${order.userID}">UserID</td>
