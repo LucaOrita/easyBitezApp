@@ -703,7 +703,7 @@ public class ShopLinker {
             String key = "0ba388d7b5f12509aef35d3cd5f570faf971a8df";
 
             Date date = new Date();
-            String dateString = new SimpleDateFormat("yyyyMMddHHmmss").format(date);
+            String dateString = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(date);
 
             HashMap<String, String> params = new HashMap<>();
 
