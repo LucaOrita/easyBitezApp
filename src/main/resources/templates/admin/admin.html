@@ -83,6 +83,7 @@
         <tr th:each="order : ${orders}">
 <!--            <td th:text="${order.id}"></td>-->
             <td th:text="${order.boxID}"></td>
+            <td th:text="${order.datePlaced}">UserID</td>
             <td th:text="${order.date}">Date</td>
             <td th:text="${order.getFoodTitle()}">Mancare Comandata</td>
             <td th:text="${order.getLivrareFormated()}">Detalii Livrare</td>

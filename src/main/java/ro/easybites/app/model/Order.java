@@ -50,6 +50,19 @@ public class Order {
         return foodTitle;
     }
 
+    public Date getDatePlaced() {
+        return datePlaced;
+    }
+
+    public void setDatePlaced(Date date) {
+        this.datePlaced = date;
+    }
+
+    public String getDatePlacedString() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return dateFormat.format(this.datePlaced);
+    }
+
     public void setFoodTitle(List<String> foodTitle) {
         this.foodTitle = foodTitle;
     }
