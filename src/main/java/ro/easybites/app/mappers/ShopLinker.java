@@ -610,8 +610,10 @@ public class ShopLinker {
         fetcher.addTracker(req.getRemoteAddr(), "pay");
 
         //plata online
-        return "shop/redirect_payment";
-        //return "shop/ramburs.html";
+
+            return "shop/redirect_payment";
+
+//            return "shop/ramburs.html";
     }
 
     @GetMapping("/na/shop/pay")
@@ -636,10 +638,12 @@ public class ShopLinker {
         fetcher.addTracker(req.getRemoteAddr(), "pay");
 
         //plata online
-        return "shop/redirect_payment";
-        // plata ramburs
-        //model.addAttribute("data_livrare", session.getAttribute("date"));
-        //return "shop/ramburs.html";
+
+            return "shop/redirect_payment";
+
+//            model.addAttribute("data_livrare", session.getAttribute("date"));
+//            return "shop/ramburs.html";
+
     }
 
     @PostMapping("/shop/getReady")
