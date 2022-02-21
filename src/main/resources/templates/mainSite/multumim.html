@@ -8,7 +8,23 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 200px;
+      width: 300px;
+    }
+    html, body {
+      margin: 0;
+      height:100%;
+      width:100%;
+      padding:0;
+    }
+
+    section {
+      display: block;
+      background: #CFF;
+      height:100%;
+      width:100%;
+      padding: 60px;
+      padding-left: 120px;
+      box-sizing:border-box;
     }
   </style>
   <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
@@ -27,26 +43,32 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css" async>
 </head>
 <body>
+<section class="banner-area section_gap"
+         th:style="'background: url(' + @{/img/banner/bg_hero_2.svg} + ') center no-repeat; background-size: cover;'">
+  <br><br>
 
-<br><br>
+  <div th:replace="fragments :: header_main"></div>
 
-<div th:replace="fragments :: header_main"></div>
+  <br><br><br><br><br>
 
-<br><br><br><br><br>
+  <div class="center">
+    <div class="banner-img">
+      <img alt="" class="img-fluid" src="img/banner/logo.png"
+           style="background:white; max-width:90%;border-radius:100%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4)">
+    </div>
+  </div>
 
-<img class="center" src="/img/banner/logo.png"/>
+  <br><br>
+
+  <div style="font-size: 50px; text-align: center; margin-top: 50px; color: white;">
+
+    <p style="color: white;">
+      Comanda dumneavoastră a fost înregistrată, vă mulțumim!
+    </p>
 
 
-<div style="font-size: 50px; text-align: center; margin-top: 50px;">
-
-  <p>
-    Comanda dumneavoastră a fost înregistrată, vă mulțumim!
-  </p>
-  <p>
-<!--    Coletul va fi livrat pe data de <text style="color: #ffba00" th:text="${data_livrare}"></text> și plata se va face la ramburs.-->
-  </p>
-
-</div>
+  </div>
+</section>
 </body>
 <script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
 <script>
