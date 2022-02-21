@@ -54,7 +54,7 @@ public class MainLinkMapper {
         return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
     }
 
-    @GetMapping("/multumim")
+    @GetMapping("/multumim.html")
     public String multumim() {
         return "mainSite/multumim";
     }
