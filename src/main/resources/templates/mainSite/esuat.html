@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Multumim</title>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+    }
+    html, body {
+      margin: 0;
+      height:100%;
+      width:100%;
+      padding:0;
+    }
+
+    section {
+      display: block;
+      background: #CFF;
+      height:100%;
+      width:100%;
+      padding: 60px;
+      padding-left: 120px;
+      box-sizing:border-box;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="/css/linearicons.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/user_defined.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/themify-icons.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/nice-select.css" async>
+  <!--<link rel="stylesheet" href="css/nouislider.min.css">-->
+  <!--<link rel="stylesheet" href="css/ion.rangeSlider.css" />-->
+  <!--<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />-->
+  <!--<link rel="stylesheet" href="css/magnific-popup.css">-->
+  <link rel="stylesheet" type="text/css" href="/css/maicons.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/mobster.css" async>
+  <link rel="stylesheet" type="text/css" href="/css/main.css" async>
+</head>
+<body>
+<section class="banner-area section_gap"
+         th:style="'background: url(' + @{/img/banner/bg_hero_2.svg} + ') center no-repeat; background-size: cover;'">
+  <br><br>
+
+  <div th:replace="fragments :: header_main"></div>
+
+  <br><br><br><br><br>
+
+  <div class="center">
+    <div class="banner-img">
+      <img alt="" class="img-fluid" src="img/banner/logo.png"
+           style="background:white; max-width:90%;border-radius:100%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4)">
+    </div>
+  </div>
+
+  <br><br>
+
+  <div style="font-size: 50px; text-align: center; margin-top: 50px; color: white;">
+
+    <p style="color: white;">
+      Comanda dumneavoastră a fost înregistrată cu succes datorită unor probleme la plată.
+    </p>
+    <p style="color: white;">
+      Veți fi redirecționat către pagina principală imediat!
+    </p>
+
+
+  </div>
+</section>
+</body>
+<script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      location.href = '/';
+    }, 20000);
+  });
+</script>
+</html>

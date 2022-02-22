@@ -54,9 +54,14 @@ public class MainLinkMapper {
         return "mainSite/g9nnrkiayjrxwr56qdj8oysxdkve3i";
     }
 
-    @PostMapping("/multumim.html")
+    @PostMapping("/multumim")
     public String multumim() {
         return "mainSite/multumim";
+    }
+
+    @PostMapping("/esuat")
+    public String esuat() {
+        return "mainSite/esuat";
     }
 
 
