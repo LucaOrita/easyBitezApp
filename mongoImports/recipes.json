@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "612df077d489eb427f1eca55"
+    "$oid": "612df077d489eb427f1eca59"
   },
   "name": "Pui Umplut cu Dovlecel la Cuptor",
   "innerName": "pui cu dovlecel",
@@ -88,7 +88,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca56"
+    "$oid": "612df077d489eb427f1eca67"
   },
   "name": "Buffalo Bites",
   "innerName": "buffalo bites",
@@ -175,7 +175,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca57"
+    "$oid": "612df077d489eb427f1eca6a"
   },
   "name": "Italiano Vero",
   "innerName": "chicken caprese",
@@ -246,7 +246,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca58"
+    "$oid": "612df077d489eb427f1eca6c"
   },
   "name": "Tigaie de Pui și Legume",
   "innerName": "tigaie de pui și legume",
@@ -333,7 +333,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca59"
+    "$oid": "612df077d489eb427f1eca56"
   },
   "name": "Pui Piperat cu Piure",
   "innerName": "pui piperat cu piure",
@@ -428,7 +428,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5a"
+    "$oid": "612df077d489eb427f1eca5b"
   },
   "name": "Easy Bolognese",
   "innerName": "paste bolognese",
@@ -507,7 +507,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5b"
+    "$oid": "612df077d489eb427f1eca68"
   },
   "name": "Easy Carbonara",
   "innerName": "paste carbonara",
@@ -562,7 +562,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5c"
+    "$oid": "612df077d489eb427f1eca69"
   },
   "name": "Paste say Cheese!",
   "innerName": "paste cu branza",
@@ -617,7 +617,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5d"
+    "$oid": "612df077d489eb427f1eca5a"
   },
   "name": "Paste cu Capere și Roșii Uscate",
   "innerName": "paste cu capere și roșii uscate",
@@ -681,7 +681,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5e"
+    "$oid": "612df077d489eb427f1eca62"
   },
   "name": "Paste cu Pui și Mult Verde",
   "innerName": "paste cu sos pesto si broccoli",
@@ -760,7 +760,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5f"
+    "$oid": "612df077d489eb427f1eca61"
   },
   "name": "Burger Delicios",
   "innerName": "classic pork burger",
@@ -847,7 +847,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca60"
+    "$oid": "612df077d489eb427f1eca5e"
   },
   "name": "Cotlet de Porc cu Cartofi și Murături",
   "innerName": "cotlet de porc cu mirodenii",
@@ -934,7 +934,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca61"
+    "$oid": "612df077d489eb427f1eca6b"
   },
   "name": "Friptură de Porc cu Legume Balsamizate",
   "innerName": "cotlet de porc cu legume balsamizate",
@@ -1013,7 +1013,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca62"
+    "$oid": "612df077d489eb427f1eca58"
   },
   "name": "Mâncărică de mazăre",
   "innerName": "mancare de mazare",
@@ -1188,7 +1188,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca65"
+    "$oid": "612df077d489eb427f1eca66"
   },
   "name": "Halloumi Aurit cu Miere",
   "innerName": "halloumi aurit cu miere",
@@ -1251,7 +1251,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca66"
+    "$oid": "612df077d489eb427f1eca5c"
   },
   "name": "Caserolă de Păstăi",
   "innerName": "pastai cu ciuperci",
@@ -1338,7 +1338,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca67"
+    "$oid": "612df077d489eb427f1eca5d"
   },
   "name": "Fried Rice Tofu",
   "innerName": "tofu cu orez prajit",
@@ -1434,7 +1434,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca68"
+    "$oid": "612df077d489eb427f1eca65"
   },
   "name": "Tofu Poke Bowl",
   "innerName": "tofu poke bowl",
@@ -1530,7 +1530,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca69"
+    "$oid": "612df077d489eb427f1eca55"
   },
   "name": "Poke Bowl",
   "innerName": "beef veggie poke",
@@ -1642,7 +1642,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca6a"
+    "$oid": "612df077d489eb427f1eca5f"
   },
   "name": "Elevated Nachos",
   "innerName": "mancarica de vita mexicana",
@@ -1745,7 +1745,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca6b"
+    "$oid": "612df077d489eb427f1eca60"
   },
   "name": "Messy Meatballs",
   "innerName": "messy meatballs",
@@ -1825,7 +1825,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca6c"
+    "$oid": "612df077d489eb427f1eca57"
   },
   "name": "Easy Beef Stroganoff",
   "innerName": "stroganoff de vita",
