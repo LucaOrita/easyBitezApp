@@ -1,1536 +1,6 @@
 [{
   "_id": {
-    "$oid": "612df077d489eb427f1eca59"
-  },
-  "name": "Pui Umplut cu Dovlecel la Cuptor",
-  "innerName": "pui cu dovlecel",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor1.jpg",
-    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor2.jpg",
-    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor3.jpg"
-  ],
-  "durata": "45 min",
-  "type": "mancare",
-  "categorie": "pui",
-  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Pentru un prânz ușor de pregătit și mai ales sănătos.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "pui",
-      "internalName": "pui",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "dovlecel",
-      "internalName": "dovlecel 100",
-      "img": "/img/uploads/ingrediente/dovlecel.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 100,
-      "v": 100
-    },
-    {
-      "name": "mozzarella",
-      "internalName": "mozzarella",
-      "img": "/img/uploads/ingrediente/mozarella.jpg",
-      "masurare": "buc",
-      "cant": 4,
-      "v": 80
-    },
-    {
-      "name": "pudră de usturoi",
-      "internalName": "pudră de usturoi",
-      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "boia dulce",
-      "internalName": "boia dulce",
-      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "busuioc uscat",
-      "internalName": "busuioc uscact",
-      "img": "/img/uploads/ingrediente/busuioc_uscat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca67"
-  },
-  "name": "Buffalo Bites",
-  "innerName": "buffalo bites",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/buffalo_chicken1.jpg",
-    "/img/uploads/retete/buffalo_chicken2.jpg"
-  ],
-  "durata": "35 min",
-  "type": "mancare",
-  "categorie": "pui",
-  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Rețetă de diner american, la fel de gustoasă servită și în sufrageria românească.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "pui",
-      "internalName": "pui",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "cartofi",
-      "internalName": "cartofi",
-      "img": "/img/uploads/ingrediente/cartofi.jpg",
-      "masurare": "g",
-      "cant": 400,
-      "v": 400
-    },
-    {
-      "name": "suc roșii",
-      "internalName": "suc roșii 100",
-      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "lapte",
-      "internalName": "lapte 40",
-      "img": "/img/uploads/ingrediente/lapte.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "unt",
-      "internalName": "unt 10",
-      "img": "/img/uploads/ingrediente/unt.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi 10",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "ceapă crocantă",
-      "internalName": "ceapă crocantă 10",
-      "img": "/img/uploads/ingrediente/ceapa_crocanta.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "pătrunje verdel",
-      "internalName": "patrunjel verde 2",
-      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca6a"
-  },
-  "name": "Italiano Vero",
-  "innerName": "chicken caprese",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/chicken_caprese1.jpg",
-    "/img/uploads/retete/chicken_caprese2.jpg"
-  ],
-  "durata": "45 min",
-  "type": "mancare",
-  "categorie": "pui",
-  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Rețetă de pui italian, numai bună pentru o seară specială.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "pui",
-      "internalName": "pui 300",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 300,
-      "v": 300
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi 10",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "oțet balsamic",
-      "internalName": "oțet balsamic 10",
-      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "busuioc uscat",
-      "internalName": "busuioc uscat 2",
-      "img": "/img/uploads/ingrediente/busuioc_uscat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "mozzarella",
-      "internalName": "mozzarella 80",
-      "img": "/img/uploads/ingrediente/mozarella.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 80
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca6c"
-  },
-  "name": "Tigaie de Pui și Legume",
-  "innerName": "tigaie de pui și legume",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/tigaie_de_pui_si_legume1.jpg",
-    "/img/uploads/retete/tigaie_de_pui_si_legume2.jpg"
-  ],
-  "durata": "45 min",
-  "type": "mancare",
-  "categorie": "pui",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Cine a spus că dietetic nu poate însemna și delicios? Tigaia de pui și legume este prânzul perfect de luat la birou.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "pui",
-      "internalName": "pui 300",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "dovlecel",
-      "internalName": "dovlecel 120",
-      "img": "/img/uploads/ingrediente/dovlecel.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 120
-    },
-    {
-      "name": "broccoli",
-      "internalName": "broccoli",
-      "img": "/img/uploads/ingrediente/broccoli.jpg",
-      "masurare": "g",
-      "cant": 120,
-      "v": 120
-    },
-    {
-      "name": "ardei gras",
-      "internalName": "ardei gras",
-      "img": "/img/uploads/ingrediente/ardei_gras.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 120
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 100,
-      "v": 100
-    },
-    {
-      "name": "suc rosii",
-      "internalName": "suc rosii 100",
-      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi 10",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "rozmarin",
-      "internalName": "rozmarin 2",
-      "img": "/img/uploads/ingrediente/rozmarin_proaspat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca56"
-  },
-  "name": "Pui Piperat cu Piure",
-  "innerName": "pui piperat cu piure",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/pui_piperat_cu_piure1.jpg",
-    "/img/uploads/retete/pui_piperat_cu_piure2.jpg"
-  ],
-  "durata": "35 min",
-  "type": "mancare",
-  "categorie": "pui",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Această rețetă clasică a fost transformată printr-un twist simplu într-o rețetă classy.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "pui",
-      "internalName": "pui 300",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "cartofi",
-      "internalName": "cartofi",
-      "img": "/img/uploads/ingrediente/cartofi.jpg",
-      "masurare": "g",
-      "cant": 400,
-      "v": 400
-    },
-    {
-      "name": "unt",
-      "internalName": "unt 10",
-      "img": "/img/uploads/ingrediente/unt.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "lapte",
-      "internalName": "lapte 40",
-      "img": "/img/uploads/ingrediente/lapte.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "piper verde",
-      "internalName": "piper verde 20",
-      "img": "/img/uploads/ingrediente/piper_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "boia ardei dulce",
-      "internalName": "boia ardei dulce 2",
-      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "usturoi pudra",
-      "internalName": "usturoi pudra 2",
-      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "cimbrișor",
-      "internalName": "cimbrișor 2",
-      "img": "/img/uploads/ingrediente/cimbrisor.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "smântână de gătit",
-      "internalName": "smântână de gătit 80",
-      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 80
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca5b"
-  },
-  "name": "Easy Bolognese",
-  "innerName": "paste bolognese",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/paste_bolognese1.jpg",
-    "/img/uploads/retete/paste_bolognese2.jpg"
-  ],
-  "durata": "30 min",
-  "type": "mancare",
-  "categorie": "paste",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Nu putem avea Carbonara fără Bolognese, așa prevede legea.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "paste",
-      "internalName": "paste",
-      "img": "/img/uploads/ingrediente/paste.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "carne de vita tocată",
-      "internalName": "vita tocata 200",
-      "img": "/img/uploads/ingrediente/carne_tocata_vita.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "suc roșii",
-      "internalName": "suc roșii 100",
-      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 100,
-      "v": 100
-    },
-    {
-      "name": "parmezan",
-      "internalName": "parmezan 20",
-      "img": "/img/uploads/ingrediente/parmezan.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 40
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi 10",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "morcov",
-      "internalName": "morcov",
-      "img": "/img/uploads/ingrediente/morcov.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 120
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca68"
-  },
-  "name": "Easy Carbonara",
-  "innerName": "paste carbonara",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/paste_carbonara1.jpg",
-    "/img/uploads/retete/paste_carbonara2.jpg"
-  ],
-  "durata": "20 min",
-  "type": "mancare",
-  "categorie": "paste",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Paste clasic italienești, garantat să vă lase gura apă doar citind rețeta.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "paste",
-      "internalName": "paste",
-      "img": "/img/uploads/ingrediente/paste.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "bacon afumat",
-      "internalName": "bacon afumat 250",
-      "img": "/img/uploads/ingrediente/bacon_afumat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 250
-    },
-    {
-      "name": "smântână de gătit",
-      "internalName": "smântână de gătit 100",
-      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "parmezan",
-      "internalName": "parmezan 20",
-      "img": "/img/uploads/ingrediente/parmezan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
     "$oid": "612df077d489eb427f1eca69"
-  },
-  "name": "Paste say Cheese!",
-  "innerName": "paste cu branza",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/paste_cu_branza1.jpg",
-    "/img/uploads/retete/paste_cu_branza2.jpg"
-  ],
-  "durata": "12 min",
-  "type": "mancare",
-  "categorie": "paste",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Paste cu brânză cu gust de copilărie.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "paste",
-      "internalName": "paste",
-      "img": "/img/uploads/ingrediente/paste.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "smântână de gătit",
-      "internalName": "smântână de gătit 100",
-      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "parmezan",
-      "internalName": "parmezan 20",
-      "img": "/img/uploads/ingrediente/parmezan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "gouda",
-      "internalName": "gouda 150",
-      "img": "/img/uploads/ingrediente/gouda.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 150
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca5a"
-  },
-  "name": "Paste cu Capere și Roșii Uscate",
-  "innerName": "paste cu capere și roșii uscate",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate1.jpg",
-    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate2.jpg",
-    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate3.jpg"
-  ],
-  "durata": "15 min",
-  "type": "mancare",
-  "categorie": "paste",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Comfort food pentru o cină leneșă.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "paste",
-      "internalName": "paste",
-      "img": "/img/uploads/ingrediente/paste.jpg",
-      "masurare": "g",
-      "cant": 250,
-      "v": 250
-    },
-    {
-      "name": "capere",
-      "internalName": "capere 40",
-      "img": "/img/uploads/ingrediente/capere.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "suc roșii",
-      "internalName": "suc roșii 100",
-      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    },
-    {
-      "name": "roșii uscate",
-      "internalName": "roșii uscate 60",
-      "img": "/img/uploads/ingrediente/rosii_uscate.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 60
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi 10",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca62"
-  },
-  "name": "Paste cu Pui și Mult Verde",
-  "innerName": "paste cu sos pesto si broccoli",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/paste_cu_sos_pesto_si_broccoli1.jpg",
-    "/img/uploads/retete/paste_cu_sos_pesto_si_broccoli2.jpg"
-  ],
-  "durata": "30 min",
-  "type": "mancare",
-  "categorie": "paste",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Rețeta aceasta reușește să facă până și broccoli-ul să dispară din farfurie.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "paste",
-      "internalName": "paste",
-      "img": "/img/uploads/ingrediente/paste.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "pui",
-      "internalName": "pui 150",
-      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 150
-    },
-    {
-      "name": "broccoli",
-      "internalName": "broccoli",
-      "img": "/img/uploads/ingrediente/broccoli.jpg",
-      "masurare": "g",
-      "cant": 130,
-      "v": 130
-    },
-    {
-      "name": "roșii uscate",
-      "internalName": "roșii uscate 50",
-      "img": "/img/uploads/ingrediente/rosii_uscate.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 50
-    },
-    {
-      "name": "feta",
-      "internalName": "feta 60",
-      "img": "/img/uploads/ingrediente/feta.jpg",
-      "masurare": "g",
-      "cant": 60,
-      "v": 120
-    },
-    {
-      "name": "sos pesto",
-      "internalName": "sos pesto 50",
-      "img": "/img/uploads/ingrediente/sos_pesto.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 50
-    },
-    {
-      "name": "unt",
-      "internalName": "unt 10",
-      "img": "/img/uploads/ingrediente/unt.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca61"
-  },
-  "name": "Burger Delicios",
-  "innerName": "classic pork burger",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/classic_pork_burger1.jpg",
-    "/img/uploads/retete/classic_pork_burger2.jpg"
-  ],
-  "durata": "20 min",
-  "type": "mancare",
-  "categorie": "porc",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Un clasic cheat meal după o săptămână grea.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "carne de porc tocată",
-      "internalName": "porc tocat 200",
-      "img": "/img/uploads/ingrediente/carne_tocata_porc.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "roșii",
-      "internalName": "roșii",
-      "img": "/img/uploads/ingrediente/rosii.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 80
-    },
-    {
-      "name": "ceapă albă",
-      "internalName": "ceapă albă",
-      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "baby spanac",
-      "internalName": "baby spanac 20",
-      "img": "/img/uploads/ingrediente/baby_spanac.jpg",
-      "masurare": "g",
-      "cant": 20,
-      "v": 20
-    },
-    {
-      "name": "sos burger",
-      "internalName": "sos burger 30",
-      "img": "/img/uploads/ingrediente/sos_burger.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 30
-    },
-    {
-      "name": "castraveți murați",
-      "internalName": "castraveți murați 40",
-      "img": "/img/uploads/ingrediente/castravete_murat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "brânză chedar",
-      "internalName": "branza chedar 20",
-      "img": "/img/uploads/ingrediente/cheddar.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 40
-    },
-    {
-      "name": "chiflă burger",
-      "internalName": "chiflă burger",
-      "img": "/img/uploads/ingrediente/chifla_burger.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca5e"
-  },
-  "name": "Cotlet de Porc cu Cartofi și Murături",
-  "innerName": "cotlet de porc cu mirodenii",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/cotlet_de_porc_cu_mirodenii1.jpg",
-    "/img/uploads/retete/cotlet_de_porc_cu_mirodenii2.jpg"
-  ],
-  "durata": "35 min",
-  "type": "mancare",
-  "categorie": "porc",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Ce comanzi de fiecare dată când ești în vacanță la munte, de data asta de acasă.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "cotlet de porc cu os",
-      "internalName": "cotlet de porc cu os 300",
-      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "rozmarin",
-      "internalName": "rozmarin 2",
-      "img": "/img/uploads/ingrediente/rozmarin_proaspat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "pudră de usturoi",
-      "internalName": "pudră de usturoi",
-      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "boia dulce",
-      "internalName": "boia dulce",
-      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "castraveți murați",
-      "internalName": "castraveți murați 100",
-      "img": "/img/uploads/ingrediente/castravete_murat.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "cotlet de porc cu os",
-      "internalName": "cotlet de porc cu os 300",
-      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "unt",
-      "internalName": "unt 10",
-      "img": "/img/uploads/ingrediente/unt.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "lapte",
-      "internalName": "lapte 40",
-      "img": "/img/uploads/ingrediente/lapte.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca6b"
-  },
-  "name": "Friptură de Porc cu Legume Balsamizate",
-  "innerName": "cotlet de porc cu legume balsamizate",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/cotlet_de_porc_cu_legume_balsamizate1.jpg",
-    "/img/uploads/retete/cotlet_de_porc_cu_legume_balsamizate2.jpg"
-  ],
-  "durata": "25 min",
-  "type": "mancare",
-  "categorie": "porc",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Am adăugat și roșiile balsamizate pentru a o face să pară o salată.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "cotlet de porc cu os",
-      "internalName": "cotlet de porc cu os 300",
-      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "pătrunje verdel",
-      "internalName": "patrunjel verde 2",
-      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "ciuperci",
-      "internalName": "ciuperci 200",
-      "img": "/img/uploads/ingrediente/ciuperci.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "oțet balsamic",
-      "internalName": "oțet balsamic 20",
-      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "pătrunje verdel",
-      "internalName": "patrunjel verde 2",
-      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca58"
-  },
-  "name": "Mâncărică de mazăre",
-  "innerName": "mancare de mazare",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/mancare_de_mazare1.jpg",
-    "/img/uploads/retete/mancare_de_mazare2.jpg",
-    "/img/uploads/retete/mancare_de_mazare3.jpg"
-  ],
-  "durata": "20 min",
-  "type": "mancare",
-  "categorie": "porc",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Mâncărică de mazăre, fix cum o făcea mama.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "carne de porc tocată",
-      "internalName": "porc tocat 200",
-      "img": "/img/uploads/ingrediente/carne_tocata_porc.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "morcov",
-      "internalName": "morcov",
-      "img": "/img/uploads/ingrediente/morcov.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "ceapă albă",
-      "internalName": "ceapă albă",
-      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "mazăre",
-      "internalName": "mazăre 260",
-      "img": "/img/uploads/ingrediente/mazare.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 260
-    },
-    {
-      "name": "cimbrișor",
-      "internalName": "cimbrișor 2",
-      "img": "/img/uploads/ingrediente/cimbrisor.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "pastă tomate",
-      "internalName": "pastă tomate 40",
-      "img": "/img/uploads/ingrediente/pasta_tomate.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "boia dulce",
-      "internalName": "boia dulce",
-      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca64"
-  },
-  "name": "Halloumi Durum",
-  "innerName": "halloumi wrap",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/halloumi_wrap1.jpg",
-    "/img/uploads/retete/halloumi_wrap2.jpg"
-  ],
-  "durata": "35 min",
-  "type": "mancare",
-  "categorie": "vegetariene",
-  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": " 0 ",
-  "descriere": " Rețetă clasică în orice Doner Shop din Berlin.Cu un twist sănătos.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "halloumi",
-      "internalName": "halloumi 200",
-      "img": "/img/uploads/ingrediente/halloumi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "tortilla wrap",
-      "internalName": "tortilla wrap",
-      "img": "/img/uploads/ingrediente/trortilla_wrap.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 200
-    },
-    {
-      "name": "ceapă roșie",
-      "internalName": "ceapă roșie 80",
-      "img": "/img/uploads/ingrediente/ceapa_rosie.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 80
-    },
-    {
-      "name": "dovlecel",
-      "internalName": "dovlecel 100",
-      "img": "/img/uploads/ingrediente/dovlecel.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "iaurt",
-      "internalName": "iaurt 100",
-      "img": "/img/uploads/ingrediente/iaurt.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "pătrunje verdel",
-      "internalName": "patrunjel verde 2",
-      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 2
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 100,
-      "v": 100
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca66"
-  },
-  "name": "Halloumi Aurit cu Miere",
-  "innerName": "halloumi aurit cu miere",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/halloumi_aurit_cu_miere1.jpg",
-    "/img/uploads/retete/halloumi_aurit_cu_miere2.jpg"
-  ],
-  "durata": "30 min",
-  "type": "mancare",
-  "categorie": "vegetariene",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Gustul trebuie neapărat încercat, asemenea amalgam de arome nu poate fi descris.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "halloumi",
-      "internalName": "halloumi 200",
-      "img": "/img/uploads/ingrediente/halloumi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "miere",
-      "internalName": "miere 15",
-      "img": "/img/uploads/ingrediente/miere.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 30
-    },
-    {
-      "name": "roșii cherry",
-      "internalName": "roșii cherry",
-      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
-      "masurare": "g",
-      "cant": 100,
-      "v": 100
-    },
-    {
-      "name": "oțet balsamic",
-      "internalName": "oțet balsamic 10",
-      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "baby spanac",
-      "internalName": "baby spanac 60",
-      "img": "/img/uploads/ingrediente/baby_spanac.jpg",
-      "masurare": "g",
-      "cant": 60,
-      "v": 60
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca5c"
-  },
-  "name": "Caserolă de Păstăi",
-  "innerName": "pastai cu ciuperci",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/pastai_cu_ciuperci1.jpg",
-    "/img/uploads/retete/pastai_cu_ciuperci2.jpg"
-  ],
-  "durata": "25 min",
-  "type": "mancare",
-  "categorie": "vegetariene",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Mâncărică făcută de seara, numai bună de încălzit la pranz.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "păstăi de fasole verde",
-      "internalName": "pastai de fasole verde 300",
-      "img": "/img/uploads/ingrediente/fasole_pastai_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 300
-    },
-    {
-      "name": "ciuperci",
-      "internalName": "ciuperci 200",
-      "img": "/img/uploads/ingrediente/ciuperci.jpg",
-      "masurare": "g",
-      "cant": 200,
-      "v": 200
-    },
-    {
-      "name": "ceapă albă",
-      "internalName": "ceapă albă",
-      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 80
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    },
-    {
-      "name": "sos soia",
-      "internalName": "sos soia 20",
-      "img": "/img/uploads/ingrediente/sos_soia.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "lapte",
-      "internalName": "lapte 60",
-      "img": "/img/uploads/ingrediente/lapte.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 60
-    },
-    {
-      "name": "ceapă crocantă",
-      "internalName": "ceapă crocantă 10",
-      "img": "/img/uploads/ingrediente/ceapa_crocanta.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "făina",
-      "internalName": "faina 10",
-      "img": "/img/uploads/ingrediente/faina.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca5d"
-  },
-  "name": "Fried Rice Tofu",
-  "innerName": "tofu cu orez prajit",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/tofu_cu_orez_prajit1.jpg",
-    "/img/uploads/retete/tofu_cu_orez_prajit2.jpg",
-    "/img/uploads/retete/tofu_cu_orez_prajit3.jpg"
-  ],
-  "durata": "45 min",
-  "type": "mancare",
-  "categorie": "vegetariene",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Ceva asiatic, vegetarian, gustos. Varianta prăjită.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "tofu",
-      "internalName": "tofu 200",
-      "img": "/img/uploads/ingrediente/tofu.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "orez",
-      "internalName": "orez 100",
-      "img": "/img/uploads/ingrediente/orez.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "mix de mazăre cu morcov",
-      "internalName": "mix de mazăre cu morcov 200",
-      "img": "/img/uploads/ingrediente/mix_morcovi_si_mazare.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    },
-    {
-      "name": "ulei de susan",
-      "internalName": "ulei de susan 20",
-      "img": "/img/uploads/ingrediente/ulei_susan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "sweet chilli",
-      "internalName": "sweet chilli 40",
-      "img": "/img/uploads/ingrediente/sweet_chilli.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "susan",
-      "internalName": "susan 4",
-      "img": "/img/uploads/ingrediente/susan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 4
-    },
-    {
-      "name": "pesmet",
-      "internalName": "pesmet 20",
-      "img": "/img/uploads/ingrediente/pesmet.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 40
-    },
-    {
-      "name": "sos soia",
-      "internalName": "sos soia 20",
-      "img": "/img/uploads/ingrediente/sos_soia.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca65"
-  },
-  "name": "Tofu Poke Bowl",
-  "innerName": "tofu poke bowl",
-  "option": "main",
-  "pics": [
-    "/img/uploads/retete/tofu_poke_bowl1.jpg",
-    "/img/uploads/retete/tofu_poke_bowl2.jpg",
-    "/img/uploads/retete/tofu_poke_bowl3.jpg"
-  ],
-  "durata": "20 min",
-  "type": "mancare",
-  "categorie": "vegetariene",
-  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
-  "premium": 0,
-  "inPlus": 0,
-  "referinta": "0",
-  "descriere": "Ceva asiatic, vegetarian, gustos. Poate chiar prea sănătos.",
-  "reviewScore": 0,
-  "i": [
-    {
-      "name": "tofu",
-      "internalName": "tofu 200",
-      "img": "/img/uploads/ingrediente/tofu.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "păstăi de fasole verde",
-      "internalName": "pastai de fasole verde 200",
-      "img": "/img/uploads/ingrediente/fasole_pastai_verde.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 200
-    },
-    {
-      "name": "orez",
-      "internalName": "orez 100",
-      "img": "/img/uploads/ingrediente/orez.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 100
-    },
-    {
-      "name": "ulei de susan",
-      "internalName": "ulei de susan 20",
-      "img": "/img/uploads/ingrediente/ulei_susan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "sos soia",
-      "internalName": "sos soia 20",
-      "img": "/img/uploads/ingrediente/sos_soia.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "susan",
-      "internalName": "susan 4",
-      "img": "/img/uploads/ingrediente/susan.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 4
-    },
-    {
-      "name": "sweet chilli",
-      "internalName": "sweet chilli 20",
-      "img": "/img/uploads/ingrediente/sweet_chilli.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 20
-    },
-    {
-      "name": "ceapă albă",
-      "internalName": "ceapă albă",
-      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 40
-    },
-    {
-      "name": "usturoi",
-      "internalName": "usturoi",
-      "img": "/img/uploads/ingrediente/usturoi.jpg",
-      "masurare": "buc",
-      "cant": 2,
-      "v": 20
-    }
-  ],
-  "_class": "ro.easybites.app.model.Reteta"
-},{
-  "_id": {
-    "$oid": "612df077d489eb427f1eca55"
   },
   "name": "Poke Bowl",
   "innerName": "beef veggie poke",
@@ -1642,7 +112,866 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca5f"
+    "$oid": "612df077d489eb427f1eca59"
+  },
+  "name": "Pui Piperat cu Piure",
+  "innerName": "pui piperat cu piure",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/pui_piperat_cu_piure1.jpg",
+    "/img/uploads/retete/pui_piperat_cu_piure2.jpg"
+  ],
+  "durata": "35 min",
+  "type": "mancare",
+  "categorie": "pui",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Această rețetă clasică a fost transformată printr-un twist simplu într-o rețetă classy.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "pui",
+      "internalName": "pui 300",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "cartofi",
+      "internalName": "cartofi",
+      "img": "/img/uploads/ingrediente/cartofi.jpg",
+      "masurare": "g",
+      "cant": 400,
+      "v": 400
+    },
+    {
+      "name": "unt",
+      "internalName": "unt 10",
+      "img": "/img/uploads/ingrediente/unt.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "lapte",
+      "internalName": "lapte 40",
+      "img": "/img/uploads/ingrediente/lapte.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "piper verde",
+      "internalName": "piper verde 20",
+      "img": "/img/uploads/ingrediente/piper_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "boia ardei dulce",
+      "internalName": "boia ardei dulce 2",
+      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "usturoi pudra",
+      "internalName": "usturoi pudra 2",
+      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "cimbrișor",
+      "internalName": "cimbrișor 2",
+      "img": "/img/uploads/ingrediente/cimbrisor.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "smântână de gătit",
+      "internalName": "smântână de gătit 80",
+      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 80
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca6c"
+  },
+  "name": "Easy Beef Stroganoff",
+  "innerName": "stroganoff de vita",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/stroganoff_de_vita1.jpg",
+    "/img/uploads/retete/stroganoff_de_vita2.jpg",
+    "/img/uploads/retete/stroganoff_de_vita3.jpg"
+  ],
+  "durata": "45 min",
+  "type": "mancare",
+  "categorie": "vita",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "De departe cel mai delicios Stroganoff pe care l-ați mâncat până acum.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "carne de vita tocată",
+      "internalName": "vita tocata 200",
+      "img": "/img/uploads/ingrediente/carne_tocata_vita.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "smântână de gătit",
+      "internalName": "smântână de gătit 100",
+      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "ciuperci",
+      "internalName": "ciuperci 200",
+      "img": "/img/uploads/ingrediente/ciuperci.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "unt",
+      "internalName": "unt 10",
+      "img": "/img/uploads/ingrediente/unt.jpg",
+      "masurare": "buc",
+      "cant": 4,
+      "v": 40
+    },
+    {
+      "name": "ceapă albă",
+      "internalName": "ceapă albă",
+      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "făina",
+      "internalName": "faina 10",
+      "img": "/img/uploads/ingrediente/faina.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "sos worcester",
+      "internalName": "sos worcester 30",
+      "img": "/img/uploads/ingrediente/sos_worcester.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 30
+    },
+    {
+      "name": "muștar dijon",
+      "internalName": "muștar dijon 20",
+      "img": "/img/uploads/ingrediente/mustar_dijon.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi 10",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 3,
+      "v": 30
+    },
+    {
+      "name": "boia ardei dulce",
+      "internalName": "boia ardei dulce 2",
+      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca62"
+  },
+  "name": "Mâncărică de mazăre",
+  "innerName": "mancare de mazare",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/mancare_de_mazare1.jpg",
+    "/img/uploads/retete/mancare_de_mazare2.jpg",
+    "/img/uploads/retete/mancare_de_mazare3.jpg"
+  ],
+  "durata": "20 min",
+  "type": "mancare",
+  "categorie": "porc",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Mâncărică de mazăre, fix cum o făcea mama.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "carne de porc tocată",
+      "internalName": "porc tocat 200",
+      "img": "/img/uploads/ingrediente/carne_tocata_porc.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "morcov",
+      "internalName": "morcov",
+      "img": "/img/uploads/ingrediente/morcov.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "ceapă albă",
+      "internalName": "ceapă albă",
+      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "mazăre",
+      "internalName": "mazăre 260",
+      "img": "/img/uploads/ingrediente/mazare.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 260
+    },
+    {
+      "name": "cimbrișor",
+      "internalName": "cimbrișor 2",
+      "img": "/img/uploads/ingrediente/cimbrisor.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "pastă tomate",
+      "internalName": "pastă tomate 40",
+      "img": "/img/uploads/ingrediente/pasta_tomate.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "boia dulce",
+      "internalName": "boia dulce",
+      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca55"
+  },
+  "name": "Pui Umplut cu Dovlecel la Cuptor",
+  "innerName": "pui cu dovlecel",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor1.jpg",
+    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor2.jpg",
+    "/img/uploads/retete/pui_umplut_cu_dovlecel_la_cuptor3.jpg"
+  ],
+  "durata": "45 min",
+  "type": "mancare",
+  "categorie": "pui",
+  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Pentru un prânz ușor de pregătit și mai ales sănătos.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "pui",
+      "internalName": "pui",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "dovlecel",
+      "internalName": "dovlecel 100",
+      "img": "/img/uploads/ingrediente/dovlecel.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 100,
+      "v": 100
+    },
+    {
+      "name": "mozzarella",
+      "internalName": "mozzarella",
+      "img": "/img/uploads/ingrediente/mozarella.jpg",
+      "masurare": "buc",
+      "cant": 4,
+      "v": 80
+    },
+    {
+      "name": "pudră de usturoi",
+      "internalName": "pudră de usturoi",
+      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "boia dulce",
+      "internalName": "boia dulce",
+      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "busuioc uscat",
+      "internalName": "busuioc uscact",
+      "img": "/img/uploads/ingrediente/busuioc_uscat.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5d"
+  },
+  "name": "Paste cu Capere și Roșii Uscate",
+  "innerName": "paste cu capere și roșii uscate",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate1.jpg",
+    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate2.jpg",
+    "/img/uploads/retete/paste_cu_capere_si_rosii_uscate3.jpg"
+  ],
+  "durata": "15 min",
+  "type": "mancare",
+  "categorie": "paste",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Comfort food pentru o cină leneșă.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "paste",
+      "internalName": "paste",
+      "img": "/img/uploads/ingrediente/paste.jpg",
+      "masurare": "g",
+      "cant": 250,
+      "v": 250
+    },
+    {
+      "name": "capere",
+      "internalName": "capere 40",
+      "img": "/img/uploads/ingrediente/capere.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "suc roșii",
+      "internalName": "suc roșii 100",
+      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    },
+    {
+      "name": "roșii uscate",
+      "internalName": "roșii uscate 60",
+      "img": "/img/uploads/ingrediente/rosii_uscate.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 60
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi 10",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5a"
+  },
+  "name": "Easy Bolognese",
+  "innerName": "paste bolognese",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/paste_bolognese1.jpg",
+    "/img/uploads/retete/paste_bolognese2.jpg"
+  ],
+  "durata": "30 min",
+  "type": "mancare",
+  "categorie": "paste",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Nu putem avea Carbonara fără Bolognese, așa prevede legea.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "paste",
+      "internalName": "paste",
+      "img": "/img/uploads/ingrediente/paste.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "carne de vita tocată",
+      "internalName": "vita tocata 200",
+      "img": "/img/uploads/ingrediente/carne_tocata_vita.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "suc roșii",
+      "internalName": "suc roșii 100",
+      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 100,
+      "v": 100
+    },
+    {
+      "name": "parmezan",
+      "internalName": "parmezan 20",
+      "img": "/img/uploads/ingrediente/parmezan.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 40
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi 10",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "morcov",
+      "internalName": "morcov",
+      "img": "/img/uploads/ingrediente/morcov.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 120
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca66"
+  },
+  "name": "Caserolă de Păstăi",
+  "innerName": "pastai cu ciuperci",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/pastai_cu_ciuperci1.jpg",
+    "/img/uploads/retete/pastai_cu_ciuperci2.jpg"
+  ],
+  "durata": "25 min",
+  "type": "mancare",
+  "categorie": "vegetariene",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Mâncărică făcută de seara, numai bună de încălzit la pranz.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "păstăi de fasole verde",
+      "internalName": "pastai de fasole verde 300",
+      "img": "/img/uploads/ingrediente/fasole_pastai_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "ciuperci",
+      "internalName": "ciuperci 200",
+      "img": "/img/uploads/ingrediente/ciuperci.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "ceapă albă",
+      "internalName": "ceapă albă",
+      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 80
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "sos soia",
+      "internalName": "sos soia 20",
+      "img": "/img/uploads/ingrediente/sos_soia.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "lapte",
+      "internalName": "lapte 60",
+      "img": "/img/uploads/ingrediente/lapte.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 60
+    },
+    {
+      "name": "ceapă crocantă",
+      "internalName": "ceapă crocantă 10",
+      "img": "/img/uploads/ingrediente/ceapa_crocanta.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "făina",
+      "internalName": "faina 10",
+      "img": "/img/uploads/ingrediente/faina.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca67"
+  },
+  "name": "Fried Rice Tofu",
+  "innerName": "tofu cu orez prajit",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/tofu_cu_orez_prajit1.jpg",
+    "/img/uploads/retete/tofu_cu_orez_prajit2.jpg",
+    "/img/uploads/retete/tofu_cu_orez_prajit3.jpg"
+  ],
+  "durata": "45 min",
+  "type": "mancare",
+  "categorie": "vegetariene",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Ceva asiatic, vegetarian, gustos. Varianta prăjită.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "tofu",
+      "internalName": "tofu 200",
+      "img": "/img/uploads/ingrediente/tofu.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "orez",
+      "internalName": "orez 100",
+      "img": "/img/uploads/ingrediente/orez.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "mix de mazăre cu morcov",
+      "internalName": "mix de mazăre cu morcov 200",
+      "img": "/img/uploads/ingrediente/mix_morcovi_si_mazare.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "ulei de susan",
+      "internalName": "ulei de susan 20",
+      "img": "/img/uploads/ingrediente/ulei_susan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "sweet chilli",
+      "internalName": "sweet chilli 40",
+      "img": "/img/uploads/ingrediente/sweet_chilli.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "susan",
+      "internalName": "susan 4",
+      "img": "/img/uploads/ingrediente/susan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 4
+    },
+    {
+      "name": "pesmet",
+      "internalName": "pesmet 20",
+      "img": "/img/uploads/ingrediente/pesmet.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 40
+    },
+    {
+      "name": "sos soia",
+      "internalName": "sos soia 20",
+      "img": "/img/uploads/ingrediente/sos_soia.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca57"
+  },
+  "name": "Italiano Vero",
+  "innerName": "chicken caprese",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/chicken_caprese1.jpg",
+    "/img/uploads/retete/chicken_caprese2.jpg"
+  ],
+  "durata": "45 min",
+  "type": "mancare",
+  "categorie": "pui",
+  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Rețetă de pui italian, numai bună pentru o seară specială.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "pui",
+      "internalName": "pui 300",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 300,
+      "v": 300
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi 10",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "oțet balsamic",
+      "internalName": "oțet balsamic 10",
+      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "busuioc uscat",
+      "internalName": "busuioc uscat 2",
+      "img": "/img/uploads/ingrediente/busuioc_uscat.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "mozzarella",
+      "internalName": "mozzarella 80",
+      "img": "/img/uploads/ingrediente/mozarella.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 80
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca60"
+  },
+  "name": "Cotlet de Porc cu Cartofi și Murături",
+  "innerName": "cotlet de porc cu mirodenii",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/cotlet_de_porc_cu_mirodenii1.jpg",
+    "/img/uploads/retete/cotlet_de_porc_cu_mirodenii2.jpg"
+  ],
+  "durata": "35 min",
+  "type": "mancare",
+  "categorie": "porc",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Ce comanzi de fiecare dată când ești în vacanță la munte, de data asta de acasă.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "cotlet de porc cu os",
+      "internalName": "cotlet de porc cu os 300",
+      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "rozmarin",
+      "internalName": "rozmarin 2",
+      "img": "/img/uploads/ingrediente/rozmarin_proaspat.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "pudră de usturoi",
+      "internalName": "pudră de usturoi",
+      "img": "/img/uploads/ingrediente/usturoi_pudra.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "boia dulce",
+      "internalName": "boia dulce",
+      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "castraveți murați",
+      "internalName": "castraveți murați 100",
+      "img": "/img/uploads/ingrediente/castravete_murat.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "cotlet de porc cu os",
+      "internalName": "cotlet de porc cu os 300",
+      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "unt",
+      "internalName": "unt 10",
+      "img": "/img/uploads/ingrediente/unt.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "lapte",
+      "internalName": "lapte 40",
+      "img": "/img/uploads/ingrediente/lapte.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca6a"
   },
   "name": "Elevated Nachos",
   "innerName": "mancarica de vita mexicana",
@@ -1745,7 +1074,7 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca60"
+    "$oid": "612df077d489eb427f1eca6b"
   },
   "name": "Messy Meatballs",
   "innerName": "messy meatballs",
@@ -1825,32 +1154,165 @@
   "_class": "ro.easybites.app.model.Reteta"
 },{
   "_id": {
-    "$oid": "612df077d489eb427f1eca57"
+    "$oid": "612df077d489eb427f1eca61"
   },
-  "name": "Easy Beef Stroganoff",
-  "innerName": "stroganoff de vita",
+  "name": "Friptură de Porc cu Legume Balsamizate",
+  "innerName": "cotlet de porc cu legume balsamizate",
   "option": "main",
   "pics": [
-    "/img/uploads/retete/stroganoff_de_vita1.jpg",
-    "/img/uploads/retete/stroganoff_de_vita2.jpg",
-    "/img/uploads/retete/stroganoff_de_vita3.jpg"
+    "/img/uploads/retete/cotlet_de_porc_cu_legume_balsamizate1.jpg",
+    "/img/uploads/retete/cotlet_de_porc_cu_legume_balsamizate2.jpg"
   ],
-  "durata": "45 min",
+  "durata": "25 min",
   "type": "mancare",
-  "categorie": "vita",
+  "categorie": "porc",
   "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
   "premium": 0,
   "inPlus": 0,
   "referinta": "0",
-  "descriere": "De departe cel mai delicios Stroganoff pe care l-ați mâncat până acum.",
+  "descriere": "Am adăugat și roșiile balsamizate pentru a o face să pară o salată.",
   "reviewScore": 0,
   "i": [
     {
-      "name": "carne de vita tocată",
-      "internalName": "vita tocata 200",
-      "img": "/img/uploads/ingrediente/carne_tocata_vita.jpg",
+      "name": "cotlet de porc cu os",
+      "internalName": "cotlet de porc cu os 300",
+      "img": "/img/uploads/ingrediente/cotlet_de_porc_cu_os.jpg",
       "masurare": "buc",
       "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "pătrunje verdel",
+      "internalName": "patrunjel verde 2",
+      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "ciuperci",
+      "internalName": "ciuperci 200",
+      "img": "/img/uploads/ingrediente/ciuperci.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "oțet balsamic",
+      "internalName": "oțet balsamic 20",
+      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "pătrunje verdel",
+      "internalName": "patrunjel verde 2",
+      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5b"
+  },
+  "name": "Easy Carbonara",
+  "innerName": "paste carbonara",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/paste_carbonara1.jpg",
+    "/img/uploads/retete/paste_carbonara2.jpg"
+  ],
+  "durata": "20 min",
+  "type": "mancare",
+  "categorie": "paste",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Paste clasic italienești, garantat să vă lase gura apă doar citind rețeta.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "paste",
+      "internalName": "paste",
+      "img": "/img/uploads/ingrediente/paste.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "bacon afumat",
+      "internalName": "bacon afumat 250",
+      "img": "/img/uploads/ingrediente/bacon_afumat.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 250
+    },
+    {
+      "name": "smântână de gătit",
+      "internalName": "smântână de gătit 100",
+      "img": "/img/uploads/ingrediente/smantana_pentru_gatit.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "parmezan",
+      "internalName": "parmezan 20",
+      "img": "/img/uploads/ingrediente/parmezan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5c"
+  },
+  "name": "Paste say Cheese!",
+  "innerName": "paste cu branza",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/paste_cu_branza1.jpg",
+    "/img/uploads/retete/paste_cu_branza2.jpg"
+  ],
+  "durata": "12 min",
+  "type": "mancare",
+  "categorie": "paste",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Paste cu brânză cu gust de copilărie.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "paste",
+      "internalName": "paste",
+      "img": "/img/uploads/ingrediente/paste.jpg",
+      "masurare": "g",
+      "cant": 200,
       "v": 200
     },
     {
@@ -1862,20 +1324,59 @@
       "v": 100
     },
     {
-      "name": "ciuperci",
-      "internalName": "ciuperci 200",
-      "img": "/img/uploads/ingrediente/ciuperci.jpg",
-      "masurare": "g",
-      "cant": 200,
+      "name": "parmezan",
+      "internalName": "parmezan 20",
+      "img": "/img/uploads/ingrediente/parmezan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "gouda",
+      "internalName": "gouda 150",
+      "img": "/img/uploads/ingrediente/gouda.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 150
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5f"
+  },
+  "name": "Burger Delicios",
+  "innerName": "classic pork burger",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/classic_pork_burger1.jpg",
+    "/img/uploads/retete/classic_pork_burger2.jpg"
+  ],
+  "durata": "20 min",
+  "type": "mancare",
+  "categorie": "porc",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Un clasic cheat meal după o săptămână grea.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "carne de porc tocată",
+      "internalName": "porc tocat 200",
+      "img": "/img/uploads/ingrediente/carne_tocata_porc.jpg",
+      "masurare": "buc",
+      "cant": 1,
       "v": 200
     },
     {
-      "name": "unt",
-      "internalName": "unt 10",
-      "img": "/img/uploads/ingrediente/unt.jpg",
+      "name": "roșii",
+      "internalName": "roșii",
+      "img": "/img/uploads/ingrediente/rosii.jpg",
       "masurare": "buc",
-      "cant": 4,
-      "v": 40
+      "cant": 1,
+      "v": 80
     },
     {
       "name": "ceapă albă",
@@ -1883,30 +1384,434 @@
       "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
       "masurare": "buc",
       "cant": 1,
-      "v": 100
+      "v": 40
     },
     {
-      "name": "făina",
-      "internalName": "faina 10",
-      "img": "/img/uploads/ingrediente/faina.jpg",
-      "masurare": "buc",
-      "cant": 1,
-      "v": 10
+      "name": "baby spanac",
+      "internalName": "baby spanac 20",
+      "img": "/img/uploads/ingrediente/baby_spanac.jpg",
+      "masurare": "g",
+      "cant": 20,
+      "v": 20
     },
     {
-      "name": "sos worcester",
-      "internalName": "sos worcester 30",
-      "img": "/img/uploads/ingrediente/sos_worcester.jpg",
+      "name": "sos burger",
+      "internalName": "sos burger 30",
+      "img": "/img/uploads/ingrediente/sos_burger.jpg",
       "masurare": "buc",
       "cant": 1,
       "v": 30
     },
     {
-      "name": "muștar dijon",
-      "internalName": "muștar dijon 20",
-      "img": "/img/uploads/ingrediente/mustar_dijon.jpg",
+      "name": "castraveți murați",
+      "internalName": "castraveți murați 40",
+      "img": "/img/uploads/ingrediente/castravete_murat.jpg",
       "masurare": "buc",
       "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "brânză chedar",
+      "internalName": "branza chedar 20",
+      "img": "/img/uploads/ingrediente/cheddar.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 40
+    },
+    {
+      "name": "chiflă burger",
+      "internalName": "chiflă burger",
+      "img": "/img/uploads/ingrediente/chifla_burger.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca5e"
+  },
+  "name": "Paste cu Pui și Mult Verde",
+  "innerName": "paste cu sos pesto si broccoli",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/paste_cu_sos_pesto_si_broccoli1.jpg",
+    "/img/uploads/retete/paste_cu_sos_pesto_si_broccoli2.jpg"
+  ],
+  "durata": "30 min",
+  "type": "mancare",
+  "categorie": "paste",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Rețeta aceasta reușește să facă până și broccoli-ul să dispară din farfurie.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "paste",
+      "internalName": "paste",
+      "img": "/img/uploads/ingrediente/paste.jpg",
+      "masurare": "g",
+      "cant": 200,
+      "v": 200
+    },
+    {
+      "name": "pui",
+      "internalName": "pui 150",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 150
+    },
+    {
+      "name": "broccoli",
+      "internalName": "broccoli",
+      "img": "/img/uploads/ingrediente/broccoli.jpg",
+      "masurare": "g",
+      "cant": 130,
+      "v": 130
+    },
+    {
+      "name": "roșii uscate",
+      "internalName": "roșii uscate 50",
+      "img": "/img/uploads/ingrediente/rosii_uscate.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 50
+    },
+    {
+      "name": "feta",
+      "internalName": "feta 60",
+      "img": "/img/uploads/ingrediente/feta.jpg",
+      "masurare": "g",
+      "cant": 60,
+      "v": 120
+    },
+    {
+      "name": "sos pesto",
+      "internalName": "sos pesto 50",
+      "img": "/img/uploads/ingrediente/sos_pesto.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 50
+    },
+    {
+      "name": "unt",
+      "internalName": "unt 10",
+      "img": "/img/uploads/ingrediente/unt.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca64"
+  },
+  "name": "Halloumi Durum",
+  "innerName": "halloumi wrap",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/halloumi_wrap1.jpg",
+    "/img/uploads/retete/halloumi_wrap2.jpg"
+  ],
+  "durata": "35 min",
+  "type": "mancare",
+  "categorie": "vegetariene",
+  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": " 0 ",
+  "descriere": " Rețetă clasică în orice Doner Shop din Berlin.Cu un twist sănătos.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "halloumi",
+      "internalName": "halloumi 200",
+      "img": "/img/uploads/ingrediente/halloumi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "tortilla wrap",
+      "internalName": "tortilla wrap",
+      "img": "/img/uploads/ingrediente/trortilla_wrap.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    },
+    {
+      "name": "ceapă roșie",
+      "internalName": "ceapă roșie 80",
+      "img": "/img/uploads/ingrediente/ceapa_rosie.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 80
+    },
+    {
+      "name": "dovlecel",
+      "internalName": "dovlecel 100",
+      "img": "/img/uploads/ingrediente/dovlecel.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "iaurt",
+      "internalName": "iaurt 100",
+      "img": "/img/uploads/ingrediente/iaurt.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "pătrunje verdel",
+      "internalName": "patrunjel verde 2",
+      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 100,
+      "v": 100
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca68"
+  },
+  "name": "Tofu Poke Bowl",
+  "innerName": "tofu poke bowl",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/tofu_poke_bowl1.jpg",
+    "/img/uploads/retete/tofu_poke_bowl2.jpg",
+    "/img/uploads/retete/tofu_poke_bowl3.jpg"
+  ],
+  "durata": "20 min",
+  "type": "mancare",
+  "categorie": "vegetariene",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Ceva asiatic, vegetarian, gustos. Poate chiar prea sănătos.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "tofu",
+      "internalName": "tofu 200",
+      "img": "/img/uploads/ingrediente/tofu.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "păstăi de fasole verde",
+      "internalName": "pastai de fasole verde 200",
+      "img": "/img/uploads/ingrediente/fasole_pastai_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "orez",
+      "internalName": "orez 100",
+      "img": "/img/uploads/ingrediente/orez.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "ulei de susan",
+      "internalName": "ulei de susan 20",
+      "img": "/img/uploads/ingrediente/ulei_susan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "sos soia",
+      "internalName": "sos soia 20",
+      "img": "/img/uploads/ingrediente/sos_soia.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "susan",
+      "internalName": "susan 4",
+      "img": "/img/uploads/ingrediente/susan.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 4
+    },
+    {
+      "name": "sweet chilli",
+      "internalName": "sweet chilli 20",
+      "img": "/img/uploads/ingrediente/sweet_chilli.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "ceapă albă",
+      "internalName": "ceapă albă",
+      "img": "/img/uploads/ingrediente/ceapa_alba.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca65"
+  },
+  "name": "Halloumi Aurit cu Miere",
+  "innerName": "halloumi aurit cu miere",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/halloumi_aurit_cu_miere1.jpg",
+    "/img/uploads/retete/halloumi_aurit_cu_miere2.jpg"
+  ],
+  "durata": "30 min",
+  "type": "mancare",
+  "categorie": "vegetariene",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Gustul trebuie neapărat încercat, asemenea amalgam de arome nu poate fi descris.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "halloumi",
+      "internalName": "halloumi 200",
+      "img": "/img/uploads/ingrediente/halloumi.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 200
+    },
+    {
+      "name": "miere",
+      "internalName": "miere 15",
+      "img": "/img/uploads/ingrediente/miere.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 30
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 100,
+      "v": 100
+    },
+    {
+      "name": "oțet balsamic",
+      "internalName": "oțet balsamic 10",
+      "img": "/img/uploads/ingrediente/otet_balsamic.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 20
+    },
+    {
+      "name": "baby spanac",
+      "internalName": "baby spanac 60",
+      "img": "/img/uploads/ingrediente/baby_spanac.jpg",
+      "masurare": "g",
+      "cant": 60,
+      "v": 60
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca56"
+  },
+  "name": "Buffalo Bites",
+  "innerName": "buffalo bites",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/buffalo_chicken1.jpg",
+    "/img/uploads/retete/buffalo_chicken2.jpg"
+  ],
+  "durata": "35 min",
+  "type": "mancare",
+  "categorie": "pui",
+  "alergii": "Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Rețetă de diner american, la fel de gustoasă servită și în sufrageria românească.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "pui",
+      "internalName": "pui",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "cartofi",
+      "internalName": "cartofi",
+      "img": "/img/uploads/ingrediente/cartofi.jpg",
+      "masurare": "g",
+      "cant": 400,
+      "v": 400
+    },
+    {
+      "name": "suc roșii",
+      "internalName": "suc roșii 100",
+      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 100
+    },
+    {
+      "name": "lapte",
+      "internalName": "lapte 40",
+      "img": "/img/uploads/ingrediente/lapte.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 40
+    },
+    {
+      "name": "unt",
+      "internalName": "unt 10",
+      "img": "/img/uploads/ingrediente/unt.jpg",
+      "masurare": "buc",
+      "cant": 2,
       "v": 20
     },
     {
@@ -1914,13 +1819,108 @@
       "internalName": "usturoi 10",
       "img": "/img/uploads/ingrediente/usturoi.jpg",
       "masurare": "buc",
-      "cant": 3,
-      "v": 30
+      "cant": 2,
+      "v": 20
     },
     {
-      "name": "boia ardei dulce",
-      "internalName": "boia ardei dulce 2",
-      "img": "/img/uploads/ingrediente/boia_dulce.jpg",
+      "name": "ceapă crocantă",
+      "internalName": "ceapă crocantă 10",
+      "img": "/img/uploads/ingrediente/ceapa_crocanta.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 10
+    },
+    {
+      "name": "pătrunje verdel",
+      "internalName": "patrunjel verde 2",
+      "img": "/img/uploads/ingrediente/patrunjel_verde.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 2
+    }
+  ],
+  "_class": "ro.easybites.app.model.Reteta"
+},{
+  "_id": {
+    "$oid": "612df077d489eb427f1eca58"
+  },
+  "name": "Tigaie de Pui și Legume",
+  "innerName": "tigaie de pui și legume",
+  "option": "main",
+  "pics": [
+    "/img/uploads/retete/tigaie_de_pui_si_legume1.jpg",
+    "/img/uploads/retete/tigaie_de_pui_si_legume2.jpg"
+  ],
+  "durata": "45 min",
+  "type": "mancare",
+  "categorie": "pui",
+  "alergii": " Toate produsele livrate de Easy Bites (OC EASYFOODS SRL) pot conține sau conțin urme de următorii alergeni: gluten, crustacee, ouă, pește, arahide și produse derivate, soia și produse derivate, lactate, fructe cu coajă, țelină, muștar, semințe de susan, sulfiți.",
+  "premium": 0,
+  "inPlus": 0,
+  "referinta": "0",
+  "descriere": "Cine a spus că dietetic nu poate însemna și delicios? Tigaia de pui și legume este prânzul perfect de luat la birou.",
+  "reviewScore": 0,
+  "i": [
+    {
+      "name": "pui",
+      "internalName": "pui 300",
+      "img": "/img/uploads/ingrediente/piept_de_pui.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 300
+    },
+    {
+      "name": "dovlecel",
+      "internalName": "dovlecel 120",
+      "img": "/img/uploads/ingrediente/dovlecel.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 120
+    },
+    {
+      "name": "broccoli",
+      "internalName": "broccoli",
+      "img": "/img/uploads/ingrediente/broccoli.jpg",
+      "masurare": "g",
+      "cant": 120,
+      "v": 120
+    },
+    {
+      "name": "ardei gras",
+      "internalName": "ardei gras",
+      "img": "/img/uploads/ingrediente/ardei_gras.jpg",
+      "masurare": "buc",
+      "cant": 1,
+      "v": 120
+    },
+    {
+      "name": "roșii cherry",
+      "internalName": "roșii cherry",
+      "img": "/img/uploads/ingrediente/rosii_cherry.jpg",
+      "masurare": "g",
+      "cant": 100,
+      "v": 100
+    },
+    {
+      "name": "suc rosii",
+      "internalName": "suc rosii 100",
+      "img": "/img/uploads/ingrediente/suc_de_rosii.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 200
+    },
+    {
+      "name": "usturoi",
+      "internalName": "usturoi 10",
+      "img": "/img/uploads/ingrediente/usturoi.jpg",
+      "masurare": "buc",
+      "cant": 2,
+      "v": 20
+    },
+    {
+      "name": "rozmarin",
+      "internalName": "rozmarin 2",
+      "img": "/img/uploads/ingrediente/rozmarin_proaspat.jpg",
       "masurare": "buc",
       "cant": 1,
       "v": 2
