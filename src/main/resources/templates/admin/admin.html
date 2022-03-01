@@ -82,10 +82,7 @@
             <td>Code USED</td>
         </tr>
         <tr th:each="order : ${orders}">
-            <td><input type="checkbox" id="scales" name="verify"
-                   checked>
-            </td>
-<!--            <td th:text="${order.id}"></td>-->
+            <td type="checkbox" id="scales" name="verify" th:text="${order.id}">Verify</td>
             <td th:text="${order.boxID}"></td>
             <td th:text="${order.datePlaced}">Date Placed</td>
             <td th:text="${order.date}">Date Delivery</td>
