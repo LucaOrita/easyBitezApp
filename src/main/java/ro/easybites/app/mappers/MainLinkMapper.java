@@ -95,6 +95,12 @@ public class MainLinkMapper {
         return "dev/mini-shop";
     }
 
+    @GetMapping("/dev/buyramburs")
+    public String buyramburs(Model model) {
+        model.addAttribute("recipes", fetcher.getAllRecipes());
+        return "dev/mini-shop";
+    }
+
     @PostMapping("/dev/buy/{ID}")
     public String buyID(@PathVariable String ID, HttpSession session) {
         ArrayList<String> ids = new ArrayList<>();
@@ -110,7 +116,7 @@ public class MainLinkMapper {
     @GetMapping("/admin")
     public String constructAdmin(Model model) {
         model.addAttribute("retete", fetcher.getAllRecipes());
-        model.addAttribute("orders", fetcher.getAllOrders());
+        model.addAttribute("orders", fetcher.getAllOrders("13/11/2021", "26/02/2022"));
         return "admin/admin";
     }
 
