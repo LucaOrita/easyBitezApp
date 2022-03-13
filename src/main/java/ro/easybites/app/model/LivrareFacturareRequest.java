@@ -45,8 +45,16 @@ public class LivrareFacturareRequest {
         return n;
     }
 
+    public void setN(String n) {
+        this.detalii = n;
+    }
+
     public String getN2() {
         return n2;
+    }
+
+    public void setN2(String n2) {
+        this.detalii = n2;
     }
 
     public String getDetalii() {
