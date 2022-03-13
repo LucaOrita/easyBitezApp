@@ -772,8 +772,8 @@ public class ShopLinker {
             params.put("fax", "");
 
             //SET FACTURARE
-            params.put("sfname", body.getNume());
-            params.put("slname", body.getNume2());
+            params.put("sfname", body.getN());
+            params.put("slname", body.getN2());
             params.put("scountry", "Romania");
             params.put("scompany", "");
             params.put("scity", body.getTown2());
