@@ -57,8 +57,23 @@ public class MainInfoFetcher {
         return template.findAll(Reteta.class);
     }
 
-    public List<Order> getAllOrders() {
-        return template.findAll(Order.class);
+    public List<Order> getAllOrders(String startDateStr, String endDateStr) {
+
+        Date startDate = new Date();
+        Date endDate = new Date();
+
+        try {
+            startDate = new SimpleDateFormat("dd/MM/yyyy").parse(startDateStr);
+            endDate = new SimpleDateFormat("dd/MM/yyyy").parse(endDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+
+        Query q = new Query();
+        q.addCriteria(Criteria.where("date").gt(startDate).lt(endDate));
+        return template.find(q, Order.class);
     }
 
     public List<Reteta> fetchReteteAfterType(String type) {
