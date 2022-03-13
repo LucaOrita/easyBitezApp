@@ -116,7 +116,7 @@ public class MainLinkMapper {
     @GetMapping("/admin")
     public String constructAdmin(Model model) {
         model.addAttribute("retete", fetcher.getAllRecipes());
-//        model.addAttribute("orders", fetcher.getAllOrders("13/11/2021", "26/02/2022"));
+        model.addAttribute("orders", fetcher.getAllOrders("13/11/2021", "26/05/2022"));
         return "admin/admin";
     }
 
