@@ -616,6 +616,31 @@ public class ShopLinker {
 //            return "shop/ramburs.html";
     }
 
+    @GetMapping("/shop/payramburs")
+    public Object buyramburs(HttpSession session, Model model, HttpServletRequest req) throws ParseException {
+
+        if (session.getAttribute("boxID") == null)
+            return new ResponseEntity<>(HttpStatus.PRECONDITION_FAILED);
+        if (session.getAttribute("mancare") == null || ((ArrayList<String>) session.getAttribute("mancare")).isEmpty())
+            return new ResponseEntity<>(HttpStatus.PRECONDITION_FAILED);
+        if (session.getAttribute("serializedParams") == null)
+            return new ResponseEntity<>(HttpStatus.PRECONDITION_FAILED);
+
+        HashMap<String, String> params = (HashMap<String, String>) session.getAttribute("serializedParams");
+
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            model.addAttribute(key, value);
+        }
+
+        fetcher.placeOrder(session);
+        fetcher.addTracker(req.getRemoteAddr(), "pay");
+
+
+        return "shop/ramburs.html";
+    }
+
     @GetMapping("/na/shop/pay")
     public Object buy(HttpServletRequest req, Model model) throws ParseException {
         HttpSession session = req.getSession(true);
@@ -637,12 +662,36 @@ public class ShopLinker {
         fetcher.placeOrder(session);
         fetcher.addTracker(req.getRemoteAddr(), "pay");
 
-        //plata online
 
             return "shop/redirect_payment";
 
-//            model.addAttribute("data_livrare", session.getAttribute("date"));
-//            return "shop/ramburs.html";
+    }
+
+    @GetMapping("/na/shop/payramburs")
+    public Object buyramburs(HttpServletRequest req, Model model) throws ParseException {
+        HttpSession session = req.getSession(true);
+        if (session.getAttribute("boxID") == null)
+            return new ResponseEntity<>("box", HttpStatus.PRECONDITION_FAILED);
+        if (session.getAttribute("mancare") == null || ((ArrayList<String>) session.getAttribute("mancare")).isEmpty())
+            return new ResponseEntity<>("mancare", HttpStatus.PRECONDITION_FAILED);
+        if (session.getAttribute("serializedParams") == null)
+            return new ResponseEntity<>("params", HttpStatus.PRECONDITION_FAILED);
+
+        HashMap<String, String> params = (HashMap<String, String>) session.getAttribute("serializedParams");
+
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            model.addAttribute(key, value);
+        }
+
+        fetcher.placeOrder(session);
+        fetcher.addTracker(req.getRemoteAddr(), "pay");
+
+
+
+            model.addAttribute("data_livrare", session.getAttribute("date"));
+            return "shop/ramburs.html";
 
     }
 
@@ -655,29 +704,29 @@ public class ShopLinker {
             String key = "0ba388d7b5f12509aef35d3cd5f570faf971a8df";
 
             Date date = new Date();
-            String dateString = new SimpleDateFormat("yyyyMMddHHmmss").format(date);
+            String dateString = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(date);
 
             HashMap<String, String> params = new HashMap<>();
 
             //SET LIVRARE DETAILS
-            params.put("fname", "");
-            params.put("lname", "");
+            params.put("fname", body.getDetalii());
+            params.put("lname", body.getDetalii());
             params.put("country", "Romania");
             params.put("company", "");
             params.put("city", body.getTown());
             params.put("add", body.makeAdress());
-            params.put("email", "email@email.com");
+            params.put("email", body.getNume());
             params.put("phone", body.getNrTel());
             params.put("fax", "");
 
             //SET FACTURARE
-            params.put("sfname", "");
-            params.put("slname", "");
+            params.put("sfname", body.getDetalii());
+            params.put("slname", body.getDetalii());
             params.put("scountry", "Romania");
             params.put("scompany", "");
             params.put("scity", body.getTown2());
             params.put("sadd", body.makeAdress2());
-            params.put("semail", "");
+            params.put("semail", body.getNume2());
             params.put("sphone", body.getNrTel2());
             params.put("sfax", "");
 
@@ -712,8 +761,8 @@ public class ShopLinker {
             HashMap<String, String> params = new HashMap<>();
 
             //SET LIVRARE DETAILS
-            params.put("fname", "");
-            params.put("lname", "");
+            params.put("fname", body.getDetalii());
+            params.put("lname", body.getDetalii());
             params.put("country", "Romania");
             params.put("company", "");
             params.put("city", body.getTown());
@@ -723,8 +772,8 @@ public class ShopLinker {
             params.put("fax", "");
 
             //SET FACTURARE
-            params.put("sfname", "");
-            params.put("slname", "");
+            params.put("sfname", body.getDetalii());
+            params.put("slname", body.getDetalii());
             params.put("scountry", "Romania");
             params.put("scompany", "");
             params.put("scity", body.getTown2());
