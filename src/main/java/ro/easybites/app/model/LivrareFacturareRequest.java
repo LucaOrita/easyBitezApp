@@ -2,6 +2,8 @@ package ro.easybites.app.model;
 
 public class LivrareFacturareRequest {
 
+    public String n;
+    public String n2;
     public String detalii;
     public String detalii2;
     public String judet;
@@ -17,7 +19,9 @@ public class LivrareFacturareRequest {
     public String town;
     public String town2;
 
-    public LivrareFacturareRequest(String detalii, String detalii2, String judet, String judet2, String nrStrada, String nrStrada2, String nrTel, String nrTel2, String nume, String nume2, String strada, String strada2, String town, String town2) {
+    public LivrareFacturareRequest(String n, String n2,String detalii, String detalii2, String judet, String judet2, String nrStrada, String nrStrada2, String nrTel, String nrTel2, String nume, String nume2, String strada, String strada2, String town, String town2) {
+        this.n = n;
+        this.n2 = n2;
         this.detalii = detalii;
         this.detalii2 = detalii2;
         this.judet = judet;
@@ -35,6 +39,14 @@ public class LivrareFacturareRequest {
     }
 
     public LivrareFacturareRequest() {
+    }
+
+    public String getN() {
+        return n;
+    }
+
+    public String getN2() {
+        return n2;
     }
 
     public String getDetalii() {
