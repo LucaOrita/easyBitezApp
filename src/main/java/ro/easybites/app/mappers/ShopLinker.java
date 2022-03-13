@@ -709,8 +709,8 @@ public class ShopLinker {
             HashMap<String, String> params = new HashMap<>();
 
             //SET LIVRARE DETAILS
-            params.put("fname", body.getNume());
-            params.put("lname", body.getNume2());
+            params.put("fname", body.getN());
+            params.put("lname", body.getN2());
             params.put("country", "Romania");
             params.put("company", "");
             params.put("city", body.getTown());
@@ -720,8 +720,8 @@ public class ShopLinker {
             params.put("fax", "");
 
             //SET FACTURARE
-            params.put("sfname", body.getNume());
-            params.put("slname", body.getNume2());
+            params.put("sfname", body.getN());
+            params.put("slname", body.getN2());
             params.put("scountry", "Romania");
             params.put("scompany", "");
             params.put("scity", body.getTown2());
@@ -761,8 +761,8 @@ public class ShopLinker {
             HashMap<String, String> params = new HashMap<>();
 
             //SET LIVRARE DETAILS
-            params.put("fname", body.getNume());
-            params.put("lname", body.getNume2());
+            params.put("fname", body.getN());
+            params.put("lname", body.getN2());
             params.put("country", "Romania");
             params.put("company", "");
             params.put("city", body.getTown());
