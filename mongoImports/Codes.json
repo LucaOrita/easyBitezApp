@@ -167,8 +167,8 @@
   "_id": {
     "$oid": "60eb61d916993246fdd39d00"
   },
-  "reducePercentage": 30,
-  "codeID": "easy30",
+  "reducePercentage": 20,
+  "codeID": "easy20",
   "type": "",
   "menu_type": "percentage",
   "offerOfBox": "",
